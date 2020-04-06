@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ReasArch_Test</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\barcelone.jpg" />
+    <None Remove="img\fond.jpg" />
+    <None Remove="img\londrezs.jpg" />
+    <None Remove="img\Paris.jpg" />
+    <None Remove="img\san francisco.jpg" />
+    <None Remove="img\statue liberté.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\barcelone.jpg" />
+    <Resource Include="img\fond.jpg" />
+    <Resource Include="img\londrezs.jpg" />
+    <Resource Include="img\Paris.jpg" />
+    <Resource Include="img\san francisco.jpg" />
+    <Resource Include="img\statue liberté.jpg" />
+  </ItemGroup>
+
+</Project>

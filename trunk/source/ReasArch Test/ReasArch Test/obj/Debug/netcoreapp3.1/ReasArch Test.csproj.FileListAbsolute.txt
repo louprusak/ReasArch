@@ -1,0 +1,19 @@
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.exe
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.deps.json
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.runtimeconfig.json
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.runtimeconfig.dev.json
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.dll
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\bin\Debug\netcoreapp3.1\ReasArch Test.pdb
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.csprojAssemblyReference.cache
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test_MarkupCompile.cache
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test_MarkupCompile.lref
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.g.resources
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.csproj.CoreCompileInputs.cache
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.AssemblyInfoInputs.cache
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.AssemblyInfo.cs
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.dll
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.pdb
+C:\Users\lrusa\Desktop\ReasArch Test\ReasArch Test\obj\Debug\netcoreapp3.1\ReasArch Test.genruntimeconfig.cache
