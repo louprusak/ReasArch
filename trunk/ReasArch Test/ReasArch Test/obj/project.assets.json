@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lrusa\\Desktop\\ReasArch Test\\ReasArch Test\\ReasArch Test.csproj",
+      "projectUniqueName": "C:\\Users\\lrusa\\Desktop\\Projet C#\\trunk\\ReasArch Test\\ReasArch Test\\ReasArch Test.csproj",
       "projectName": "ReasArch Test",
-      "projectPath": "C:\\Users\\lrusa\\Desktop\\ReasArch Test\\ReasArch Test\\ReasArch Test.csproj",
+      "projectPath": "C:\\Users\\lrusa\\Desktop\\Projet C#\\trunk\\ReasArch Test\\ReasArch Test\\ReasArch Test.csproj",
       "packagesPath": "C:\\Users\\lrusa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lrusa\\Desktop\\ReasArch Test\\ReasArch Test\\obj\\",
+      "outputPath": "C:\\Users\\lrusa\\Desktop\\Projet C#\\trunk\\ReasArch Test\\ReasArch Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lrusa\\AppData\\Roaming\\NuGet\\NuGet.Config",
