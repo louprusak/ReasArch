@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="architecte empire state.png" />
+    <None Remove="avis.png" />
+    <None Remove="barcelone.jpg" />
+    <None Remove="chrysler building.jpg" />
+    <None Remove="empire state building.jpg" />
+    <None Remove="flatiron building.jpg" />
+    <None Remove="fond.jpg" />
     <None Remove="img\architecte empire state.png" />
     <None Remove="img\avis.png" />
     <None Remove="img\barcelone.jpg" />
@@ -23,7 +30,18 @@
     <None Remove="img\plan empire state.jpg" />
     <None Remove="img\san francisco.jpg" />
     <None Remove="img\statue liberté.jpg" />
+    <None Remove="img\statue_liberte.jpg" />
     <None Remove="img\stickers-skyline-new-york.jpg.jpg" />
+    <None Remove="interieur empire state.jpg" />
+    <None Remove="londrezs.jpg" />
+    <None Remove="map empire state.png" />
+    <None Remove="one world trade center.jpg" />
+    <None Remove="panoramanew york.jpg" />
+    <None Remove="Paris.jpg" />
+    <None Remove="plan empire state.jpg" />
+    <None Remove="san francisco.jpg" />
+    <None Remove="statue_liberte.jpg" />
+    <None Remove="stickers-skyline-new-york.jpg.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -72,7 +90,7 @@
     <Content Include="img\san francisco.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="img\statue liberté.jpg">
+    <Content Include="img\statue_liberte.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\stickers-skyline-new-york.jpg.jpg">

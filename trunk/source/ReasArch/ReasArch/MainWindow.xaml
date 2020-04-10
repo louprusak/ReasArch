@@ -1,4 +1,4 @@
-﻿<Window x:Class="ReasArch.MainWindow"
+﻿    <Window x:Class="ReasArch.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -28,7 +28,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/statue liberté.jpg"/>
+                        <Image Source="img/statue_liberte.jpg"/>
                         <TextBlock Text="NEW YORK"/>
                     </StackPanel>
                 </ToggleButton.Content>
@@ -106,3 +106,4 @@
         </Grid>
     </DockPanel>
 </Window>
+   
