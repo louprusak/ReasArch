@@ -21,7 +21,14 @@
     <None Remove="img\empire state building.jpg" />
     <None Remove="img\flatiron building.jpg" />
     <None Remove="img\fond.jpg" />
+    <None Remove="img\icone_barcelone.png" />
+    <None Remove="img\icone_londres.png" />
+    <None Remove="img\icone_newyork.png" />
+    <None Remove="img\icone_paris.png" />
+    <None Remove="img\icone_sanfrancisco.png" />
     <None Remove="img\interieur empire state.jpg" />
+    <None Remove="img\logo reasarch blanc.png" />
+    <None Remove="img\logo reasarch noir.png" />
     <None Remove="img\londrezs.jpg" />
     <None Remove="img\map empire state.png" />
     <None Remove="img\one world trade center.jpg" />
@@ -66,7 +73,28 @@
     <Content Include="img\fond.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="img\icone_barcelone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_londres.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_newyork.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_paris.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_sanfrancisco.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="img\interieur empire state.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\logo reasarch blanc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\logo reasarch noir.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\londrezs.jpg">
