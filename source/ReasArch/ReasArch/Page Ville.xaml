@@ -28,7 +28,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/statue liberté.jpg"/>
+                        <Image Source="img/icone_newyork.png"/>
                         <TextBlock Text="NEW YORK"/>
                     </StackPanel>
                 </ToggleButton.Content>
@@ -36,7 +36,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/Paris.jpg"/>
+                        <Image Source="img/icone_paris.png"/>
                         <TextBlock Text="PARIS"/>
                     </StackPanel>
                 </ToggleButton.Content>
@@ -44,7 +44,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/londrezs.jpg"/>
+                        <Image Source="img/icone_londres.png"/>
                         <TextBlock Text="LONDRES"/>
                     </StackPanel>
                 </ToggleButton.Content>
@@ -52,7 +52,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/san francisco.jpg"/>
+                        <Image Source="img/icone_sanfrancisco.png"/>
                         <TextBlock Text="SAN FRANCISCO"/>
                     </StackPanel>
                 </ToggleButton.Content>
@@ -60,7 +60,7 @@
             <ToggleButton>
                 <ToggleButton.Content>
                     <StackPanel>
-                        <Image Source="img/barcelone.jpg"/>
+                        <Image Source="img/icone_barcelone.png"/>
                         <TextBlock Text="BARCELONE"/>
                     </StackPanel>
                 </ToggleButton.Content>
