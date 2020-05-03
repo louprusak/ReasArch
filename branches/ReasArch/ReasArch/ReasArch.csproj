@@ -1,0 +1,131 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\architecte empire state.png" />
+    <None Remove="img\avis.png" />
+    <None Remove="img\barcelone.jpg" />
+    <None Remove="img\chrysler building.jpg" />
+    <None Remove="img\empire_state_building.jpg" />
+    <None Remove="img\flatiron building.jpg" />
+    <None Remove="img\fond.jpg" />
+    <None Remove="img\icone fenetre ReasArch.png" />
+    <None Remove="img\icone_barcelone.png" />
+    <None Remove="img\icone_londres.png" />
+    <None Remove="img\icone_modif.png" />
+    <None Remove="img\icone_newyork.png" />
+    <None Remove="img\icone_paris.png" />
+    <None Remove="img\icone_retour.png" />
+    <None Remove="img\icone_sanfrancisco.png" />
+    <None Remove="img\icone_supprimer.jpg" />
+    <None Remove="img\icone_supprimer.png" />
+    <None Remove="img\interieur empire state.jpg" />
+    <None Remove="img\logo reasarch blanc.png" />
+    <None Remove="img\logo reasarch noir.png" />
+    <None Remove="img\londrezs.jpg" />
+    <None Remove="img\map empire state.png" />
+    <None Remove="img\one world trade center.jpg" />
+    <None Remove="img\panoramanew york.jpg" />
+    <None Remove="img\Paris.jpg" />
+    <None Remove="img\plan empire state.jpg" />
+    <None Remove="img\san francisco.jpg" />
+    <None Remove="img\statue_liberte.jpg" />
+    <None Remove="img\stickers-skyline-new-york.jpg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="img\architecte empire state.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\avis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\barcelone.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\chrysler building.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\empire_state_building.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\flatiron building.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\fond.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone fenetre ReasArch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_barcelone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_londres.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_modif.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_newyork.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_paris.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_retour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_sanfrancisco.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_supprimer.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icone_supprimer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\interieur empire state.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\logo reasarch blanc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\logo reasarch noir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\londrezs.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\map empire state.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\one world trade center.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\panoramanew york.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\Paris.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\plan empire state.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\san francisco.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\statue_liberte.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\stickers-skyline-new-york.jpg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
