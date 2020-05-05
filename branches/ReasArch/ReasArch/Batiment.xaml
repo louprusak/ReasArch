@@ -32,16 +32,32 @@
                 <RowDefinition Height="3*"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Image x:Name="IMGBatPrincipale"      Source="img/empire_state_building.jpg"/>
+            <Image x:Name="IMGBatPrincipale"      Source="img/empire_state_building.jpg">
+                <Image.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+                </Image.BitmapEffect>
+            </Image>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="IMGBat1"     Source="img/architecte empire state.png"/>
-                <Image Grid.Column="1" x:Name="IMGBat2"     Source="img/plan empire state.jpg"/>
-                <Image Grid.Column="2" x:Name="IMGBat3"     Source="img/interieur empire state.jpg"/>
+                <Image x:Name="IMGBat1"     Source="img/architecte empire state.png">
+                    <Image.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+                    </Image.BitmapEffect>
+                </Image>
+                <Image Grid.Column="1" x:Name="IMGBat2"     Source="img/plan empire state.jpg">
+                    <Image.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+                    </Image.BitmapEffect>
+                </Image>
+                <Image Grid.Column="2" x:Name="IMGBat3"     Source="img/interieur empire state.jpg">
+                    <Image.BitmapEffect>
+                        <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+                    </Image.BitmapEffect>
+                </Image>
             </Grid>
         </Grid>
         <Grid Grid.Column="1">
@@ -63,13 +79,13 @@
                 </Grid.ColumnDefinitions>
                 <Button>
                     <WrapPanel>
-                        <Image Source="img/icone_retour.png" Width="20"/>
+                        <Image Source="img/icone_retour_noir.png" Width="20"/>
                         <TextBlock Text="Retour"/>
                     </WrapPanel>
                 </Button>
                 <Button Grid.Column="1">
                     <WrapPanel>
-                        <Image Source="img/icone_modif.png" Width="20"/>
+                        <Image Source="img/icone_modif_noir.png" Width="20"/>
                         <TextBlock Text="Modifier"/>
                     </WrapPanel>
                 </Button>

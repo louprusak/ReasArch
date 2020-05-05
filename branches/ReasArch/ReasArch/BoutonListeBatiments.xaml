@@ -35,15 +35,19 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image x:Name="Image" Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="190"/>
+        <Image x:Name="Image" Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="190">
+            <Image.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+            </Image.BitmapEffect>
+        </Image>
         <Button Grid.Column="2" Grid.ColumnSpan="2">
             <TextBlock x:Name="Titre" />
         </Button>
         <Button Grid.Column="2" Grid.Row="1">
-            <Image Source="img/icone_modif.png"/>
+            <Image Source="img/icone_modif_blanc.png"/>
         </Button>
         <Button Grid.Column="3" Grid.Row="1">
-            <Image Source="img/icone_supprimer.png"/>
+            <Image Source="img/icone_supprimer_blanc.png"/>
         </Button>
     </Grid>
 </UserControl>

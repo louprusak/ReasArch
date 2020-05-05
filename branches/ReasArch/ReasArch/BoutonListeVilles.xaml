@@ -24,8 +24,16 @@
     
     <Button Cursor="Hand">
         <StackPanel>
-            <Image x:Name="IMGVille"/>
-            <TextBlock x:Name="TBListeVille"/>
+            <Image x:Name="IMGVille">
+                <Image.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0" Softness=".9"/>
+                </Image.BitmapEffect>
+            </Image>
+            <TextBlock x:Name="TBListeVille">
+                <TextBlock.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
+                </TextBlock.BitmapEffect>
+            </TextBlock>
         </StackPanel>
     </Button>
     
