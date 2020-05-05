@@ -27,14 +27,20 @@
                     <Setter Property="Background" Value="{x:Null}"/>
                     <Setter Property="BorderBrush" Value="{x:Null}"/>
                 </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Width" Value="20"/>
+                </Style>
             </Grid.Resources>
             <Button>
-               
+                <Image Source="img/icone_retour.png"/>
             </Button>
-            <Button Grid.Column="1"></Button>
             <TextBlock Grid.Column="2" Text="New York City" Foreground="White" FontSize="35" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
-            <Button Grid.Column="3"></Button>
-            <Button Grid.Column="4"></Button>
+            <Button Grid.Column="3">
+                <Image Source="img/icone_ajouter_blanc.png"/>
+            </Button>
+            <Button Grid.Column="4">
+                <Image Source="img/icone_modif.png"/>
+            </Button>
         </Grid>
 
         <ScrollViewer Grid.Row="2">

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReasArch"
         mc:Ignorable="d"
+        Icon="img/icone fenetre ReasArch.png"
         Title="MainWindow" Height="450" Width="800">
 
     <DockPanel>
@@ -14,6 +15,8 @@
             <local:BoutonListeVilles Source="img/icone_newyork.png" Texte="NEW YORK"/>
             <local:BoutonListeVilles Source="img/icone_paris.png" Texte="PARIS"/>
             <local:BoutonListeVilles Source="img/icone_sanfrancisco.png" Texte="SAN FRANCISCO"/>
+            <local:BoutonListeVilles Source="img/icone_londres.png" Texte="LONDRES"/>
+            <local:BoutonListeVilles Source="img/icone_barcelone.png" Texte="BARCELONE"/>
         </ListBox>
         <ContentControl x:Name="fenetre">
             <Grid Background="#757575">
