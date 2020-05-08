@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Batiment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BoutonListeBatiments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BoutonListeVilles.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TestUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ville.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Batiment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BoutonListeBatiments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="BoutonListeVilles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TestUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ville.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
