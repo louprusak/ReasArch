@@ -25,6 +25,9 @@
     <Compile Update="TestUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TextBlock_Bouton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Ville.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TestUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TextBlock_Bouton.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ville.xaml">

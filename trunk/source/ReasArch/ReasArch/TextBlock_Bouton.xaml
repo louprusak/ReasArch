@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ReasArch.Label_TextBox"
+﻿<UserControl x:Class="ReasArch.TextBlock_Bouton"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,20 +9,31 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.Resources>
             <Style TargetType="TextBlock">
-                <Setter Property="FontSize" Value="20"/>
                 <Setter Property="Foreground" Value="White"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="10"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
-            <Style TargetType="TextBox">
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="DarkOrange"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="10"/>
             </Style>
         </Grid.Resources>
         <TextBlock x:Name="MonTextBlock"/>
-        <TextBox Grid.Column="1" TextWrapping="Wrap"/>
+        <Button Grid.Column="1">
+            <TextBlock Text="Choisir">
+                <TextBlock.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0" Softness=".9"/>
+                </TextBlock.BitmapEffect>
+            </TextBlock>
+        </Button>
     </Grid>
 </UserControl>

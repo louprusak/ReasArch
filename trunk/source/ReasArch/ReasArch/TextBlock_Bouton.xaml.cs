@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace ReasArch
 {
     /// <summary>
-    /// Logique d'interaction pour Label_TextBox.xaml
+    /// Logique d'interaction pour TextBlock_Bouton.xaml
     /// </summary>
-    public partial class Label_TextBox : UserControl
+    public partial class TextBlock_Bouton : UserControl
     {
-        public Label_TextBox()
+        public TextBlock_Bouton()
         {
             InitializeComponent();
         }
@@ -28,9 +28,7 @@ namespace ReasArch
             set
             {
                 MonTextBlock.Text = value;
-            }          
+            }
         }
-
-      
     }
 }
