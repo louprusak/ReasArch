@@ -35,8 +35,8 @@ namespace Modele
         /// <returns></returns>
         public bool AjouterBatiment ( string nom, string architecte, string description)
         {
-            Batiment batiment = new Batiment(nom, architecte, description);
-            Listebatiments.Add(batiment);
+            //Batiment batiment = new Batiment(nom, architecte, description);
+            //Listebatiments.Add(batiment);
             return true;
         }
 

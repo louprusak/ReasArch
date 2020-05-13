@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReasArch"
         mc:Ignorable="d"
-        Icon="img/icone fenetre ReasArch.png"
+        Icon="img/icone fenetre ReasARch.png"
         Title="MainWindow" Height="450" Width="800">
 
     <DockPanel>
         <ListBox DockPanel.Dock="Left" Background="#424242" BorderBrush="#424242">
             <Button Content="Ville" Click="Nouvelle_Ville"/>
             <Button Content="Batiment" Click="Nouveau_Batiment"/>
+            <Button Content="BatimentUtils" Click="Ajout_Modif_Batiment"/>
             <local:BoutonListeVilles Source="img/icone_newyork.png" Texte="NEW YORK"/>
             <local:BoutonListeVilles Source="img/icone_paris.png" Texte="PARIS"/>
             <local:BoutonListeVilles Source="img/icone_sanfrancisco.png" Texte="SAN FRANCISCO"/>
