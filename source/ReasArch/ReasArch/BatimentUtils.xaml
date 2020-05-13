@@ -7,24 +7,47 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Background="#757575">
-        <TextBlock Text="Ajouter / Modifier un Bâtiment" DockPanel.Dock="Top" FontSize="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+        <TextBlock Background="Black" Text="Ajouter / Modifier un Bâtiment" DockPanel.Dock="Top" FontSize="30" Foreground="White" FontWeight="Bold" TextAlignment="Center" Padding="10"/>
         <ScrollViewer>
-            <StackPanel>
-                <local:Label_TextBox TexteLabel="Nom"/>
-                <local:Label_TextBox TexteLabel="Pays"/>
-                <local:Label_TextBox TexteLabel="Ville"/>
-                <local:Label_TextBox TexteLabel="Quartier"/>
-                <local:Label_TextBox TexteLabel="Adresse"/>
-                <local:Label_TextBox TexteLabel="Architecte"/>
-                <local:Label_TextBox TexteLabel="Ingénieur"/>
-                <local:Label_TextBox TexteLabel="Style"/>
-                <local:Label_TextBox TexteLabel="Matériaux"/>
-                <local:Label_TextBox TexteLabel="Hauteur"/>
-                <local:Label_TextBox TexteLabel="Nombre d'étages"/>
-                <local:Label_TextBox TexteLabel="Années de construction"/>
-                <local:Label_TextBox TexteLabel="Année d'ouverture"/>
-                <local:Label_TextBox TexteLabel="Description"/>
+            <StackPanel Margin="0,10,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <local:TextBlock_Bouton Texte="Image Principale"/>
+                    <local:TextBlock_Bouton Grid.Column="1" Texte="Image Principale"/>
+                    <local:TextBlock_Bouton Grid.Row="1" Texte="Image Principale"/>
+                    <local:TextBlock_Bouton Grid.Column="1" Grid.Row="1" Texte="Image Principale"/>
+                </Grid>
+                <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
+                <local:Label_TextBox Texte="Nom"/>
+                <local:Label_TextBox Texte="Pays"/>
+                <local:Label_TextBox Texte="Ville"/>
+                <local:Label_TextBox Texte="Quartier"/>
+                <local:Label_TextBox Texte="Adresse"/>
+                <local:Label_TextBox Texte="Architecte"/>
+                <local:Label_TextBox Texte="Ingénieur"/>
+                <local:Label_TextBox Texte="Style"/>
+                <local:Label_TextBox Texte="Matériaux"/>
+                <local:Label_TextBox Texte="Hauteur"/>
+                <local:Label_TextBox Texte="Nombre d'étages"/>
+                <local:Label_TextBox Texte="Années de construction"/>
+                <local:Label_TextBox Texte="Année d'ouverture"/>
+                <local:Label_TextBox Texte="Description"/>
+                <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
+                <Button Background="DarkGreen" Margin="10" HorizontalAlignment="Center">
+                    <TextBlock Text="Sauvegarder" Foreground="White" FontSize="20" Padding="10"/>
+                </Button>
+                <Button Background="Red" Margin="10" HorizontalAlignment="Center">
+                    <TextBlock Text="Annuler" Foreground="White" FontSize="20" Padding="10"/>
+                </Button>
             </StackPanel>
+            
         </ScrollViewer>
     </DockPanel>
 </UserControl>
