@@ -5,16 +5,12 @@ using System.Text;
 namespace Modele
 {
     public class Ville
-    {
-        /// <summary>
-        /// Nom de la ville
-        /// </summary>
-        public string Nom { get; private set; }
-
-        /// <summary>
-        /// Liste de batiments dans cette ville
-        /// </summary>
+    {  
+        public string Nom { get; set; }
         public List<Batiment> Listebatiments { get; private set; }
+
+        //-----------------------------------------------------------------------------------------------------------//
+        //CONSTRUCTEURS
 
         /// <summary>
         /// Constructeur de la class Ville
@@ -22,23 +18,76 @@ namespace Modele
         /// <param name="nom">Nom de la ville</param>
         public Ville (string nom)
         {
-            Nom = nom;
-            Listebatiments = new List<Batiment>();
+            if(!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
+            {
+                Nom = nom;
+                Listebatiments = new List<Batiment>();
+            }
+            
         }
-        
+
+        //-----------------------------------------------------------------------------------------------------------//
+        //METHODES
+
         /// <summary>
-        /// Ajouter un batiment à cette ville
+        /// Ajouter un batiment avec un détail simple à cette ville
         /// </summary>
-        /// <param name="nom">Nom du batiment</param>
-        /// <param name="architecte">Nom de l'architecte du batiment</param>
-        /// <param name="description">Description du batiment</param>
-        /// <returns></returns>
-        public bool AjouterBatiment ( string nom, string architecte, string description)
+        /// <returns>Retourne true si le batiment a bien été ajouté à la liste</returns>
+        public bool AjouterBatimentSimple(string nom, string pays, string ville, string description)
         {
-            //Batiment batiment = new Batiment(nom, architecte, description);
-            //Listebatiments.Add(batiment);
+            Batiment batiment = new Batiment(nom, pays, ville, description);
+            Listebatiments.Add(batiment);
+            if(Listebatiments.Contains(batiment)) { return true; }
+            else { return false; }
+        }
+
+        /// <summary>
+        /// Ajouter un batiment avec un détail complet à cette ville
+        /// </summary>
+        /// <returns>Retourne true si le batiment a bien été ajouté à la liste</returns>
+        public bool AjouterBatimentComplet(string nom, string pays, string ville, string quartier, string adresse,
+            string architecte, string ingenieur, string style, string materiaux, string hauteur, string nbetages,
+            string construction, string ouverture, string description)
+        {
+            Batiment batiment = new Batiment(nom, pays, ville, quartier, adresse, architecte, ingenieur, style, materiaux,
+                hauteur, nbetages, construction, ouverture, description);
+            Listebatiments.Add(batiment);
+            if (Listebatiments.Contains(batiment)) { return true; }
+            else { return false; }
+        }
+
+        /// <summary>
+        /// Supprime un batiment de la liste avec un nom donné
+        /// </summary>
+        /// <returns>Retourne true si le batiment n'est plus présent dans la liste</returns>
+        public bool SupprimerBatiment(string nom)
+        {
+            Batiment batiment = new Batiment(nom);
+            Listebatiments.Remove(batiment);
+            if (Listebatiments.Contains(batiment)){ return false; }
+            else { return true; }
+        }
+
+        /// <summary>
+        /// Modifier un batiment présent dans la liste
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <returns></returns>
+        public bool ModifierBatiment(string nom)
+        {
             return true;
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (this == obj) return true;
+            if (this.GetType() != obj.GetType()) return false;
+            Ville other = (Ville)obj;
+            return Nom.Equals(other.Nom);
+        }
+
+
 
 
     }
