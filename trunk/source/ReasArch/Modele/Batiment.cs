@@ -25,9 +25,14 @@ namespace Modele
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
+        public Batiment(string nom)
+        {
+            Nom = nom;
+        }
+
         public Batiment(string nom, string pays, string ville, string description)
         {
-            if (String.IsNullOrEmpty(nom) | String.IsNullOrEmpty(pays) | String.IsNullOrEmpty(ville) | String.IsNullOrEmpty(description))
+            if (!String.IsNullOrEmpty(nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(ville) | String.IsNullOrEmpty(description))
             {
                 Nom = nom;
                 Pays = pays;
@@ -64,6 +69,15 @@ namespace Modele
                 $"Construction : {Construction}\nOuverture : {Ouverture}\n\n" +
                 $"{Description}";
             return message;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (this == obj) return true;
+            if (this.GetType() != obj.GetType()) return false;
+            Batiment other = (Batiment)obj;
+            return Nom.Equals(other.Nom);
         }
     }
 }
