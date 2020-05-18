@@ -65,17 +65,23 @@ namespace Modele
             Batiment batiment = new Batiment(nom);
             Listebatiments.Remove(batiment);
             if (Listebatiments.Contains(batiment)){ return false; }
-            else { return true; }
+            else return true;
+        }
+
+        int RechercherBatiment(string nombat)
+        {
+            Batiment batiment = new Batiment(nombat);
+            int index = Listebatiments.IndexOf(batiment);
+            return index;
         }
 
         /// <summary>
         /// Modifier un batiment présent dans la liste
         /// </summary>
-        /// <param name="nom"></param>
         /// <returns></returns>
         public bool ModifierBatiment(string nom)
         {
-            return true;
+            
         }
 
         public override bool Equals(object obj)

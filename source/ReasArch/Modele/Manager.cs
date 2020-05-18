@@ -43,17 +43,22 @@ namespace Modele
             else return true;
         }
 
+        public int RechercherVille(string nomville)
+        {
+            Ville ville = new Ville(nomville);
+            int index = Listevilles.IndexOf(ville);
+            return index;
+        }
+
         /// <summary>
         /// Modifier une ville dans la liste
         /// </summary>
         /// <returns>Retourne true si les modifications ont bien été opérées</returns>
-        public bool ModifierVille (string nom)
+        public bool ModifierVille (string nomville)
         {
-            int index;
-            Ville v = new Ville(nom);
-            index = Listevilles.IndexOf(v);
-            Listevilles[index].Nom = nom;
-            if (Listevilles[index].Nom == nom) return true;
+            int index = RechercherVille(nomville);
+            Listevilles[index].Nom = nomville;
+            if (Listevilles[index].Nom == nomville) return true;
             else return false;
         }
 
@@ -63,11 +68,7 @@ namespace Modele
         /// <returns>Retourne true si le batiment a été ajouté dans la liste</returns>
         public bool AjouterBatimentSimple(string nomville, string nombat, string pays, string ville, string description)
         {
-            bool res;
-            int index;
-            Ville v = new Ville(nomville);
-            index = Listevilles.IndexOf(v);
-            res = Listevilles[index].AjouterBatimentSimple(nombat, pays, ville, description);
+            bool res = Listevilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, pays, ville, description);
             return res;
         }
 
@@ -79,11 +80,7 @@ namespace Modele
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur, 
             string nbetages, string construction, string ouverture, string description)
         {
-            bool res;
-            int index;
-            Ville v = new Ville(nomville);
-            index = Listevilles.IndexOf(v);
-            res = Listevilles[index].AjouterBatimentComplet(nombat, pays, ville, quartier, adresse, architecte, ingenieur
+            bool res = Listevilles[RechercherVille(nomville)].AjouterBatimentComplet(nombat, pays, ville, quartier, adresse, architecte, ingenieur
                 , style, materiaux, hauteur, nbetages, construction, ouverture, description);
             return res;
         }
@@ -94,12 +91,8 @@ namespace Modele
         /// <returns>Retourne true si le batiment n'est plus présent dans la liste</returns>
         public bool SupprimerBatiment (string nomville, string nombat)
         {
-            bool res;
-            int index;
-            Ville ville = new Ville(nomville);
             Batiment batiment = new Batiment(nombat);
-            index = Listevilles.IndexOf(ville);
-            res = Listevilles[index].Listebatiments.Remove(batiment);
+            bool res = Listevilles[RechercherVille(nomville)].Listebatiments.Remove(batiment);
             return res;
         }
 
@@ -107,9 +100,11 @@ namespace Modele
         /// Modifier un batiment dans une ville donnée
         /// </summary>
         /// <returns>Retourne true si les modifications ont bien été opérées</returns>
-        public bool ModifierBatiment( string nomville, string nombat)
+        public bool ModifierBatiment( string nomville, string nombat, string nvnom, string pays, string ville, string quartier,
+            string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
+            string nbetages, string construction, string ouverture, string description)
         {
-            return true;
+            
         }
     }
 }
