@@ -68,7 +68,7 @@ namespace Modele
             else return true;
         }
 
-        int RechercherBatiment(string nombat)
+        public int RechercherBatiment(string nombat)
         {
             Batiment batiment = new Batiment(nombat);
             int index = Listebatiments.IndexOf(batiment);
@@ -79,10 +79,18 @@ namespace Modele
         /// Modifier un batiment présent dans la liste
         /// </summary>
         /// <returns></returns>
-        public bool ModifierBatiment(string nom)
+        public bool ModifierBatiment(string nombat, string nvnom, string pays, string ville, string quartier,
+            string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
+            string nbetages, string construction, string ouverture, string description)
         {
-            
+            int index = RechercherBatiment(nombat);
+            bool res = Listebatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
+                ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description);
+            return res;
         }
+
+        //-----------------------------------------------------------------------------------------------------------//
+        //REDEFINITION DE METHODES
 
         public override bool Equals(object obj)
         {
