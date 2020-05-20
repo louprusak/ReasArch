@@ -39,5 +39,10 @@ namespace ReasArch
         {
             fenetre.Content = new BatimentUtils();
         }
+
+        private void Ajout_Modif_Ville(object sender, RoutedEventArgs e)
+        {
+            fenetre.Content = new VilleUtils();
+        }
     }
 }

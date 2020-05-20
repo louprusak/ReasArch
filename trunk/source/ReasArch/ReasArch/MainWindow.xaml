@@ -13,6 +13,7 @@
             <Button Content="Ville" Click="Nouvelle_Ville"/>
             <Button Content="Batiment" Click="Nouveau_Batiment"/>
             <Button Content="BatimentUtils" Click="Ajout_Modif_Batiment"/>
+            <Button Content="VilleUtils" Click="Ajout_Modif_Ville"/>
             <local:BoutonListeVilles Source="img/icone_newyork.png" Texte="NEW YORK"/>
             <local:BoutonListeVilles Source="img/icone_paris.png" Texte="PARIS"/>
             <local:BoutonListeVilles Source="img/icone_sanfrancisco.png" Texte="SAN FRANCISCO"/>
