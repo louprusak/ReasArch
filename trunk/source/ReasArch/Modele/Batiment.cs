@@ -25,11 +25,17 @@ namespace Modele
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
+        /// <summary>
+        /// Constructeur de la class Batiment
+        /// </summary>
         public Batiment(string nom)
         {
             Nom = nom;
         }
 
+        /// <summary>
+        /// Constructeur de la class Batiment
+        /// </summary>
         public Batiment(string nom, string pays, string ville, string description)
         {
             if (!String.IsNullOrEmpty(nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(ville) | String.IsNullOrEmpty(description))
@@ -41,11 +47,12 @@ namespace Modele
             }
         }
 
-
+        /// <summary>
+        /// Constructeur de la class Batiment
+        /// </summary>
         public Batiment(string nom, string pays, string ville, string quartier, string adresse, string architecte,
             string ingenieur, string style, string materiaux, string hauteur, string nbetages, string construction,
-            string ouverture, string description)
-            : this(nom, pays, ville, description)
+            string ouverture, string description) : this(nom, pays, ville, description)
         {
             Quartier = quartier;
             Adresse = adresse;
@@ -59,6 +66,13 @@ namespace Modele
             Ouverture = ouverture;
         }
 
+        //------------------------------------------------------------------------------------//
+        //METHODES
+
+        /// <summary>
+        /// Modifie les paramètres d'un batiment
+        /// </summary>
+        /// <returns>Retourne true si la modification a bien eu lieu sinon retourne false</returns>
         public bool ModifierBatiment(string nvnom, string pays, string ville, string quartier,
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
             string nbetages, string construction, string ouverture, string description)
@@ -73,10 +87,15 @@ namespace Modele
             Hauteur == hauteur && NbEtages == nbetages && Construction == construction &&
             Ouverture == ouverture && Description == description) return true;
             else return false;
+        }
 
         //----------------------------------------------------------------------------------------------------------------------//
         //REDEFINITION DE METHODES 
 
+        /// <summary>
+        /// Définit l'affichage de la description du batiment
+        /// </summary>
+        /// <returns>Retourne le message à afficher</returns>
         public override string ToString()
         {
             string message = $"Nom : {Nom}\nPays : {Pays}\nQuartier : {Quartier}\nAdresse : {Adresse}\nArchitecte : {Architecte}\n" +
@@ -86,6 +105,10 @@ namespace Modele
             return message;
         }
 
+        /// <summary>
+        /// Compare si l'objet envoyé est le même que le batiment  
+        /// </summary>
+        /// <returns>Retourne true si ce sont tout deux le même batiment</returns>
         public override bool Equals(object obj)
         {
             if (obj == null) return false;
