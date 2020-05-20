@@ -6,11 +6,14 @@ namespace Modele
 {
     class Manager
     {
-        public List<Ville> Listevilles { get; private set; }
+        public List<Ville> Listevilles { get; private set; } //liste des villes contenues dans l'application
 
         //------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
+        /// <summary>
+        /// Constructeur de la class Manager
+        /// </summary>
         public Manager()
         {
             Listevilles = new List<Ville>();
@@ -22,7 +25,7 @@ namespace Modele
         /// <summary>
         /// Ajouter une ville dans la liste de villes
         /// </summary>
-        /// <returns>Retourne true si la liste a bien été ajoutée à la liste</returns>
+        /// <returns>Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
         public bool AjouterVille (string nom)
         {
             Ville ville = new Ville(nom);
@@ -34,7 +37,7 @@ namespace Modele
         /// <summary>
         /// Supprime une ville de la liste avec un nom donné
         /// </summary>
-        /// <returns>Retourne true si la ville n'est plus présente dans la liste des villes</returns>
+        /// <returns>Retourne true si la ville n'est plus présente dans la liste des villes sinon retourne false</returns>
         public bool SupprimerVille (string nom)
         {
             Ville ville = new Ville(nom);
@@ -43,6 +46,10 @@ namespace Modele
             else return true;
         }
 
+        /// <summary>
+        /// Recherche une ville grâce à un nom de ville donné
+        /// </summary>
+        /// <returns>Retourne la position où se trouve la ville dans la liste</returns>
         public int RechercherVille(string nomville)
         {
             Ville ville = new Ville(nomville);
@@ -53,7 +60,7 @@ namespace Modele
         /// <summary>
         /// Modifier une ville dans la liste
         /// </summary>
-        /// <returns>Retourne true si les modifications ont bien été opérées</returns>
+        /// <returns>Retourne true si les modifications ont bien été opérées sinon retourne false</returns>
         public bool ModifierVille (string nomville)
         {
             int index = RechercherVille(nomville);
@@ -65,7 +72,7 @@ namespace Modele
         /// <summary>
         /// Ajout d'un batiment avec détail simple dans une ville donnée
         /// </summary>
-        /// <returns>Retourne true si le batiment a été ajouté dans la liste</returns>
+        /// <returns>Retourne true si le batiment a été ajouté dans la liste sinon retourne false</returns>
         public bool AjouterBatimentSimple(string nomville, string nombat, string pays, string ville, string description)
         {
             bool res = Listevilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, pays, ville, description);
@@ -75,7 +82,7 @@ namespace Modele
         /// <summary>
         /// Ajout d'un batiment avec détail complet dans une ville donnée
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retourne true si l'ajout du batiment à bien eu lieu sinon retourne false</returns>
         public bool AjouterBatimentComplet(string nomville, string nombat, string pays, string ville, string quartier, 
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur, 
             string nbetages, string construction, string ouverture, string description)
@@ -88,7 +95,7 @@ namespace Modele
         /// <summary>
         /// Supprimer un batiment dans une ville donnée
         /// </summary>
-        /// <returns>Retourne true si le batiment n'est plus présent dans la liste</returns>
+        /// <returns>Retourne true si le batiment n'est plus présent dans la liste sinon retourne false</returns>
         public bool SupprimerBatiment (string nomville, string nombat)
         {
             Batiment batiment = new Batiment(nombat);
@@ -99,7 +106,7 @@ namespace Modele
         /// <summary>
         /// Modifier un batiment dans une ville donnée
         /// </summary>
-        /// <returns>Retourne true si les modifications ont bien été opérées</returns>
+        /// <returns>Retourne true si les modifications ont bien été opérées sinon retourne false</returns>
         public bool ModifierBatiment( string nomville, string nombat, string nvnom, string pays, string ville, string quartier,
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
             string nbetages, string construction, string ouverture, string description)
