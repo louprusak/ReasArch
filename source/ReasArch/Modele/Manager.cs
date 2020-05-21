@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Modele
 {
-    class Manager
+    public class Manager
     {
         public List<Ville> Listevilles { get; private set; } //liste des villes contenues dans l'application
 
@@ -12,7 +12,7 @@ namespace Modele
         //CONSTRUCTEURS
 
         /// <summary>
-        /// Constructeur de la class Manager
+        /// Constructeur de la classe Manager
         /// </summary>
         public Manager()
         {
@@ -111,7 +111,22 @@ namespace Modele
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
             string nbetages, string construction, string ouverture, string description)
         {
-            
+            bool res = Listevilles[RechercherVille(nomville)].ModifierBatiment(nombat, nvnom, pays, ville, quartier, adresse,
+                architecte, ingenieur, style, materiaux, hauteur, nbetages, construction, ouverture, description);
+            return res;
+        }
+
+        //------------------------------------------------------------------------------------//
+        //REDEFINITION DE METHODES
+
+        public override string ToString()
+        {
+            string message = "///---Affichage de toutes les données des villes contenues dans l'application:---///\n\n";
+            foreach(Ville ville in Listevilles)
+            {
+                message += ville.ToString();
+            }
+            return message;
         }
     }
 }

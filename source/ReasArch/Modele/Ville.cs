@@ -109,6 +109,16 @@ namespace Modele
             return Nom.Equals(other.Nom);
         }
 
+        public override string ToString()
+        {
+            string message = $"Description de la ville {Nom.ToUpper()} et de ses batiments :\n\n";
+            foreach(Batiment batiment in Listebatiments)
+            {
+                message += batiment.ToString();
+            }
+            return message;
+        }
+
 
 
 

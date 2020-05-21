@@ -7,7 +7,7 @@ namespace Modele
 {
     public class Batiment
     {
-        public string Nom { get => Nom.ToUpper(); set { } } //Nom du batiment
+        public string Nom { get; set; } //Nom du batiment
         public string Pays { get; set; }//Pays dans lequel se trouve le batiment
         public string Ville { get; set; }//Ville dans laquelle se trouve le batiment
         public string Quartier { get; set; } = "non spécifié";//Quartier dans lequel se trouve la batiment
@@ -101,7 +101,7 @@ namespace Modele
             string message = $"Nom : {Nom}\nPays : {Pays}\nQuartier : {Quartier}\nAdresse : {Adresse}\nArchitecte : {Architecte}\n" +
                 $"Ingénieur : {Ingenieur}\nStyle : {Style}\nMatériaux : {Materiaux}\nHauteur : {Hauteur}\nNombre d'Etages : {NbEtages}\n" +
                 $"Construction : {Construction}\nOuverture : {Ouverture}\n\n" +
-                $"{Description}";
+                $"{Description}\n\n";
             return message;
         }
 
