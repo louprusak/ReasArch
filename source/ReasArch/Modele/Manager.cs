@@ -54,6 +54,7 @@ namespace Modele
         {
             Ville ville = new Ville(nomville);
             int index = Listevilles.IndexOf(ville);
+            Console.WriteLine($"Indice de la recherche:{index}");
             return index;
         }
 
