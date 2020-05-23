@@ -61,11 +61,11 @@ namespace Modele
         /// Modifier une ville dans la liste
         /// </summary>
         /// <returns>Retourne true si les modifications ont bien été opérées sinon retourne false</returns>
-        public bool ModifierVille (string nomville)
+        public bool ModifierVille(string nomville, string nvnomville)
         {
             int index = RechercherVille(nomville);
-            Listevilles[index].Nom = nomville;
-            if (Listevilles[index].Nom == nomville) return true;
+            Listevilles[index].Nom = nvnomville;
+            if (Listevilles[index].Nom == nvnomville) return true;
             else return false;
         }
 
