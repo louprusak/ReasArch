@@ -8,8 +8,8 @@ namespace Modele
     public class Batiment
     {
         public string Nom { get; set; } //Nom du batiment
-        public string Pays { get; set; }//Pays dans lequel se trouve le batiment
-        public string Ville { get; set; }//Ville dans laquelle se trouve le batiment
+        public string Pays { get; set; } = "non spécifié"; //Pays dans lequel se trouve le batiment
+        public string Ville { get; set; } = "non spécifié";//Ville dans laquelle se trouve le batiment
         public string Quartier { get; set; } = "non spécifié";//Quartier dans lequel se trouve la batiment
         public string Adresse { get;  set; } = "non spécifié";//Adresse du batiment
         public string Architecte { get; set; } = "non spécifié";//Architecte du batiment
@@ -20,7 +20,7 @@ namespace Modele
         public string NbEtages { get; set; } = "non spécifié";//Nombre d'étages du batiment
         public string Construction { get; set; } = "non spécifié";//Années de construction du batiment
         public string Ouverture { get; set; } = "non spécifié";//Année d'ouverture du batiment
-        public string Description { get; set; }//Description autre du batiment
+        public string Description { get; set; } = "aucune description";//Description autre du batiment
 
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
