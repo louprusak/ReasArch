@@ -22,7 +22,7 @@
         </Style>
     </UserControl.Resources>
     
-    <Button Cursor="Hand">
+    <Button Cursor="Hand" Click="Nouvelle_Ville">
         <StackPanel>
             <Image x:Name="IMGVille">
                 <Image.BitmapEffect>

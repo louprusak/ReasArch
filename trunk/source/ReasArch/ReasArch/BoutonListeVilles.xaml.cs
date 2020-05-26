@@ -38,8 +38,5 @@ namespace ReasArch
                 TBListeVille.Text = value;
             }
         }
-
-        
-
     }
 }

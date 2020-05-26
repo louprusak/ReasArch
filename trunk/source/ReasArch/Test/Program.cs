@@ -12,7 +12,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            /*WriteLine("------------------------------------------------------------------------------------------------------------\n" +
+            WriteLine("------------------------------------------------------------------------------------------------------------\n" +
                 "Hello World! Voici les tests console de notre application ReasArch ! Enjoy !\n" +
                 "------------------------------------------------------------------------------------------------------------\n\n");
             WriteLine("1) Instanciation de la classe Batiment:\n\n");
@@ -24,7 +24,7 @@ namespace Test
             WriteLine("ToString du Batiment avec détail simplifié:\n"+Stub.CreerBatimentSimple().ToString());
             WriteLine("-    -   -   -   -   -");
             
-            WriteLine("ToString du Batiment avec détail maximal:\n"+Stub.CreerBatimentComplet().ToString());*/
+            WriteLine("ToString du Batiment avec détail maximal:\n"+Stub.CreerBatimentComplet().ToString());
 
 
 
