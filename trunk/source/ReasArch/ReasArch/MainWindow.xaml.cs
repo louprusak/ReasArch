@@ -22,12 +22,12 @@ namespace ReasArch
     /// </summary>
     public partial class MainWindow : Window
     {
-        Manager manager = Stub.CreerManager();
+        Ensemble ensemble = Stub.CreerEnsemble();
 
         public MainWindow()
         {
             InitializeComponent();
-            AfficheurVilles.DataContext = manager;
+            AfficheurVilles.DataContext = ensemble;
             
         }
 

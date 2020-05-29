@@ -11,9 +11,9 @@ namespace Data
 {
     public class Stub
     {
-        public static Manager CreerManager()
+        public static Ensemble CreerEnsemble()
         {
-            Manager manager = new Manager();
+            Ensemble manager = new Ensemble();
             manager.AjouterVille("Clermont-Ferrand", "img/icone_barcelone.png");
             manager.AjouterVille("Lyon", "img/icone_londres.png");
             manager.AjouterVille("Paris", "img/icone_paris.png");
