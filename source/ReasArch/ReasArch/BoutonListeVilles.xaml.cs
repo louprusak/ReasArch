@@ -20,7 +20,7 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeVilles : UserControl
     {
-        Manager manager = Stub.CreerManager();
+        Ensemble ensemble = Stub.CreerEnsemble();
 
         public BoutonListeVilles()
         {
