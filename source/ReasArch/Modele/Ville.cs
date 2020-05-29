@@ -7,23 +7,36 @@ namespace Modele
     public class Ville
     {  
         public string Nom { get; set; } // nom de la ville 
+        public string Imagevignette { get; set; }// Image de la vignette de la ville
         public List<Batiment> Listebatiments { get; private set; } // liste des batiments contenuent dans la ville
 
         //-----------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
         /// <summary>
-        /// Constructeur de la class Ville
+        /// Constructeur de la class Ville sans l'image
         /// </summary>
-        public Ville (string nom)
+        public Ville(string nom)
         {
-            if(!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
+            if (!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
             {
                 Nom = nom;
                 Listebatiments = new List<Batiment>();
             }
-            
         }
+
+        /// <summary>
+        /// Constructeur de la class Ville avec l'image
+        /// </summary>
+        public Ville (string nom, string imagevignette)
+        {
+            if(!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
+            {
+                Nom = nom;
+                Imagevignette = imagevignette;
+                Listebatiments = new List<Batiment>();
+            }
+         }
 
         //-----------------------------------------------------------------------------------------------------------//
         //METHODES

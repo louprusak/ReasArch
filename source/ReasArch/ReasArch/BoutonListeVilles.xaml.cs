@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,16 +20,19 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeVilles : UserControl
     {
+        Manager manager = Stub.CreerManager();
+
         public BoutonListeVilles()
         {
             InitializeComponent();
+//            AfficheurVignetteVille.DataContext = manager.Listevilles;
         }
 
         public System.Windows.Media.ImageSource Source
         {
             set
             {
-                IMGVille.Source = value;
+               // IMGVille.ImageSource = value;
             }
         }
 
@@ -35,7 +40,7 @@ namespace ReasArch
         {
             set
             {
-                TBListeVille.Text = value;
+               // TBListeVille.Text = value;
             }
         }
     }
