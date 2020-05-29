@@ -22,19 +22,19 @@
         </Style>
     </UserControl.Resources>
     
-    <Button Cursor="Hand" Click="Nouvelle_Ville">
-        <StackPanel>
-            <Image x:Name="IMGVille">
-                <Image.BitmapEffect>
-                    <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0" Softness=".9"/>
-                </Image.BitmapEffect>
-            </Image>
-            <TextBlock x:Name="TBListeVille">
+    <Button Cursor="Hand">
+        <StackPanel Name="AfficheurVignetteVille">
+            <Ellipse Width="90" Height="90" StrokeThickness="2" Stroke="Black">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding Imagevignette}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding Nom}">
                 <TextBlock.BitmapEffect>
                     <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
                 </TextBlock.BitmapEffect>
             </TextBlock>
         </StackPanel>
     </Button>
-    
+     
 </UserControl>

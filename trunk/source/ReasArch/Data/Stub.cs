@@ -14,9 +14,9 @@ namespace Data
         public static Manager CreerManager()
         {
             Manager manager = new Manager();
-            manager.AjouterVille("Clermont-Ferrand");
-            manager.AjouterVille("Lyon");
-            manager.AjouterVille("Paris");
+            manager.AjouterVille("Clermont-Ferrand", "img/icone_barcelone.png");
+            manager.AjouterVille("Lyon", "img/icone_londres.png");
+            manager.AjouterVille("Paris", "img/icone_paris.png");
 
             manager.AjouterBatimentSimple("Clermont-Ferrand", "Cathédrale", "France", "Clermont-Ferrand", "Description");
             manager.AjouterBatimentSimple("Clermont-Ferrand", "Cathédrale", "France", "Clermont-Ferrand", "Description");

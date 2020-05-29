@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Modele;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,13 @@ namespace ReasArch
     /// </summary>
     public partial class MainWindow : Window
     {
+        Manager manager = Stub.CreerManager();
+
         public MainWindow()
         {
             InitializeComponent();
+            AfficheurVilles.DataContext = manager;
+            
         }
 
         private void Nouveau_Batiment(object sender, RoutedEventArgs e)
