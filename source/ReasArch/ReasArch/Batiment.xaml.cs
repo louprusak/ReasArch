@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,28 +19,16 @@ namespace ReasArch
     /// </summary>
     public partial class Batiment : UserControl
     {
+        Modele.Batiment batiment = Stub.CreerBatimentComplet();
+
         public Batiment()
         {
             InitializeComponent();
+            NomBat.DataContext = batiment;
+            DesBat.DataContext = batiment;
         }
 
-        public Batiment(System.Windows.Media.ImageSource image0, 
-            System.Windows.Media.ImageSource image1,
-            System.Windows.Media.ImageSource image2,
-            System.Windows.Media.ImageSource image3,
-            string nombat,
-            string desbat)
-        {
-            InitializeComponent();
-            IMG0 = image0;
-            IMG1 = image1;
-            IMG2 = image2;
-            IMG3 = image3;
-            Nom = nombat;
-            Des = desbat;
-        }
-
-        public System.Windows.Media.ImageSource IMG0
+        /*public System.Windows.Media.ImageSource IMG0
         {
             set
             {
@@ -80,6 +69,6 @@ namespace ReasArch
             {
                 TBDesBat.Text = value;
             }
-        }
+        }*/
     }
 }
