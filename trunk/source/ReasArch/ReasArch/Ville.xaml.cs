@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +20,12 @@ namespace ReasArch
     /// </summary>
     public partial class Ville : UserControl
     {
+        Modele.Ville ville = Stub.CreerVille();
+
         public Ville()
         {
             InitializeComponent();
+            NomVille.DataContext = ville;
         }
     }
 }

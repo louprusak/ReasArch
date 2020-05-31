@@ -34,7 +34,7 @@
             <Button>
                 <Image Source="img/icone_retour_blanc.png"/>
             </Button>
-            <TextBlock Grid.Column="2" Text="New York City" Foreground="White" FontSize="35" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Name="NomVille" Text="{Binding Nom}" Foreground="White" FontSize="35" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
             <Button Grid.Column="3">
                 <Image Source="img/icone_ajouter_blanc.png"/>
             </Button>

@@ -13,30 +13,30 @@ namespace Data
     {
         public static Ensemble CreerEnsemble()
         {
-            Ensemble manager = new Ensemble();
-            manager.AjouterVille("San Francisco", "img/icone_sanfrancisco.png");
-            manager.AjouterVille("New York", "img/icone_newyork.png");
-            manager.AjouterVille("Paris", "img/icone_paris.png");
+            Ensemble test = new Ensemble();
+            test.AjouterVille("San Francisco", "img/san francisco.jpg");
+            test.AjouterVille("New York", "img/icone_newyork.png");
+            test.AjouterVille("Paris", "img/icone_paris.png");
 
-            manager.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
-            manager.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
-            manager.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
-            manager.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
-            manager.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description");
 
-            manager.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
-            manager.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
-            manager.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
-            manager.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
-            manager.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description");
 
-            manager.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
-            manager.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
-            manager.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
-            manager.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
-            manager.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description");
 
-            return manager;
+            return test;
         }
 
         public static Ville CreerVille()
