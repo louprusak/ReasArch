@@ -27,6 +27,14 @@ namespace ReasArch
             AfficheurBatiment.DataContext = batiment;
         }
 
+        private void Modif(object sender, RoutedEventArgs e)
+        {
+            Window modif = new AjoutModifBatiment();
+            modif.ShowDialog();
+        }
+
+
+
         /*public System.Windows.Media.ImageSource IMG0
         {
             set

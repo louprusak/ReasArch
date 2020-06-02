@@ -83,7 +83,7 @@
                         <TextBlock Text="Retour"/>
                     </WrapPanel>
                 </Button>
-                <Button Grid.Column="1">
+                <Button Grid.Column="1" Click="Modif">
                     <WrapPanel>
                         <Image Source="img/icone_modif_noir.png" Width="20"/>
                         <TextBlock Text="Modifier"/>
