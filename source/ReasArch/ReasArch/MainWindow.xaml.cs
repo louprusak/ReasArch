@@ -42,14 +42,12 @@ namespace ReasArch
             fenetre.Content = new Ville();
         }
 
-        private void Ajout_Modif_Batiment(object sender, RoutedEventArgs e)
+        private void Ajout_Ville(object sender, RoutedEventArgs e)
         {
-            fenetre.Content = new BatimentUtils();
+            Window nouvelle_ville = new AjoutModifVille();
+            nouvelle_ville.ShowDialog();
         }
 
-        private void Ajout_Modif_Ville(object sender, RoutedEventArgs e)
-        {
-            fenetre.Content = new VilleUtils();
-        }
+
     }
 }

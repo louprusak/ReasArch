@@ -36,9 +36,6 @@ namespace ReasArch
             modifierWindow.ShowDialog();
         }
 
-        private void (object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
