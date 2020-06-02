@@ -11,7 +11,7 @@ namespace Modele
         public string Pays { get; set; } = "non spécifié"; //Pays dans lequel se trouve le batiment
         public string Ville { get; set; } = "non spécifié";//Ville dans laquelle se trouve le batiment
         public string Quartier { get; set; } = "non spécifié";//Quartier dans lequel se trouve la batiment
-        public string Adresse { get;  set; } = "non spécifié";//Adresse du batiment
+        public string Adresse { get; set; } = "non spécifié";//Adresse du batiment
         public string Architecte { get; set; } = "non spécifié";//Architecte du batiment
         public string Ingenieur { get; set; } = "non spécifié";//INgénieur du batiment
         public string Style { get; set; } = "non spécifié";//Style du batiment
@@ -21,6 +21,10 @@ namespace Modele
         public string Construction { get; set; } = "non spécifié";//Années de construction du batiment
         public string Ouverture { get; set; } = "non spécifié";//Année d'ouverture du batiment
         public string Description { get; set; } = "aucune description";//Description autre du batiment
+        public string ImagePrincipale { get; set; } = null;//Image Principale du batiment
+        public string ImageArchitecte { get; set; } = null;//Image de l'architecte du batiment
+        public string ImagePlan { get; set; } = null;//Image du plan du batiment
+        public string ImageInterieur { get; set; } = null;//Image de l'intérieur du batiment
 
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
@@ -36,7 +40,7 @@ namespace Modele
         /// <summary>
         /// Constructeur de la class Batiment
         /// </summary>
-        public Batiment(string nom, string pays, string ville, string description)
+        public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
             if (!String.IsNullOrEmpty(nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(ville) | String.IsNullOrEmpty(description))
             {
@@ -44,6 +48,10 @@ namespace Modele
                 Pays = pays;
                 Ville = ville;
                 Description = description;
+                ImagePrincipale = imageprincipale;
+                ImageArchitecte = imagearchitecte;
+                ImagePlan = imageplan;
+                ImageInterieur = imageinterieur;
             }
         }
 
@@ -52,7 +60,8 @@ namespace Modele
         /// </summary>
         public Batiment(string nom, string pays, string ville, string quartier, string adresse, string architecte,
             string ingenieur, string style, string materiaux, string hauteur, string nbetages, string construction,
-            string ouverture, string description) : this(nom, pays, ville, description)
+            string ouverture, string description, string imageprincipale, string imagearchitecte, 
+            string imageplan, string imageinterieur) : this(nom, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur)
         {
             Quartier = quartier;
             Adresse = adresse;
@@ -75,12 +84,14 @@ namespace Modele
         /// <returns>Retourne true si la modification a bien eu lieu sinon retourne false</returns>
         public bool ModifierBatiment(string nvnom, string pays, string ville, string quartier,
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
-            string nbetages, string construction, string ouverture, string description)
+            string nbetages, string construction, string ouverture, string description, string imageprincipale,
+            string imagearchitecte, string imageplan, string imageinterieur)
         {
             Nom = nvnom; Pays = pays; Ville = ville;  Quartier = quartier; Adresse = adresse;
             Architecte = architecte; Ingenieur = ingenieur; Style = style; Materiaux = materiaux;
             Hauteur = hauteur; NbEtages = nbetages; Construction = construction;
-            Ouverture = ouverture; Description = description;
+            Ouverture = ouverture; Description = description; ImagePrincipale = imageprincipale;
+            ImageArchitecte = imagearchitecte; ImagePlan = imageplan; ImageInterieur = imageinterieur;
 
             if(Nom == nvnom && Pays == pays && Ville == ville && Quartier == quartier && Adresse == adresse &&
             Architecte == architecte && Ingenieur == ingenieur && Style == style && Materiaux == materiaux &&

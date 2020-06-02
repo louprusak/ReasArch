@@ -23,6 +23,7 @@ namespace ReasArch
     public partial class MainWindow : Window
     {
         Ensemble ensemble = Stub.CreerEnsemble();
+        
 
         public MainWindow()
         {
