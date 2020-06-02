@@ -25,6 +25,7 @@
                     <RowDefinition Height="5*"/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition Height="0.5*"/>
                 </Grid.RowDefinitions>
                 <Image Source="img/fond.jpg" Stretch="UniformToFill"/>
                 <TextBlock Grid.Row="1" Text="Bienvenue sur ReasArch !" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="30" FontWeight="Bold">
@@ -37,6 +38,12 @@
                         <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
                     </TextBlock.BitmapEffect>
                 </TextBlock>
+                <WrapPanel Grid.Row="3">
+                    <TextBlock Text="Ville" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" Margin="4"/>
+                    <Button>
+                        <Image Source="img/icone_ajouter_blanc.png"/>
+                    </Button>
+                </WrapPanel>
             </Grid>
         </ContentControl>
     </DockPanel>

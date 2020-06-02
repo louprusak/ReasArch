@@ -10,10 +10,10 @@
     <Compile Update="AjoutModifBatiment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Batiment.xaml.cs">
+    <Compile Update="AjoutModifVille.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="BatimentUtils.xaml.cs">
+    <Compile Update="Batiment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="BoutonListeBatiments.xaml.cs">
@@ -25,16 +25,10 @@
     <Compile Update="Label+TextBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="TestUC.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="TextBlock_Bouton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Ville.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="VilleUtils.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -42,10 +36,10 @@
     <Page Update="AjoutModifBatiment.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Batiment.xaml">
+    <Page Update="AjoutModifVille.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="BatimentUtils.xaml">
+    <Page Update="Batiment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BoutonListeBatiments.xaml">
@@ -60,16 +54,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="TestUC.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="TextBlock_Bouton.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Ville.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="VilleUtils.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
