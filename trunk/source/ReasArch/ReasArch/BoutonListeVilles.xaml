@@ -26,7 +26,7 @@
         <StackPanel Name="AfficheurVignetteVille">
             <Ellipse Width="90" Height="90" StrokeThickness="2" Stroke="Black">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="{Binding Imagevignette}"/>
+                    <ImageBrush ImageSource="{Binding ImageVignette}"/>
                 </Ellipse.Fill>
             </Ellipse>
             <TextBlock Text="{Binding Nom}">

@@ -7,7 +7,8 @@ namespace Modele
     public class Ville
     {  
         public string Nom { get; set; } // nom de la ville 
-        public string Imagevignette { get; set; }// Image de la vignette de la ville
+        public string ImageVignette { get; set; } = null; // Image de la vignette de la ville
+        public string ImagePanorama { get; set; } = null; // Image panoramique de la ville
         public List<Batiment> Listebatiments { get; private set; } // liste des batiments contenuent dans la ville
 
         //-----------------------------------------------------------------------------------------------------------//
@@ -28,12 +29,13 @@ namespace Modele
         /// <summary>
         /// Constructeur de la class Ville avec l'image
         /// </summary>
-        public Ville (string nom, string imagevignette)
+        public Ville (string nom, string imagevignette, string imagepanorama)
         {
             if(!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
             {
                 Nom = nom;
-                Imagevignette = imagevignette;
+                ImageVignette = imagevignette;
+                ImagePanorama = imagepanorama;
                 Listebatiments = new List<Batiment>();
             }
          }
@@ -45,9 +47,10 @@ namespace Modele
         /// Ajouter un batiment avec un détail simple à cette ville
         /// </summary>
         /// <returns>Retourne true si le batiment a bien été ajouté à la liste sinon retourne false</returns>
-        public bool AjouterBatimentSimple(string nom, string pays, string ville, string description)
+        public bool AjouterBatimentSimple(string nom, string pays, string ville, string description, string imageprincipale,
+            string imagearchitecte, string imageplan, string imageinterieur)
         {
-            Batiment batiment = new Batiment(nom, pays, ville, description);
+            Batiment batiment = new Batiment(nom, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             Listebatiments.Add(batiment);
             if(Listebatiments.Contains(batiment)) { return true; }
             else { return false; }
@@ -59,10 +62,10 @@ namespace Modele
         /// <returns>Retourne true si le batiment a bien été ajouté à la liste sinon retourne false</returns>
         public bool AjouterBatimentComplet(string nom, string pays, string ville, string quartier, string adresse,
             string architecte, string ingenieur, string style, string materiaux, string hauteur, string nbetages,
-            string construction, string ouverture, string description)
+            string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
             Batiment batiment = new Batiment(nom, pays, ville, quartier, adresse, architecte, ingenieur, style, materiaux,
-                hauteur, nbetages, construction, ouverture, description);
+                hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             Listebatiments.Add(batiment);
             if (Listebatiments.Contains(batiment)) { return true; }
             else { return false; }
@@ -97,11 +100,11 @@ namespace Modele
         /// <returns>Retourne true si le batiment à bien été modifié sinon retourne false</returns>
         public bool ModifierBatiment(string nombat, string nvnom, string pays, string ville, string quartier,
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
-            string nbetages, string construction, string ouverture, string description)
+            string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
             int index = RechercherBatiment(nombat);
             bool res = Listebatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
-                ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description);
+                ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }
 

@@ -20,12 +20,25 @@ namespace ReasArch
     /// </summary>
     public partial class Ville : UserControl
     {
+       
         Modele.Ville ville = Stub.CreerVille();
 
         public Ville()
         {
             InitializeComponent();
-            NomVille.DataContext = ville;
+            Panorama.DataContext = ville;
+            EnTeteVille.DataContext = ville;
+        }
+
+        private void Ajouter_Batiment(object sender, RoutedEventArgs e)
+        {
+            Window modifierWindow = new AjoutModifBatiment();
+            modifierWindow.ShowDialog();
+        }
+
+        private void (object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

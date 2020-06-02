@@ -24,8 +24,7 @@ namespace ReasArch
         public Batiment()
         {
             InitializeComponent();
-            NomBat.DataContext = batiment;
-            DesBat.DataContext = batiment;
+            AfficheurBatiment.DataContext = batiment;
         }
 
         /*public System.Windows.Media.ImageSource IMG0
