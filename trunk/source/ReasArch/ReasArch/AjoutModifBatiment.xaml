@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReasArch"
         mc:Ignorable="d"
-        Title="AjoutModifBatiment" Height="450" Width="800">
+        Title="AjoutModifBatiment" Height="800" Width="800">
     <DockPanel Background="#757575">
         <TextBlock Background="Black" Text="Ajouter / Modifier un Bâtiment" DockPanel.Dock="Top" FontSize="30" Foreground="White" FontWeight="Bold" TextAlignment="Center" Padding="10"/>
         <ScrollViewer>
