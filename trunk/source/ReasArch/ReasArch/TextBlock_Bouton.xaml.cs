@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -29,6 +30,13 @@ namespace ReasArch
             {
                 MonTextBlock.Text = value;
             }
+        }
+
+        private void Choisir_Image(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            dialog.ShowDialog();
         }
     }
 }

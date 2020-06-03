@@ -36,6 +36,11 @@ namespace ReasArch
             modifierWindow.ShowDialog();
         }
 
-        
+        private void Supprimer_Ville(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer cette ville ?", "Suppression de la ville", MessageBoxButton.OKCancel);
+
+
+        }
     }
 }

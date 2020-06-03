@@ -38,7 +38,7 @@
 			<Button Grid.Column="3" Click="Ajouter_Batiment">
 				<Image Source="img/icone_ajouter_blanc.png"/>
 			</Button>
-			<Button Grid.Column="4">
+			<Button Grid.Column="4" Click="Supprimer_Ville">
 				<Image Source="img/icone_supprimer_blanc.png"/>
 			</Button>
         </Grid>

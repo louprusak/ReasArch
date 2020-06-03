@@ -28,7 +28,7 @@
             </Style>
         </Grid.Resources>
         <TextBlock x:Name="MonTextBlock"/>
-        <Button Grid.Column="1">
+        <Button Grid.Column="1" Click="Choisir_Image">
             <TextBlock Text="Choisir">
                 <TextBlock.BitmapEffect>
                     <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0" Softness=".9"/>
