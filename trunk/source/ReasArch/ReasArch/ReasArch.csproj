@@ -39,18 +39,22 @@
     <None Remove="img\map empire state.png" />
     <None Remove="img\one world trade center.jpg" />
     <None Remove="img\panoramanew york.jpg" />
+    <None Remove="img\panorama_londres.jpg" />
+    <None Remove="img\panorama_newyork.jpg" />
+    <None Remove="img\panorama_paris.jpg" />
+    <None Remove="img\panorama_sanfrancisco.jpg" />
     <None Remove="img\Paris.jpg" />
     <None Remove="img\plan empire state.jpg" />
     <None Remove="img\san francisco.jpg" />
     <None Remove="img\statue_liberte.jpg" />
     <None Remove="img\stickers-skyline-new-york.jpg.jpg" />
+    <None Remove="img\vignette_londres.jpg" />
+    <None Remove="img\vignette_paris.jpg" />
+    <None Remove="img\vignette_sanfrancisco.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="img\architecte empire state.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="img\avis.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\barcelone.jpg">
@@ -119,16 +123,19 @@
     <Content Include="img\logo reasarch noir.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="img\londrezs.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="img\map empire state.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="img\one world trade center.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="img\panoramanew york.jpg">
+    <Content Include="img\panorama_londres.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\panorama_newyork.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\panorama_paris.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\panorama_sanfrancisco.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\Paris.jpg">
@@ -141,6 +148,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\statue_liberte.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\vignette_londres.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\vignette_paris.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\vignette_sanfrancisco.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

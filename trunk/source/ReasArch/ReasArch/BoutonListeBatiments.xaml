@@ -35,7 +35,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image x:Name="Image" Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="190">
+        <Image x:Name="Image" Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxWidth="200">
             <Image.BitmapEffect>
                 <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
             </Image.BitmapEffect>
