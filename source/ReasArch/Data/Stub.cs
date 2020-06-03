@@ -14,9 +14,10 @@ namespace Data
         public static Ensemble CreerEnsemble()
         {
             Ensemble test = new Ensemble();
-            test.AjouterVille("San Francisco", "img/san francisco.jpg", "img/panoramanew york.jpg");
-            test.AjouterVille("New York", "img/icone_newyork.png", "img/panoramanew york.jpg");
-            test.AjouterVille("Paris", "img/icone_paris.png", "img/panoramanew york.jpg");
+            test.AjouterVille("San Francisco", "img/vignette_sanfrancisco.jpg", "img/panorama_sanfrancisco.jpg");
+            test.AjouterVille("New York", "img/statue_liberte.jpg", "img/panorama_newyork.jpg");
+            test.AjouterVille("Paris", "img/vignette_paris.jpg", "img/panorama_paris.jpg");
+            test.AjouterVille("Londres", "img/vignette_londres.jpg", "img/panorama_londres.jpg");
 
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
