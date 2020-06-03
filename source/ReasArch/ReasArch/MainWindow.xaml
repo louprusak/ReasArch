@@ -47,7 +47,7 @@
                     </TextBlock>
                 </StackPanel>
                 
-                <Grid Grid.Row="3" Background="Black">
+                <Grid Grid.Row="3" Background="#757575">
                     <WrapPanel HorizontalAlignment="Center">
                         <TextBlock Text="Ville" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="4"/>
                         <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Ajout_Ville">
