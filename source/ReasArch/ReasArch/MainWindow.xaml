@@ -14,12 +14,12 @@
         <ListBox DockPanel.Dock="Left" Background="#424242" BorderBrush="#424242" Name="AfficheurVilles" ItemsSource="{Binding ListeVilles}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <local:BoutonListeVilles/>
+                    <local:BoutonListeVilles MouseUp="BoutonListeVilles_MouseUp"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
           
         </ListBox>
-        <ContentControl x:Name="fenetre">
+        <ContentControl Name="fenetre">
             <Grid Background="#757575">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
