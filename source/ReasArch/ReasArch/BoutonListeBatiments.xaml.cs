@@ -38,5 +38,16 @@ namespace ReasArch
                 Titre.Text = value;
             }
         }
+
+        private void Modifier_Batiment(object sender, RoutedEventArgs e)
+        {
+            Window modif = new AjoutModifBatiment();
+            modif.ShowDialog();
+        }
+
+        private void Supprimer_Batiment(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer ce bâtiment ?", "Suppression du bâtiment", MessageBoxButton.OKCancel);
+        }
     }
 }
