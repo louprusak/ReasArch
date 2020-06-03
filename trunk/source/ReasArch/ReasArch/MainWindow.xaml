@@ -9,8 +9,6 @@
         Title="MainWindow" Height="450" Width="800">
 
     <DockPanel>
-        <Button Content="Ville" Click="Nouvelle_Ville"/>
-        <Button Content="Ville" Click="Nouveau_Batiment"/>
         <ListBox DockPanel.Dock="Left" Background="#424242" BorderBrush="#424242" Name="AfficheurVilles" ItemsSource="{Binding ListeVilles}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
