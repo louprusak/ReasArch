@@ -32,16 +32,6 @@ namespace ReasArch
             
         }
 
-        private void Nouveau_Batiment(object sender, RoutedEventArgs e)
-        {
-            fenetre.Content = new Batiment();
-        }
-
-        private void Nouvelle_Ville(object sender, RoutedEventArgs e)
-        {
-            fenetre.Content = new Ville();
-        }
-
         private void Ajout_Ville(object sender, RoutedEventArgs e)
         {
             Window nouvelle_ville = new AjoutModifVille();

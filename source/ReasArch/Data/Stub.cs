@@ -18,23 +18,23 @@ namespace Data
             test.AjouterVille("New York", "img/icone_newyork.png", "img/panoramanew york.jpg");
             test.AjouterVille("Paris", "img/icone_paris.png", "img/panoramanew york.jpg");
 
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg","img/avis.png","img/plan empire state.jpg","img/icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
 
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description","","","","");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description","","","","");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description","","","","");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description","","","","");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description","","","","");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
 
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
 
             return test;
         }
