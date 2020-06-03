@@ -48,6 +48,11 @@ namespace ReasArch
             nouvelle_ville.ShowDialog();
         }
 
-
+        private void BoutonListeVilles_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BoutonListeVilles bouton = sender as BoutonListeVilles;
+            Modele.Ville ville = bouton.DataContext as Modele.Ville;
+            fenetre.Content = new Ville(ville);
+        }
     }
 }
