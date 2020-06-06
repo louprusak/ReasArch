@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,6 +18,8 @@ namespace ReasArch
     /// </summary>
     public partial class AjoutModifBatiment : Window
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public AjoutModifBatiment()
         {
             InitializeComponent();

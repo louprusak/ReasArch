@@ -11,9 +11,9 @@ namespace Data
 {
     public class Stub
     {
-        public static Ensemble CreerEnsemble()
+        public static Monde CreerEnsemble()
         {
-            Ensemble test = new Ensemble();
+            Monde test = new Monde();
             test.AjouterVille("San Francisco", "img/vignette_sanfrancisco.jpg", "img/panorama_sanfrancisco.jpg");
             test.AjouterVille("New York", "img/statue_liberte.jpg", "img/panorama_newyork.jpg");
             test.AjouterVille("Paris", "img/vignette_paris.jpg", "img/panorama_paris.jpg");

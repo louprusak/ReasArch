@@ -22,14 +22,13 @@ namespace ReasArch
     /// </summary>
     public partial class MainWindow : Window
     {
-        Ensemble ensemble = Stub.CreerEnsemble();
-        
+        public Manager manager => (App.Current as App).LeManager;
+
 
         public MainWindow()
         {
             InitializeComponent();
-            AfficheurVilles.DataContext = ensemble;
-            
+            AfficheurVilles.DataContext = manager;
         }
 
         private void Ajout_Ville(object sender, RoutedEventArgs e)
@@ -44,5 +43,7 @@ namespace ReasArch
             Modele.Ville ville = bouton.DataContext as Modele.Ville;
             fenetre.Content = new Ville(ville);
         }
+
+       
     }
 }

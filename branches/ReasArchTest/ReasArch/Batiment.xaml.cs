@@ -1,4 +1,5 @@
 ﻿using Data;
+using Modele;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,12 +20,11 @@ namespace ReasArch
     /// </summary>
     public partial class Batiment : UserControl
     {
-        Modele.Batiment batiment = Stub.CreerBatimentComplet();
+        public Manager manager => (App.Current as App).LeManager;
 
         public Batiment()
         {
             InitializeComponent();
-            AfficheurBatiment.DataContext = batiment;
         }
 
         private void Modif(object sender, RoutedEventArgs e)

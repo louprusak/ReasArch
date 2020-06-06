@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +19,8 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeBatiments : UserControl
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public BoutonListeBatiments()
         {
             InitializeComponent();

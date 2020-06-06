@@ -21,6 +21,8 @@ namespace ReasArch
     public partial class Ville : UserControl
     {
 
+        public Manager manager => (App.Current as App).LeManager;
+
         Modele.Ville ville;
 
         public Ville()

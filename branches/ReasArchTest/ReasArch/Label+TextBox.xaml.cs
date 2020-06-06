@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +19,8 @@ namespace ReasArch
     /// </summary>
     public partial class Label_TextBox : UserControl
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public Label_TextBox()
         {
             InitializeComponent();

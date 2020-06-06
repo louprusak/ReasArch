@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,11 @@ namespace ReasArch
     /// </summary>
     public partial class AjoutModifVille : Window
     {
+        public Manager manager => (App.Current as App).LeManager;
         public AjoutModifVille()
         {
             InitializeComponent();
+            DataContext = manager.VilleSelectionnee;
         }
     }
 }
