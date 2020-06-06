@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Modele
 {
-    public class Ensemble
+    public class Monde
     {
         public List<Ville> ListeVilles { get; private set; } //liste des villes contenues dans l'application
 
@@ -12,9 +12,9 @@ namespace Modele
         //CONSTRUCTEURS
 
         /// <summary>
-        /// Constructeur de la classe Ensemble
+        /// Constructeur de la classe Monde
         /// </summary>
-        public Ensemble()
+        public Monde()
         {
             ListeVilles = new List<Ville>();
         }
