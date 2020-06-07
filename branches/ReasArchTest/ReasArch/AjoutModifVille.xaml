@@ -19,7 +19,27 @@
                     <local:TextBlock_Bouton Grid.Column="1" Texte="Image Panorama Ville"/>
                 </Grid>
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
-                <local:Label_TextBox Texte="Nom de la ville"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                    </Grid.Resources>
+                    <TextBlock Text="Nom de la Ville"/>
+                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
                 <Button Background="DarkGreen" Margin="10" HorizontalAlignment="Center">
                     <TextBlock Text="Sauvegarder" Foreground="White" FontSize="20" Padding="10"/>

@@ -26,7 +26,7 @@ namespace ReasArch
             InitializeComponent();
         }
 
-        public System.Windows.Media.ImageSource Source
+        /*public System.Windows.Media.ImageSource Source
         {
             set
             {
@@ -40,7 +40,7 @@ namespace ReasArch
             {
                 Titre.Text = value;
             }
-        }
+        }*/
 
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {

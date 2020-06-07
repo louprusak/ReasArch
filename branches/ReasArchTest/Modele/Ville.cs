@@ -9,7 +9,7 @@ namespace Modele
         public string Nom { get; set; } // nom de la ville 
         public string ImageVignette { get; set; } = null; // Image de la vignette de la ville
         public string ImagePanorama { get; set; } = null; // Image panoramique de la ville
-        public List<Batiment> Listebatiments { get; private set; } // liste des batiments contenuent dans la ville
+        public List<Batiment> ListeBatiments { get; private set; } // liste des batiments contenuent dans la ville
 
         //-----------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
@@ -22,7 +22,7 @@ namespace Modele
             if (!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
             {
                 Nom = nom;
-                Listebatiments = new List<Batiment>();
+                ListeBatiments = new List<Batiment>();
             }
         }
 
@@ -36,7 +36,7 @@ namespace Modele
                 Nom = nom;
                 ImageVignette = imagevignette;
                 ImagePanorama = imagepanorama;
-                Listebatiments = new List<Batiment>();
+                ListeBatiments = new List<Batiment>();
             }
          }
 
@@ -51,8 +51,8 @@ namespace Modele
             string imagearchitecte, string imageplan, string imageinterieur)
         {
             Batiment batiment = new Batiment(nom, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
-            Listebatiments.Add(batiment);
-            if(Listebatiments.Contains(batiment)) { return true; }
+            ListeBatiments.Add(batiment);
+            if(ListeBatiments.Contains(batiment)) { return true; }
             else { return false; }
         }
 
@@ -66,8 +66,8 @@ namespace Modele
         {
             Batiment batiment = new Batiment(nom, pays, ville, quartier, adresse, architecte, ingenieur, style, materiaux,
                 hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
-            Listebatiments.Add(batiment);
-            if (Listebatiments.Contains(batiment)) { return true; }
+            ListeBatiments.Add(batiment);
+            if (ListeBatiments.Contains(batiment)) { return true; }
             else { return false; }
         }
 
@@ -78,8 +78,8 @@ namespace Modele
         public bool SupprimerBatiment(string nom)
         {
             Batiment batiment = new Batiment(nom);
-            Listebatiments.Remove(batiment);
-            if (Listebatiments.Contains(batiment)){ return false; }
+            ListeBatiments.Remove(batiment);
+            if (ListeBatiments.Contains(batiment)){ return false; }
             else return true;
         }
 
@@ -90,7 +90,7 @@ namespace Modele
         public int RechercherBatiment(string nombat)
         {
             Batiment batiment = new Batiment(nombat);
-            int index = Listebatiments.IndexOf(batiment);
+            int index = ListeBatiments.IndexOf(batiment);
             return index;
         }
 
@@ -103,7 +103,7 @@ namespace Modele
             string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
             int index = RechercherBatiment(nombat);
-            bool res = Listebatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
+            bool res = ListeBatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
                 ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }
@@ -128,7 +128,7 @@ namespace Modele
         public override string ToString()
         {
             string message = $"Description de la ville {Nom.ToUpper()} et de ses batiments :\n\n";
-            foreach(Batiment batiment in Listebatiments)
+            foreach(Batiment batiment in ListeBatiments)
             {
                 message += batiment.ToString();
             }

@@ -28,9 +28,6 @@ namespace ReasArch
         public Ville()
         {
             InitializeComponent();
-            ville = Stub.CreerVille();
-            Panorama.DataContext = ville;
-            EnTeteVille.DataContext = ville;
         }
 
         public Ville(Modele.Ville ville)
@@ -39,6 +36,7 @@ namespace ReasArch
             this.ville = ville;
             Panorama.DataContext = ville;
             EnTeteVille.DataContext = ville;
+            Afficheur_Batiments.DataContext = ville;
         }
 
         private void Ajouter_Batiment(object sender, RoutedEventArgs e)
@@ -52,6 +50,12 @@ namespace ReasArch
             MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer cette ville ?", "Suppression de la ville", MessageBoxButton.OKCancel);
 
 
+        }
+
+        private void Modifier_Ville(object sender, RoutedEventArgs e)
+        {
+            Window modifierWindow = new AjoutModifVille();
+            modifierWindow.ShowDialog();
         }
     }
 }

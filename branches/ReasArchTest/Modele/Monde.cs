@@ -99,7 +99,7 @@ namespace Modele
         public bool SupprimerBatiment (string nomville, string nombat)
         {
             Batiment batiment = new Batiment(nombat);
-            bool res = ListeVilles[RechercherVille(nomville)].Listebatiments.Remove(batiment);
+            bool res = ListeVilles[RechercherVille(nomville)].ListeBatiments.Remove(batiment);
             return res;
         }
 
