@@ -14,37 +14,37 @@ namespace Data
         public static Monde CreerEnsemble()
         {
             Monde test = new Monde();
-            test.AjouterVille("San Francisco", "img/vignette_sanfrancisco.jpg", "img/panorama_sanfrancisco.jpg");
-            test.AjouterVille("New York", "img/statue_liberte.jpg", "img/panorama_newyork.jpg");
-            test.AjouterVille("Paris", "img/vignette_paris.jpg", "img/panorama_paris.jpg");
-            test.AjouterVille("Londres", "img/vignette_londres.jpg", "img/panorama_londres.jpg");
+            test.AjouterVille("San Francisco", "vignette_sanfrancisco.jpg", "panorama_sanfrancisco.jpg");
+            test.AjouterVille("New York", "statue_liberte.jpg", "panorama_newyork.jpg");
+            test.AjouterVille("Paris", "vignette_paris.jpg", "panorama_paris.jpg");
+            test.AjouterVille("Londres", "vignette_londres.jpg", "panorama_londres.jpg");
 
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
             return test;
         }
 
         public static Ville CreerVille()
         {
-            Ville ville = new Ville("Londres", "img/londrezs.jpg", "img/statue_liberte.jpg");
-            ville.AjouterBatimentSimple("BigBen", "Angleterre", "Londres", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
-            ville.AjouterBatimentSimple("LondonEye", "Angleterre", "Londres", "Description", "img/londrezs.jpg", "img/avis.png", "img/plan empire state.jpg", "img/icone_londres.png");
+            Ville ville = new Ville("Londres", "londrezs.jpg", "statue_liberte.jpg");
+            ville.AjouterBatimentSimple("BigBen", "Angleterre", "Londres", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            ville.AjouterBatimentSimple("LondonEye", "Angleterre", "Londres", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
             return ville;
         }
@@ -64,7 +64,7 @@ namespace Data
         public static Batiment CreerBatimentComplet()
         {
             Batiment batiment = new Batiment("Tour de Pise","Italie","Pise","Pise","adresse pise", "on sait pas","pas qui c'est","vieux","pierre","haut","compte pour voir","ya longtemps",
-                "très longtemps","bah elle penche quoi ...","img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png");
+                "très longtemps","bah elle penche quoi ...","icone_newyork.png", "icone_newyork.png", "icone_newyork.png", "icone_newyork.png");
             return batiment;
         }
     }

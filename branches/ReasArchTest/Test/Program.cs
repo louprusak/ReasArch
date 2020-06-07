@@ -66,7 +66,7 @@ namespace Test
 
 
 
-            WriteLine("------------------------------------------------------------------------------------------------------------\n");
+            /*WriteLine("------------------------------------------------------------------------------------------------------------\n");
             WriteLine("\n3) Instanciation de la classe Monde:\n\n");
 
 
@@ -112,7 +112,7 @@ namespace Test
             bool supprimerville = manager.SupprimerVille("Clermont-Fd");
             WriteLine($"Test de la variable de suppression d'une ville:{supprimerville}");
             WriteLine("ToString de Monde juste après la suppression d'une ville:\n" + manager.ToString());
-            WriteLine("-    -   -   -   -   -");
+            WriteLine("-    -   -   -   -   -");*/
             
         }
     }
