@@ -22,9 +22,6 @@
     <Compile Update="BoutonListeVilles.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Label+TextBox.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="ModifierBatiment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,9 +49,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="BoutonListeVilles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Label+TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
