@@ -29,7 +29,7 @@ namespace ReasArch
 
         private void Modif(object sender, RoutedEventArgs e)
         {
-            Window modif = new AjoutModifBatiment();
+            Window modif = new ModifierBatiment();
             modif.ShowDialog();
         }
 

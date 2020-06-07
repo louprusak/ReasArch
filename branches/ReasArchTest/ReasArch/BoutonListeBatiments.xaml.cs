@@ -44,7 +44,7 @@ namespace ReasArch
 
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {
-            Window modif = new AjoutModifBatiment();
+            Window modif = new ModifierBatiment();
             modif.ShowDialog();
         }
 

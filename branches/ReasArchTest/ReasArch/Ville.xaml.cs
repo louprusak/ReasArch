@@ -41,7 +41,7 @@ namespace ReasArch
 
         private void Ajouter_Batiment(object sender, RoutedEventArgs e)
         {
-            Window modifierWindow = new AjoutModifBatiment();
+            Window modifierWindow = new AjouterBatiment();
             modifierWindow.ShowDialog();
         }
 
@@ -54,7 +54,7 @@ namespace ReasArch
 
         private void Modifier_Ville(object sender, RoutedEventArgs e)
         {
-            Window modifierWindow = new AjoutModifVille();
+            Window modifierWindow = new ModifierVille();
             modifierWindow.ShowDialog();
         }
     }

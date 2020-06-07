@@ -8,7 +8,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ReasArch
@@ -16,7 +15,7 @@ namespace ReasArch
     /// <summary>
     /// Logique d'interaction pour ModifierVille.xaml
     /// </summary>
-    public partial class ModifierVille : Page
+    public partial class ModifierVille : Window
     {
         public ModifierVille()
         {

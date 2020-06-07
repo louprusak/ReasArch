@@ -33,7 +33,7 @@ namespace ReasArch
 
         private void Ajout_Ville(object sender, RoutedEventArgs e)
         {
-            Window nouvelle_ville = new AjoutModifVille();
+            Window nouvelle_ville = new AjouterVille();
             nouvelle_ville.ShowDialog();
         }
 
