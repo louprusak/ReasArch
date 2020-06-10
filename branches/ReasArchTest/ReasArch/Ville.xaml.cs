@@ -57,5 +57,14 @@ namespace ReasArch
             Window modifierWindow = new ModifierVille();
             modifierWindow.ShowDialog();
         }
+
+        private void BoutonListeBatiments_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BoutonListeBatiments bouton = sender as BoutonListeBatiments;
+            Modele.Batiment batiment = bouton.DataContext as Modele.Batiment;
+            
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Batiment(batiment);
+        }
     }
 }

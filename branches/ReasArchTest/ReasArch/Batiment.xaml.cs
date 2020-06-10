@@ -21,10 +21,18 @@ namespace ReasArch
     public partial class Batiment : UserControl
     {
         public Manager manager => (App.Current as App).LeManager;
+        Modele.Batiment batiment;
 
         public Batiment()
         {
             InitializeComponent();
+        }
+
+        public Batiment(Modele.Batiment batiment)
+        {
+            InitializeComponent();
+            this.batiment = batiment;
+            AfficheurBatiment.DataContext = batiment;
         }
 
         private void Modif(object sender, RoutedEventArgs e)

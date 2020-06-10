@@ -12,7 +12,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <Image Source="{Binding ImagePanorama}" Name="Panorama" Stretch="UniformToFill"/>
+        <Image Source="{Binding ImagePanorama, Converter={StaticResource StringToImageConverter}}" Name="Panorama" Stretch="UniformToFill"/>
 
         <Grid Grid.Row="1" Background="Black" Name="EnTeteVille">
             <Grid.ColumnDefinitions>
@@ -50,34 +50,16 @@
             <ItemsControl Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:BoutonListeBatiments MaxWidth="800"/>
+                        <local:BoutonListeBatiments MouseUp="BoutonListeBatiments_MouseUp" Cursor="Hand"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal"/>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </ScrollViewer>
-        
-        
-        
-        <!--<ListBox Grid.Row="2" Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <local:BoutonListeBatiments />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>-->
-
-        <!--<ListView Name="Afficheur_Batiments" Grid.Row="2" ItemsSource="{Binding ListeBatiments}" Background="#757575">
-            <ListView.ItemTemplate >
-                <DataTemplate>
-                    <local:BoutonListeBatiments/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
 
     </Grid>
 
