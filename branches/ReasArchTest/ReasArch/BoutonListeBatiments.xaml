@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ReasArch"
              mc:Ignorable="d" 
-             d:DesignHeight="225" d:DesignWidth="800">
+             d:DesignHeight="225" d:DesignWidth="400">
 
     <Grid Margin="20" Background="#585858">
         <Grid.Resources>
@@ -35,7 +35,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxWidth="200" Source="{Binding ImagePrincipale}">
+        <Image Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxWidth="200" Source="C:\Users\Loup\Desktop\Projet_CSHARP\branches\ReasArchTest\ReasArchBin\images\vignette_sanfrancisco.jpg">
             <Image.BitmapEffect>
                 <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
             </Image.BitmapEffect>

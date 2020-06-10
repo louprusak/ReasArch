@@ -31,11 +31,11 @@ namespace Data
             test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
             test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour Effeil", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
 
             return test;
         }

@@ -46,13 +46,30 @@
             </Button>
         </Grid>
 
-        <ListBox Grid.Row="2" Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
+        <ScrollViewer Grid.Row="2">
+            <ItemsControl Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:BoutonListeBatiments MaxWidth="800"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+        
+        
+        
+        <!--<ListBox Grid.Row="2" Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:BoutonListeBatiments />
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>
+        </ListBox>-->
 
         <!--<ListView Name="Afficheur_Batiments" Grid.Row="2" ItemsSource="{Binding ListeBatiments}" Background="#757575">
             <ListView.ItemTemplate >
