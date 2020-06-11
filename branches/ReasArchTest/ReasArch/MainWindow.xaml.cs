@@ -44,6 +44,9 @@ namespace ReasArch
             fenetre.Content = new Ville(ville);
         }
 
-       
+        private void AfficheurVilles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            manager.VilleSelectionnee = e.AddedItems[0] as Modele.Ville;
+        }
     }
 }

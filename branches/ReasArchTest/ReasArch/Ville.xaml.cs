@@ -66,5 +66,16 @@ namespace ReasArch
             MainWindow main = Window.GetWindow(this) as MainWindow;
             main.fenetre.Content = new Batiment(batiment);
         }
+
+        private void Afficheur_Batiments_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            manager.BatimentSelectionne = e.AddedItems[0] as Modele.Batiment;
+        }
+
+        private void Retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Accueil();
+        }
     }
 }

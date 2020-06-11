@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,22 @@ namespace ReasArch
     /// </summary>
     public partial class ModifierVille : Window
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public ModifierVille()
         {
             InitializeComponent();
+            DataContext = manager.VilleSelectionnee;
+        }
+
+        private void Sauvegarder(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Annuler(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

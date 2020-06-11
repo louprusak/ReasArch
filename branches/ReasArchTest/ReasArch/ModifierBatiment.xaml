@@ -64,43 +64,43 @@
                     <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="1" Text="Pays"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Pays, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="2" Text="Ville"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Ville, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="3" Text="Quartier"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Quartier, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="4" Text="Adresse"/>
-                    <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Adresse, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="5" Text="Architecte"/>
-                    <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Architecte, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="6" Text="Ingénieur"/>
-                    <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="{Binding Ingenieur, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="7" Text="Style"/>
-                    <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="{Binding Style, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="8" Text="Matériaux"/>
-                    <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="{Binding Materiaux, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="9" Text="Hauteur"/>
-                    <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Text="{Binding Hauteur, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="10" Text="Nombre d'étages"/>
-                    <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="{Binding NombreEtages, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="11" Text="Année de construction"/>
-                    <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Text="{Binding Construction, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="12" Text="Année d'ouverture"/>
-                    <TextBox Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" Text="{Binding Ouverture, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="13" Text="Description"/>
-                    <TextBox Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
 
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>

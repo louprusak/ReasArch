@@ -41,10 +41,10 @@
                 </Grid>
 
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
-                <Button Background="DarkGreen" Margin="10" HorizontalAlignment="Center">
+                <Button Background="DarkGreen" Margin="10" HorizontalAlignment="Center" Click="Sauvegarder">
                     <TextBlock Text="Sauvegarder" Foreground="White" FontSize="20" Padding="10"/>
                 </Button>
-                <Button Background="Red" Margin="10" HorizontalAlignment="Center">
+                <Button Background="Red" Margin="10" HorizontalAlignment="Center" Click="Annuler">
                     <TextBlock Text="Annuler" Foreground="White" FontSize="20" Padding="10"/>
                 </Button>
             </StackPanel>

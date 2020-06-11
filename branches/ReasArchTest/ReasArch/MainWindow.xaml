@@ -9,7 +9,7 @@
         Title="REASARCH" Height="500" Width="800">
 
     <DockPanel>
-        <ListBox DockPanel.Dock="Left" Background="#424242" BorderBrush="#424242" Name="AfficheurVilles" ItemsSource="{Binding monde.ListeVilles}" SelectedItem="{Binding VilleSelectionnee}">
+        <ListBox DockPanel.Dock="Left" Background="#424242" BorderBrush="#424242" Name="AfficheurVilles" ItemsSource="{Binding monde.ListeVilles}" SelectionChanged="AfficheurVilles_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:BoutonListeVilles MouseUp="BoutonListeVilles_MouseUp" Cursor="Hand"/>
@@ -30,7 +30,7 @@
                     </Grid.ColumnDefinitions>
                     <Image Source="img/icone fenetre ReasArch.png"/>
                 </Grid>
-                
+
                 <Image Grid.Row="1" Source="img/fond.jpg" Stretch="UniformToFill"/>
                 <StackPanel Grid.Row="1" VerticalAlignment="Center">
                     <TextBlock Grid.Row="1" Text="Bienvenue sur ReasArch !" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">
@@ -44,7 +44,7 @@
                         </TextBlock.BitmapEffect>
                     </TextBlock>
                 </StackPanel>
-                
+
                 <Grid Grid.Row="3" Background="#757575">
                     <WrapPanel HorizontalAlignment="Center">
                         <TextBlock Text="Ville" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="4"/>

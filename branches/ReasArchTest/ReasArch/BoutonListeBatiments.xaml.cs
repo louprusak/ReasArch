@@ -44,7 +44,8 @@ namespace ReasArch
 
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {
-            Window modif = new ModifierBatiment();
+            Modele.Batiment batiment = DataContext as Modele.Batiment;
+            Window modif = new ModifierBatiment(batiment);
             modif.ShowDialog();
         }
 

@@ -21,5 +21,11 @@ namespace ReasArch
         {
             InitializeComponent();
         }
+
+        public ModifierBatiment(Modele.Batiment batiment)
+        {
+            InitializeComponent();
+            DataContext = batiment;
+        }
     }
 }

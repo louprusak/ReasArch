@@ -37,8 +37,14 @@ namespace ReasArch
 
         private void Modif(object sender, RoutedEventArgs e)
         {
-            Window modif = new ModifierBatiment();
+            Window modif = new ModifierBatiment(batiment);
             modif.ShowDialog();
+        }
+
+        private void Retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Ville(manager.VilleSelectionnee);
         }
 
 
