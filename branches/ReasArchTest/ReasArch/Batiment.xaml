@@ -32,7 +32,7 @@
                 <RowDefinition Height="3*"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Image Source="{Binding ImagePrincipale, Converter={StaticResource StringToImageConverter}}">
+            <Image Source="{Binding ImagePrincipale, Converter={StaticResource StringToImageConverter}}" MouseUp="Image_MouseUp">
                 <Image.BitmapEffect>
                     <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
                 </Image.BitmapEffect>

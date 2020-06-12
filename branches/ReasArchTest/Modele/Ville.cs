@@ -24,6 +24,7 @@ namespace Modele
                 Nom = nom;
                 ListeBatiments = new List<Batiment>();
             }
+            else throw new ArgumentException();
         }
 
         /// <summary>
@@ -38,7 +39,8 @@ namespace Modele
                 ImagePanorama = imagepanorama;
                 ListeBatiments = new List<Batiment>();
             }
-         }
+            else throw new ArgumentException();
+        }
 
         //-----------------------------------------------------------------------------------------------------------//
         //METHODES

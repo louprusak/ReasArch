@@ -47,6 +47,13 @@ namespace ReasArch
             main.fenetre.Content = new Ville(manager.VilleSelectionnee);
         }
 
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Media.ImageSource source = sender as ImageSource;
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre = new PleinEcran(source);
+        }
+
 
 
         /*public System.Windows.Media.ImageSource IMG0
