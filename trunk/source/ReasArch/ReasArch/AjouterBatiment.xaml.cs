@@ -21,5 +21,15 @@ namespace ReasArch
         {
             InitializeComponent();
         }
+
+        private void Sauvegarder(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Annuler(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

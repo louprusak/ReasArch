@@ -48,8 +48,12 @@ namespace ReasArch
         private void Supprimer_Ville(object sender, RoutedEventArgs e)
         {
             MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer cette ville ?", "Suppression de la ville", MessageBoxButton.OKCancel);
-
-
+            if (res == MessageBoxResult.OK)
+            {
+                bool suppr = manager.SupprimerVille(ville);
+                if(suppr == false)
+                { MessageBox.Show("Erreur lors de la suppression de la ville...", "", MessageBoxButton.OK, MessageBoxImage.Error);}
+            }
         }
 
         private void Modifier_Ville(object sender, RoutedEventArgs e)
