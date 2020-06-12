@@ -25,13 +25,13 @@
     <Compile Update="BoutonListeVilles.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ImageFullScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ModifierBatiment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ModifierVille.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="PleinEcran.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TextBlock_Bouton.xaml.cs">
@@ -60,6 +60,9 @@
     <Page Update="BoutonListeVilles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ImageFullScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -67,9 +70,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ModifierVille.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="PleinEcran.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TextBlock_Bouton.xaml">

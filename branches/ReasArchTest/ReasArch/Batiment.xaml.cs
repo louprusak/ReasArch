@@ -47,56 +47,28 @@ namespace ReasArch
             main.fenetre.Content = new Ville(manager.VilleSelectionnee);
         }
 
-        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
+        private void ImagePrincipale_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            System.Windows.Media.ImageSource source = sender as ImageSource;
-            MainWindow main = Window.GetWindow(this) as MainWindow;
-            main.fenetre = new PleinEcran(source);
+            Window fullscreen = new ImageFullScreen(batiment.ImagePrincipale);
+            fullscreen.Show();
         }
 
+        private void ImageArchitecte_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Window fullscreen = new ImageFullScreen(batiment.ImageArchitecte);
+            fullscreen.Show();
+        }
 
+        private void ImagePlan_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Window fullscreen = new ImageFullScreen(batiment.ImagePlan);
+            fullscreen.Show();
+        }
 
-        /*public System.Windows.Media.ImageSource IMG0
+        private void ImageInterieur_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            set
-            {
-                IMGBatPrincipale.Source = value;
-            }
+            Window fullscreen = new ImageFullScreen(batiment.ImageInterieur);
+            fullscreen.Show();
         }
-        public System.Windows.Media.ImageSource IMG1
-        {
-            set
-            {
-                IMGBat1.Source = value;
-            }
-        }
-        public System.Windows.Media.ImageSource IMG2
-        {
-            set
-            {
-                IMGBat2.Source = value;
-            }
-        }
-        public System.Windows.Media.ImageSource IMG3
-        {
-            set
-            {
-                IMGBat3.Source = value;
-            }
-        }
-        public string Nom
-        {
-            set
-            {
-                TBNomBat.Text = value;
-            }
-        }
-        public string Des
-        {
-            set
-            {
-                TBDesBat.Text = value;
-            }
-        }*/
     }
 }
