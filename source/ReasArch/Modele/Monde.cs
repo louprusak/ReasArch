@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace Modele
 {
     public class Monde
     {
-        public List<Ville> ListeVilles { get; private set; } //liste des villes contenues dans l'application
+        public ObservableCollection<Ville> ListeVilles { get; private set; } //liste des villes contenues dans l'application
 
         //------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
@@ -16,11 +18,19 @@ namespace Modele
         /// </summary>
         public Monde()
         {
-            ListeVilles = new List<Ville>();
+            ListeVilles = new ObservableCollection<Ville>();
         }
 
         //------------------------------------------------------------------------------------//
         //METHODES
+
+        public Modele.Ville GetVille(string nom)
+        {
+            return ListeVilles.SingleOrDefault(v => v.Nom == nom);
+        }
+
+
+
 
         /// <summary>
         /// Ajouter une ville dans la liste de villes

@@ -46,6 +46,18 @@ namespace Modele
         }
         private Batiment batimentSelectionne;
 
+        public bool AjouterVille(Modele.Ville ville)
+        {
+            bool res = monde.AjouterVille(ville.Nom, ville.ImageVignette, ville.ImagePanorama);
+            return res;
+        }
+
+        public bool SupprimerVille(Modele.Ville ville)
+        {
+            bool res = monde.SupprimerVille(ville.Nom);
+            return res;
+        }
+
         /// <summary>
         /// Event de changement de propriété des objects
         /// </summary>
