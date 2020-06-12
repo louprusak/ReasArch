@@ -1,0 +1,54 @@
+﻿<Window x:Class="ReasArch.ModifierVille"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReasArch"
+        mc:Ignorable="d"
+        Title="ModifierVille" Height="500" Width="800">
+    <DockPanel Background="#757575">
+        <TextBlock Background="Black" Text="Modifier une Ville" DockPanel.Dock="Top" FontSize="30" Foreground="White" FontWeight="Bold" TextAlignment="Center" Padding="10"/>
+        <ScrollViewer>
+            <StackPanel Margin="0,10,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <local:TextBlock_Bouton Texte="Icône Ville"/>
+                    <local:TextBlock_Bouton Grid.Column="1" Texte="Image Panorama Ville"/>
+                </Grid>
+                <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="20"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                    </Grid.Resources>
+                    <TextBlock Text="Nom de la Ville"/>
+                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+
+                <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
+                <Button Background="DarkGreen" Margin="10" HorizontalAlignment="Center" Click="Sauvegarder">
+                    <TextBlock Text="Sauvegarder" Foreground="White" FontSize="20" Padding="10"/>
+                </Button>
+                <Button Background="Red" Margin="10" HorizontalAlignment="Center" Click="Annuler">
+                    <TextBlock Text="Annuler" Foreground="White" FontSize="20" Padding="10"/>
+                </Button>
+            </StackPanel>
+
+        </ScrollViewer>
+    </DockPanel>
+</Window>

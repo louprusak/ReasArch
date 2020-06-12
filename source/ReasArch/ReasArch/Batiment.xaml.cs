@@ -1,4 +1,5 @@
 ﻿using Data;
+using Modele;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,63 +20,55 @@ namespace ReasArch
     /// </summary>
     public partial class Batiment : UserControl
     {
-        Modele.Batiment batiment = Stub.CreerBatimentComplet();
+        public Manager manager => (App.Current as App).LeManager;
+        Modele.Batiment batiment;
 
         public Batiment()
         {
             InitializeComponent();
+        }
+
+        public Batiment(Modele.Batiment batiment)
+        {
+            InitializeComponent();
+            this.batiment = batiment;
             AfficheurBatiment.DataContext = batiment;
         }
 
         private void Modif(object sender, RoutedEventArgs e)
         {
-            Window modif = new AjoutModifBatiment();
+            Window modif = new ModifierBatiment(batiment);
             modif.ShowDialog();
         }
 
+        private void Retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Ville(manager.VilleSelectionnee);
+        }
 
+        private void ImagePrincipale_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Window fullscreen = new ImageFullScreen(batiment.ImagePrincipale);
+            fullscreen.Show();
+        }
 
-        /*public System.Windows.Media.ImageSource IMG0
+        private void ImageArchitecte_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            set
-            {
-                IMGBatPrincipale.Source = value;
-            }
+            Window fullscreen = new ImageFullScreen(batiment.ImageArchitecte);
+            fullscreen.Show();
         }
-        public System.Windows.Media.ImageSource IMG1
+
+        private void ImagePlan_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            set
-            {
-                IMGBat1.Source = value;
-            }
+            Window fullscreen = new ImageFullScreen(batiment.ImagePlan);
+            fullscreen.Show();
         }
-        public System.Windows.Media.ImageSource IMG2
+
+        private void ImageInterieur_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            set
-            {
-                IMGBat2.Source = value;
-            }
+            Window fullscreen = new ImageFullScreen(batiment.ImageInterieur);
+            fullscreen.Show();
         }
-        public System.Windows.Media.ImageSource IMG3
-        {
-            set
-            {
-                IMGBat3.Source = value;
-            }
-        }
-        public string Nom
-        {
-            set
-            {
-                TBNomBat.Text = value;
-            }
-        }
-        public string Des
-        {
-            set
-            {
-                TBDesBat.Text = value;
-            }
-        }*/
     }
 }

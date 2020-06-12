@@ -66,53 +66,53 @@ namespace Test
 
 
 
-            WriteLine("------------------------------------------------------------------------------------------------------------\n");
-            WriteLine("\n3) Instanciation de la classe Ensemble:\n\n");
+            /*WriteLine("------------------------------------------------------------------------------------------------------------\n");
+            WriteLine("\n3) Instanciation de la classe Monde:\n\n");
 
 
 
 
 
 
-            Ensemble manager = Stub.CreerEnsemble();
-            WriteLine("ToString de Ensemble juste après sa création:\n"+manager.ToString());
+            Monde manager = Stub.CreerEnsemble();
+            WriteLine("ToString de Monde juste après sa création:\n"+manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool ajoutville = manager.AjouterVille("Clermont-Ferrand","img/icone_londre.png");
             WriteLine($"Test de la variable d'ajout d'une ville:{ajoutville}");
-            WriteLine("ToString de Ensemble juste après ajout d'une nouvelle ville:\n"+manager.ToString());
+            WriteLine("ToString de Monde juste après ajout d'une nouvelle ville:\n"+manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool modifierville = manager.ModifierVille("Clermont-Ferrand", "Clermont-Fd");
             WriteLine($"Test de la variable de modification d'une ville:{modifierville}");
-            WriteLine("ToString de Ensemble juste après la modification d'une ville:\n" + manager.ToString());
+            WriteLine("ToString de Monde juste après la modification d'une ville:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool ajoutsimplemanager = manager.AjouterBatimentSimple("Clermont-Fd","Cathédrale", "France", "Clermont - Ferrand", "Ceci est la decription de la cathédrale de Clermont - Ferrand");
             WriteLine($"Test variable ajoutsimplemanager:{ajoutsimplemanager}");
-            WriteLine("ToString de Ensemble juste après ajout simple d'un batiment:\n" + manager.ToString());
+            WriteLine("ToString de Monde juste après ajout simple d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool ajoutcompletmanager = manager.AjouterBatimentComplet("Clermont-Fd","Centre Jaude 2", "France", "Clermont-Ferrand", "Centre de Clermont", "Place de Jaude", "M.Jenesaispas", "M.Jenesaisqui",
                 "Comtemporain", "Pierre de Volvic", "50", "4", "2010", "2012", "Ceci est la description du centre Jaude 2");
             WriteLine($"Test variable ajoutcompletmanager:{ajoutcompletmanager}");
-            WriteLine("ToString de Ensemble juste après ajout complet d'un batiment:\n" + manager.ToString());
+            WriteLine("ToString de Monde juste après ajout complet d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool supprimerbatimentmanager = manager.SupprimerBatiment("Clermont-Fd","Cathédrale");
             WriteLine($"Test variable suppressionbatimentmanager:{supprimerbatimentmanager}");
-            WriteLine("ToString de Ensemble juste après suppression d'un batiment:\n" + manager.ToString());
+            WriteLine("ToString de Monde juste après suppression d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
             bool modifierbatimentmanager = manager.ModifierBatiment("Clermont-Fd","Centre Jaude 2", "CARRE JAUDE 2", "France", "Clermont-Ferrand", "Centre de Clermont", "Place de Jaude", "M.Jenesaispas", "M.Jenesaisqui",
                 "Comtemporain", "Pierre de Volvic", "50", "4", "2010", "2012", "Ceci est la description du carre Jaude 2");
             WriteLine($"Test de la variable modificationbatimentmanager:{modifierbatimentmanager}");
-            WriteLine("ToString de Ensemble après modification d'un batiment:\n" + manager.ToString());
+            WriteLine("ToString de Monde après modification d'un batiment:\n" + manager.ToString());
 
             bool supprimerville = manager.SupprimerVille("Clermont-Fd");
             WriteLine($"Test de la variable de suppression d'une ville:{supprimerville}");
-            WriteLine("ToString de Ensemble juste après la suppression d'une ville:\n" + manager.ToString());
-            WriteLine("-    -   -   -   -   -");
+            WriteLine("ToString de Monde juste après la suppression d'une ville:\n" + manager.ToString());
+            WriteLine("-    -   -   -   -   -");*/
             
         }
     }
