@@ -24,18 +24,21 @@ namespace Data
             test.AjouterBatimentSimple("San Francisco", "Transamerica Pyramid", "USA", "San Francisco", "Description", "TransamericaPyramid/transamerica_pyramid.jpg","TransamericaPyramid/architecte.jpg", "TransamericaPyramid/plan.png", "TransamericaPyramid/interieur.png");
             test.AjouterBatimentSimple("San Francisco", "Ferry Building", "USA", "San Francisco", "Description", "FerryBuilding/ferry_building.jpg", "no_image_available.png", "FerryBuilding/plan.jpg", "FerryBuilding/interieur.jpg");
             
-
             test.AjouterBatimentSimple("New York", "Empire State Building", "USA", "New York", "Description", "EmpireStateBuilding/empire_state_building.jpg", "EmpireStateBuilding/architecte.png", "EmpireStateBuilding/plan.jpg", "EmpireStateBuilding/interieur.jpg");
             test.AjouterBatimentSimple("New York", "Chrysler Building", "USA", "New York", "Description", "ChryslerBuilding/chrysler_building.jpg", "ChryslerBuilding/architecte.jpg", "ChryslerBuilding/plan.jpg", "ChryslerBuilding/interieur.jpg");
             test.AjouterBatimentSimple("New York", "One World Trade Center", "USA", "New York", "Description", "OneWorldTradeCenter/one_world_trade_center.jpg", "OneWorldTradeCenter/architecte.jpg", "OneWorldTradeCenter/plan.jpg", "OneWorldTradeCenter/interieur.jpg");
             test.AjouterBatimentSimple("New York", "Flatiron Building", "USA", "New York", "Description", "FlatIronBuilding/flatiron building.jpg", "FlatIronBuilding/architecte.jpg", "FlatIronBuilding/plan.jpg", "FlatIronBuilding/interieur.jpg");
             test.AjouterBatimentSimple("New York", "Metropolitan Museum Of Art", "USA", "New York", "Description", "MMOA/mmoa.jpg", "MMOA/architecte.jpg", "MMOA/plan.jpg", "MMOA/interieur.jpg");
 
-            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
-            test.AjouterBatimentSimple("Paris", "Tour", "France", "Paris", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
+            test.AjouterBatimentSimple("Paris", "Tour Eiffel", "France", "Paris", "Description", "TourEiffel/toureiffel.webp", "TourEiffel/archtoureiffel.jpg", "TourEiffel/plantoureiffel.jpg", "TourEiffel/intertoureiffel.jpg");
+            test.AjouterBatimentSimple("Paris", "Arc de triomphe", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Pyramide du Louvre", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Notre-Dame de Paris", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Obélisque de Louxor", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Chateau de Versaille", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Grande Arche de la Défense", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Fondation Louis Vuitton", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Gare du Nord", "France", "Paris", "Description", "", "", "", "");
 
             return test;
         }
