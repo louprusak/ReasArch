@@ -21,14 +21,13 @@ namespace ReasArch
     public partial class Ville : UserControl
     {
 
+        public Manager manager => (App.Current as App).LeManager;
+
         Modele.Ville ville;
 
         public Ville()
         {
             InitializeComponent();
-            ville = Stub.CreerVille();
-            Panorama.DataContext = ville;
-            EnTeteVille.DataContext = ville;
         }
 
         public Ville(Modele.Ville ville)
@@ -37,11 +36,12 @@ namespace ReasArch
             this.ville = ville;
             Panorama.DataContext = ville;
             EnTeteVille.DataContext = ville;
+            Afficheur_Batiments.DataContext = ville;
         }
 
         private void Ajouter_Batiment(object sender, RoutedEventArgs e)
         {
-            Window modifierWindow = new AjoutModifBatiment();
+            Window modifierWindow = new AjouterBatiment();
             modifierWindow.ShowDialog();
         }
 
@@ -50,6 +50,32 @@ namespace ReasArch
             MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer cette ville ?", "Suppression de la ville", MessageBoxButton.OKCancel);
 
 
+        }
+
+        private void Modifier_Ville(object sender, RoutedEventArgs e)
+        {
+            Window modifierWindow = new ModifierVille();
+            modifierWindow.ShowDialog();
+        }
+
+        private void BoutonListeBatiments_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BoutonListeBatiments bouton = sender as BoutonListeBatiments;
+            Modele.Batiment batiment = bouton.DataContext as Modele.Batiment;
+            
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Batiment(batiment);
+        }
+
+        private void Afficheur_Batiments_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            manager.BatimentSelectionne = e.AddedItems[0] as Modele.Batiment;
+        }
+
+        private void Retour(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.fenetre.Content = new Accueil();
         }
     }
 }

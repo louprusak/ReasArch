@@ -20,13 +20,13 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeVilles : UserControl
     {
-        //Ensemble ensemble = Stub.CreerEnsemble();
-        
+
+        public Manager manager => (App.Current as App).LeManager;
+
 
         public BoutonListeVilles()
         {
             InitializeComponent();
-//            AfficheurVignetteVille.DataContext = manager.Listevilles;
         }
 
         public System.Windows.Media.ImageSource Source

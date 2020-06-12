@@ -53,6 +53,7 @@ namespace Modele
                 ImagePlan = imageplan;
                 ImageInterieur = imageinterieur;
             }
+            else throw new ArgumentException();
         }
 
         /// <summary>

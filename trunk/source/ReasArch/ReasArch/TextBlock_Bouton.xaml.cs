@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Modele;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +20,8 @@ namespace ReasArch
     /// </summary>
     public partial class TextBlock_Bouton : UserControl
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public TextBlock_Bouton()
         {
             InitializeComponent();

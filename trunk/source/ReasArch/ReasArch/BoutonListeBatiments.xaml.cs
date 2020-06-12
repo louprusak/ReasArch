@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,12 +19,14 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeBatiments : UserControl
     {
+        public Manager manager => (App.Current as App).LeManager;
+
         public BoutonListeBatiments()
         {
             InitializeComponent();
         }
 
-        public System.Windows.Media.ImageSource Source
+        /*public System.Windows.Media.ImageSource Source
         {
             set
             {
@@ -37,11 +40,12 @@ namespace ReasArch
             {
                 Titre.Text = value;
             }
-        }
+        }*/
 
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {
-            Window modif = new AjoutModifBatiment();
+            Modele.Batiment batiment = DataContext as Modele.Batiment;
+            Window modif = new ModifierBatiment(batiment);
             modif.ShowDialog();
         }
 
