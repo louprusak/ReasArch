@@ -26,7 +26,7 @@ namespace ReasArch
         {
             InitializeComponent();
             var v = new Modele.Ville("//unknown//", "//unknown//", "", "");
-            LaVille = new Modele.Ville(v.Nom, v.Pays, v.ImageVignette, v.ImagePanorama);
+            LaVille = new Modele.Ville(v.NOM, v.PAYS, v.IMAGEVIGNETTE, v.IMAGEPANORAMA);
             DataContext = LaVille;
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -8,7 +9,13 @@ namespace Modele
 {
     public class Monde
     {
-        public ObservableCollection<Ville> ListeVilles { get; private set; } //liste des villes contenues dans l'application
+        public ObservableCollection<Ville> LISTEVILLES
+        {
+            get { return ListeVilles; }
+            set { ListeVilles = value; }
+        }
+        private ObservableCollection<Ville> ListeVilles; //liste des villes contenues dans l'application
+
 
         //------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
@@ -31,7 +38,7 @@ namespace Modele
         /// <returns> Retourne la ville </returns>
         public Modele.Ville GetVille(string nom)
         {
-            return ListeVilles.SingleOrDefault(v => v.Nom == nom);
+            return ListeVilles.SingleOrDefault(v => v.NOM == nom);
         }
 
 
@@ -80,8 +87,8 @@ namespace Modele
         public bool ModifierVille(string nomville, string nvnomville)
         {
             int index = RechercherVille(nomville);
-            ListeVilles[index].Nom = nvnomville;
-            if (ListeVilles[index].Nom == nvnomville) return true;
+            ListeVilles[index].NOM = nvnomville;
+            if (ListeVilles[index].NOM == nvnomville) return true;
             else return false;
         }
 
@@ -119,7 +126,7 @@ namespace Modele
         public bool SupprimerBatiment (string nomville, string nombat)
         {
             Batiment batiment = new Batiment(nombat);
-            bool res = ListeVilles[RechercherVille(nomville)].ListeBatiments.Remove(batiment);
+            bool res = ListeVilles[RechercherVille(nomville)].LISTEBATIMENTS.Remove(batiment);
             return res;
         }
 

@@ -24,9 +24,9 @@ namespace ReasArch
         public AjouterBatiment()
         {
             InitializeComponent();
-            var b = new Modele.Batiment("", manager.VilleSelectionnee.Pays, manager.VilleSelectionnee.Nom,"" , "", "", "", "", "", "", "", "", "", "", "", "", "", "");
-            LeBatiment = new Modele.Batiment(b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
-                b.Hauteur, b.NbEtages, b.Construction, b.Ouverture, b.Description, b.ImagePrincipale, b.ImageArchitecte, b.ImagePlan, b.ImageInterieur);
+            var b = new Modele.Batiment("", manager.VilleSelectionnee.PAYS, manager.VilleSelectionnee.NOM,"" , "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+            LeBatiment = new Modele.Batiment(b.NOM, b.PAYS, b.VILLE, b.QUARTIER, b.ADRESSE, b.ARCHITECTE, b.INGENIEUR, b.STYLE, b.MATERIAUX,
+                b.HAUTEUR, b.NBETAGES, b.CONSTRUCTION, b.OUVERTURE, b.DESCRIPTION, b.IMAGEPRINCIPALE, b.IMAGEARCHITECTE, b.IMAGEPLAN, b.IMAGEINTERIEUR);
             DataContext = LeBatiment;
         }
 

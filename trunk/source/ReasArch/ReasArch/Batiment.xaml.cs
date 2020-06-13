@@ -49,25 +49,25 @@ namespace ReasArch
 
         private void ImagePrincipale_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Window fullscreen = new ImageFullScreen(batiment.ImagePrincipale);
+            Window fullscreen = new ImageFullScreen(batiment.IMAGEPRINCIPALE);
             fullscreen.Show();
         }
 
         private void ImageArchitecte_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Window fullscreen = new ImageFullScreen(batiment.ImageArchitecte);
+            Window fullscreen = new ImageFullScreen(batiment.IMAGEARCHITECTE);
             fullscreen.Show();
         }
 
         private void ImagePlan_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Window fullscreen = new ImageFullScreen(batiment.ImagePlan);
+            Window fullscreen = new ImageFullScreen(batiment.IMAGEPLAN);
             fullscreen.Show();
         }
 
         private void ImageInterieur_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Window fullscreen = new ImageFullScreen(batiment.ImageInterieur);
+            Window fullscreen = new ImageFullScreen(batiment.IMAGEINTERIEUR);
             fullscreen.Show();
         }
     }

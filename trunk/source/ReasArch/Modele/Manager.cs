@@ -10,7 +10,12 @@ namespace Modele
         /// <summary>
         /// Attribut Monde du manager qui regroupe toutes les villes et les batiments de l'application
         /// </summary>
-        public Monde monde { get; set; }
+        public Monde MONDE
+        {
+            get { return monde; }
+            set { monde = value; }
+        }
+        private Monde monde;
 
 
         /// <summary>
@@ -55,7 +60,7 @@ namespace Modele
         /// <returns> Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
         public bool AjouterVille(Modele.Ville ville)
         {
-            bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.ImageVignette, ville.ImagePanorama);
+            bool res = monde.AjouterVille(ville.NOM, ville.PAYS, ville.IMAGEVIGNETTE, ville.IMAGEPANORAMA);
             return res;
         }
 
@@ -66,7 +71,7 @@ namespace Modele
         /// <returns> Retourne true si la liste a bien été supprimée à la liste sinon retourne false</returns>
         public bool SupprimerVille(Modele.Ville ville)
         {
-            bool res = monde.SupprimerVille(ville.Nom);
+            bool res = monde.SupprimerVille(ville.NOM);
             return res;
         }
 
@@ -77,8 +82,8 @@ namespace Modele
         /// <returns> Retourne true si le batiment à bien été ajouté </returns>
         public bool AjouterBatiment(Modele.Batiment b)
         {
-            bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
-                b.Hauteur, b.NbEtages, b.Construction, b.Ouverture, b.Description, b.ImagePrincipale, b.ImageArchitecte, b.ImagePlan, b.ImageInterieur);
+            bool res = monde.AjouterBatimentComplet(VilleSelectionnee.NOM,b.NOM, b.PAYS, b.VILLE, b.QUARTIER, b.ADRESSE, b.ARCHITECTE, b.INGENIEUR, b.STYLE, b.MATERIAUX,
+                b.HAUTEUR, b.NBETAGES, b.CONSTRUCTION, b.OUVERTURE, b.DESCRIPTION, b.IMAGEPRINCIPALE, b.IMAGEARCHITECTE, b.IMAGEPLAN, b.IMAGEINTERIEUR);
             return res;
         }
 
