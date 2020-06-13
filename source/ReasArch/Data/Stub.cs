@@ -45,6 +45,8 @@ namespace Data
             return test;
         }
 
+        /*Le test*/
+
         /*public static Ville CreerVille()
         {
             Ville ville = new Ville("Londres", "londrezs.jpg", "statue_liberte.jpg");
