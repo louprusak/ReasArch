@@ -29,6 +29,7 @@ namespace Modele
             else throw new ArgumentException();
         }
 
+
         /// <summary>
         /// Constructeur de la class Ville avec l'image
         /// </summary>
@@ -38,6 +39,7 @@ namespace Modele
             ImageVignette = imagevignette;
             ImagePanorama = imagepanorama;
         }
+
 
         //-----------------------------------------------------------------------------------------------------------//
         //METHODES
@@ -55,6 +57,7 @@ namespace Modele
             else { return false; }
         }
 
+
         /// <summary>
         /// Ajouter un batiment avec un détail complet à cette ville
         /// </summary>
@@ -70,6 +73,7 @@ namespace Modele
             else { return false; }
         }
 
+
         /// <summary>
         /// Supprime un batiment de la liste avec un nom donné
         /// </summary>
@@ -82,6 +86,7 @@ namespace Modele
             else return true;
         }
 
+
         /// <summary>
         /// Recherche un batiment à partir d'un nom bonné
         /// </summary>
@@ -92,6 +97,7 @@ namespace Modele
             int index = ListeBatiments.IndexOf(batiment);
             return index;
         }
+
 
         /// <summary>
         /// Modifier un batiment présent dans la liste
@@ -107,9 +113,9 @@ namespace Modele
             return res;
         }
 
+
         //-----------------------------------------------------------------------------------------------------------//
         //REDEFINITION DE METHODES
-
 
         /// <summary>
         /// Compare si l'objet envoyé est le même que la ville 
@@ -124,6 +130,11 @@ namespace Modele
             return Nom.Equals(other.Nom);
         }
 
+
+        /// <summary>
+        /// Redéfinition du ToString de la classe ville
+        /// </summary>
+        /// <returns> Retourne le message à afficher </returns>
         public override string ToString()
         {
             string message = $"Description de la ville {Nom.ToUpper()} et de ses batiments :\n\n";
@@ -133,9 +144,5 @@ namespace Modele
             }
             return message;
         }
-
-
-
-
     }
 }

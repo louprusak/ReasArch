@@ -37,6 +37,7 @@ namespace Modele
             Nom = nom;
         }
 
+
         /// <summary>
         /// Constructeur de la class Batiment
         /// </summary>
@@ -55,6 +56,7 @@ namespace Modele
             }
             else throw new ArgumentException();
         }
+
 
         /// <summary>
         /// Constructeur de la class Batiment
@@ -75,6 +77,7 @@ namespace Modele
             Construction = construction;
             Ouverture = ouverture;
         }
+
 
         //------------------------------------------------------------------------------------//
         //METHODES
@@ -101,6 +104,7 @@ namespace Modele
             else return false;
         }
 
+
         //----------------------------------------------------------------------------------------------------------------------//
         //REDEFINITION DE METHODES 
 
@@ -116,6 +120,7 @@ namespace Modele
                 $"{Description}\n\n";
             return message;
         }
+
 
         /// <summary>
         /// Compare si l'objet envoyé est le même que le batiment  
