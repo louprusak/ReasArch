@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlTypes;
 using System.Text;
 
 namespace Modele
 {
-    public class Batiment
+    public class Batiment : INotifyPropertyChanged
     {
         public String NOM
         {
@@ -185,6 +186,8 @@ namespace Modele
             Construction = construction;
             Ouverture = ouverture;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
         //------------------------------------------------------------------------------------//
