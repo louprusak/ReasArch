@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlTypes;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Modele
@@ -11,119 +12,170 @@ namespace Modele
         public String NOM
         {
             get { return Nom; }
-            set { Nom = value; }
+            set {
+                if (Nom != value)
+                { Nom = value;OnPropertyChanged();}
+            }
         }
         private String Nom; //nom du batiment
 
         public String PAYS
         {
             get { return Pays; }
-            set { Pays = value; }
+            set {
+                if (Pays != value)
+                { Pays = value; OnPropertyChanged(); }
+            }
         }
         private string Pays = "non spécifié"; //Pays dans lequel se trouve le batiment
 
         public String VILLE
         {
             get { return Ville; }
-            set { Ville = value; }
+            set {
+                if (Ville != value)
+                { Ville = value; OnPropertyChanged(); }
+            }
         }
         private string Ville = "non spécifié";//Ville dans laquelle se trouve le batiment
 
         public String QUARTIER
         {
             get { return Quartier; }
-            set { Quartier = value; }
+            set {
+                if (Quartier != value)
+                { Quartier= value; OnPropertyChanged(); }
+            }
         }
         private string Quartier = "non spécifié";//Quartier dans lequel se trouve la batiment
 
         public String ADRESSE
         {
             get { return Adresse; }
-            set { Adresse = value; }
+            set {
+                if (Adresse != value)
+                { Adresse = value; OnPropertyChanged(); }
+            }
         }
         private string Adresse = "non spécifié";//Adresse du batiment
 
         public String ARCHITECTE
         {
             get { return Architecte; }
-            set { Architecte = value; }
+            set {
+                if (Architecte != value)
+                { Architecte = value; OnPropertyChanged(); }
+            }
         }
         private string Architecte = "non spécifié";//Architecte du batiment
 
         public String INGENIEUR
         {
             get { return Ingenieur; }
-            set { Ingenieur = value; }
+            set {
+                if (Ingenieur != value)
+                { Ingenieur = value; OnPropertyChanged(); }
+            }
         }
         private string Ingenieur = "non spécifié";//INgénieur du batiment
 
         public String STYLE
         {
             get { return Style; }
-            set { Style = value; }
+            set {
+                if (Style != value)
+                { Style = value; OnPropertyChanged(); }
+            }
         }
         private string Style = "non spécifié";//Style du batiment
 
         public String MATERIAUX
         {
             get { return Materiaux; }
-            set { Materiaux = value; }
+            set {
+                if (Materiaux != value)
+                { Materiaux = value; OnPropertyChanged(); }
+            }
         }
         private string Materiaux = "non spécifié";//Matériaux utilisés pour construire le batiment
 
         public String HAUTEUR
         {
             get { return Hauteur; }
-            set { Hauteur = value; }
+            set {
+                if (Hauteur != value)
+                { Hauteur = value; OnPropertyChanged(); }
+            }
         }
         private string Hauteur = "non spécifié";//Hauteur en mètres du batiment
 
         public String NBETAGES
         {
             get { return NbEtages; }
-            set { NbEtages = value; }
+            set {
+                if (NbEtages != value)
+                { NbEtages = value; OnPropertyChanged(); }
+            }
         }
         private string NbEtages = "non spécifié";//Nombre d'étages du batiment
 
         public String CONSTRUCTION
         {
             get { return Construction; }
-            set { Construction = value; }
+            set {
+                if (Construction != value)
+                { Construction = value; OnPropertyChanged(); }
+            }
         }
         private string Construction = "non spécifié";//Années de construction du batiment
 
         public String OUVERTURE
         {
             get { return Ouverture; }
-            set { Ouverture = value; }
+            set {
+                if (Ouverture != value)
+                { Ouverture = value; OnPropertyChanged(); }
+            }
         }
         private string Ouverture = "non spécifié";//Année d'ouverture du batiment
 
         public String DESCRIPTION
         {
             get { return Description; }
-            set { Description = value; }
+            set {
+                if (Description != value)
+                { Description = value; OnPropertyChanged(); }
+            }
         }
         private string Description = "aucune description";//Description autre du batiment
 
         public String IMAGEPRINCIPALE
         {
             get { return ImagePrincipale; }
-            set { ImagePrincipale = value; }
+            set {
+                if (ImagePrincipale != value)
+                { ImagePrincipale = value; OnPropertyChanged(); }
+            }
         }
         private string ImagePrincipale = null;//Image Principale du batiment
 
         public String IMAGEARCHITECTE
         {
             get { return ImageArchitecte; }
-            set { ImageArchitecte = value; }
+            set {
+                if (ImageArchitecte != value)
+                { ImageArchitecte = value; OnPropertyChanged(); }
+            }
         }
         private string ImageArchitecte = null;//Image de l'architecte du batiment
 
         public String IMAGEPLAN
         {
             get { return ImagePlan; }
-            set { ImagePlan = value; }
+            set {
+                if (ImagePlan != value)
+                { ImagePlan= value; OnPropertyChanged(); }
+            }
         }
         private string ImagePlan = null;//Image du plan du batiment
 
@@ -187,7 +239,7 @@ namespace Modele
             Ouverture = ouverture;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        
 
 
         //------------------------------------------------------------------------------------//
@@ -245,6 +297,14 @@ namespace Modele
             Batiment other = (Batiment)obj;
             return Nom.Equals(other.Nom);
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Méthode appelée lors du changement de propriété des objects afin de refaire remonter l'information et ainsi de modifier le visuel XAML
+        /// </summary>
+        void OnPropertyChanged([CallerMemberName]string PropertyName = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
     }
 }
 

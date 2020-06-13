@@ -26,7 +26,7 @@
                     <local:TextBlock_Bouton Grid.Column="1" Grid.Row="1" Texte="Image Plan" MouseUp="ImagePlan_MouseUp"/>
                     <local:TextBlock_Bouton Grid.Column="2" Grid.Row="1" Texte="Image Interieur" MouseUp="ImageInterieur_MouseUp"/>
                     <Viewbox>
-                        <Image Source="{Binding ImagePrincipale, Converter={StaticResource StringToImageConverter}}"/>
+                        <Image Source="{Binding IMAGEPRINCIPALE, Converter={StaticResource StringToImageConverter}}"/>
                     </Viewbox>
                     <Viewbox Grid.Column="3">
                         <Image Source="{Binding ImageArchitecte, Converter={StaticResource StringToImageConverter}}"/>
