@@ -12,6 +12,7 @@ namespace Modele
         /// </summary>
         public Monde monde { get; set; }
 
+
         /// <summary>
         /// Attribut Ville Sélectionnée de manager ce qui permet de faire le lien avec le data binding et les usercontrols
         /// </summary>
@@ -27,7 +28,8 @@ namespace Modele
                 }
             }
         }
-        private Ville villeSelectionnee;
+        private Ville villeSelectionnee; // initialistaion de la variable contenant la ville sélectionnée
+
 
         /// <summary>
         /// Attribut Batiment Sélectionné de manager ce qui permet de faire le lien avec le data binding et les usercontrols
@@ -44,26 +46,42 @@ namespace Modele
                 }
             }
         }
-        private Batiment batimentSelectionne;
+        private Batiment batimentSelectionne;  // initialistaion de la variable contenant le bâtiment sélectionné
 
+
+        /// <summary>
+        /// Permet d'ajouter une ville à la collection de ville
+        /// </summary>
+        /// <returns> Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
         public bool AjouterVille(Modele.Ville ville)
         {
             bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.ImageVignette, ville.ImagePanorama);
             return res;
         }
 
+
+        /// <summary>
+        /// Permet de supprimer une ville de la collection de ville
+        /// </summary>
+        /// <returns> Retourne true si la liste a bien été supprimée à la liste sinon retourne false</returns>
         public bool SupprimerVille(Modele.Ville ville)
         {
             bool res = monde.SupprimerVille(ville.Nom);
             return res;
         }
 
+
+        /// <summary>
+        /// Permet d'ajouter un batiment complet à la liste des batiments dans une ville sélectionnée
+        /// </summary>
+        /// <returns> Retourne true si le batiment à bien été ajouté </returns>
         public bool AjouterBatiment(Modele.Batiment b)
         {
             bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
                 b.Hauteur, b.NbEtages, b.Construction, b.Ouverture, b.Description, b.ImagePrincipale, b.ImageArchitecte, b.ImagePlan, b.ImageInterieur);
             return res;
         }
+
 
         /// <summary>
         /// Event de changement de propriété des objects
