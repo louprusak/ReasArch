@@ -9,7 +9,7 @@ namespace ReasArch.converters
 {
     class StringToImageConverter : IValueConverter
     {
-        private static string imagesPath;
+        public static string imagesPath;
 
         static StringToImageConverter()
         {

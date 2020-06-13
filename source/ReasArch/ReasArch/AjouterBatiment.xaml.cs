@@ -1,6 +1,9 @@
-﻿using Modele;
+﻿using Microsoft.Win32;
+using Modele;
+using ReasArch.converters;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,6 +43,66 @@ namespace ReasArch
         private void Annuler(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ImagePrincipale_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true) 
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath,filename));
+                LeBatiment.ImagePrincipale = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void ImageArchitecte_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true) 
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
+                LeBatiment.ImageArchitecte = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void ImagePlan_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true)
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
+                LeBatiment.ImagePlan = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void ImageInterieur_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true)
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
+                LeBatiment.ImageInterieur = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
