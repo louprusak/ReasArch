@@ -25,6 +25,10 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
                     <Grid.Resources>
                         <Style TargetType="TextBlock">
                             <Setter Property="FontSize" Value="20"/>
@@ -37,7 +41,10 @@
                         </Style>
                     </Grid.Resources>
                     <TextBlock Text="Nom de la Ville"/>
-                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding Nom}"/>
+
+                    <TextBlock Grid.Row="1" Text="Pays de la ville"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Pays}"/>
                 </Grid>
 
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>

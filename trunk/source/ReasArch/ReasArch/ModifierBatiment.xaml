@@ -64,10 +64,10 @@
                     <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Nom, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <TextBlock Grid.Row="1" Text="Pays"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Pays, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding Pays}"/>
 
                     <TextBlock Grid.Row="2" Text="Ville"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Ville, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding Ville}"/>
 
                     <TextBlock Grid.Row="3" Text="Quartier"/>
                     <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Quartier, UpdateSourceTrigger=PropertyChanged}"/>

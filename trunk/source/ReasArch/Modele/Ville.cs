@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace Modele
 {
     public class Ville
     {  
-        public string Nom { get; set; } // nom de la ville 
+        public string Nom { get; set; } // nom de la ville
+        public string Pays { get; set; } //Pays dans lequel se trouve la ville
         public string ImageVignette { get; set; } = null; // Image de la vignette de la ville
         public string ImagePanorama { get; set; } = null; // Image panoramique de la ville
-        public List<Batiment> ListeBatiments { get; private set; } // liste des batiments contenuent dans la ville
+        public ObservableCollection<Batiment> ListeBatiments { get; private set; } // liste des batiments contenuent dans la ville
 
         //-----------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
@@ -22,7 +24,7 @@ namespace Modele
             if (!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
             {
                 Nom = nom;
-                ListeBatiments = new List<Batiment>();
+                ListeBatiments = new ObservableCollection<Batiment>();
             }
             else throw new ArgumentException();
         }
@@ -30,16 +32,11 @@ namespace Modele
         /// <summary>
         /// Constructeur de la class Ville avec l'image
         /// </summary>
-        public Ville (string nom, string imagevignette, string imagepanorama)
+        public Ville (string nom, string pays, string imagevignette, string imagepanorama):this(nom)
         {
-            if(!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
-            {
-                Nom = nom;
-                ImageVignette = imagevignette;
-                ImagePanorama = imagepanorama;
-                ListeBatiments = new List<Batiment>();
-            }
-            else throw new ArgumentException();
+            Pays = pays;
+            ImageVignette = imagevignette;
+            ImagePanorama = imagepanorama;
         }
 
         //-----------------------------------------------------------------------------------------------------------//
@@ -49,10 +46,10 @@ namespace Modele
         /// Ajouter un batiment avec un détail simple à cette ville
         /// </summary>
         /// <returns>Retourne true si le batiment a bien été ajouté à la liste sinon retourne false</returns>
-        public bool AjouterBatimentSimple(string nom, string pays, string ville, string description, string imageprincipale,
+        public bool AjouterBatimentSimple(string nom, string description, string imageprincipale,
             string imagearchitecte, string imageplan, string imageinterieur)
         {
-            Batiment batiment = new Batiment(nom, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
+            Batiment batiment = new Batiment(nom, this.Pays, this.Nom, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             ListeBatiments.Add(batiment);
             if(ListeBatiments.Contains(batiment)) { return true; }
             else { return false; }
@@ -62,11 +59,11 @@ namespace Modele
         /// Ajouter un batiment avec un détail complet à cette ville
         /// </summary>
         /// <returns>Retourne true si le batiment a bien été ajouté à la liste sinon retourne false</returns>
-        public bool AjouterBatimentComplet(string nom, string pays, string ville, string quartier, string adresse,
+        public bool AjouterBatimentComplet(string nom, string quartier, string adresse,
             string architecte, string ingenieur, string style, string materiaux, string hauteur, string nbetages,
             string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            Batiment batiment = new Batiment(nom, pays, ville, quartier, adresse, architecte, ingenieur, style, materiaux,
+            Batiment batiment = new Batiment(nom, this.Pays, this.Nom, quartier, adresse, architecte, ingenieur, style, materiaux,
                 hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             ListeBatiments.Add(batiment);
             if (ListeBatiments.Contains(batiment)) { return true; }

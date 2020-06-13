@@ -25,8 +25,8 @@ namespace ReasArch
         public AjouterVille()
         {
             InitializeComponent();
-            var v = new Modele.Ville("//unknown//", "", "");
-            LaVille = new Modele.Ville(v.Nom, v.ImageVignette, v.ImagePanorama);
+            var v = new Modele.Ville("//unknown//", "//unknown//", "", "");
+            LaVille = new Modele.Ville(v.Nom, v.Pays, v.ImageVignette, v.ImagePanorama);
             DataContext = LaVille;
         }
 
@@ -38,6 +38,11 @@ namespace ReasArch
             }*/
             bool res = manager.AjouterVille(LaVille);
             if(res == false) { MessageBox.Show("Erreur lors de l'ajout de la ville...", "", MessageBoxButton.OK, MessageBoxImage.Error); }
+            Close();
+        }
+
+        private void Annuler(object sender, RoutedEventArgs e)
+        {
             Close();
         }
     }
