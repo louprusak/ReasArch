@@ -60,46 +60,46 @@
                         </Style>
                     </Grid.Resources>
                     <TextBlock Grid.Row="0" Text="Nom"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Nom}"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" Text="{Binding NOM}"/>
 
                     <TextBlock Grid.Row="1" Text="Pays"/>
-                    <TextBlock Grid.Column="1" Grid.Row="1" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding Pays}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding PAYS}"/>
 
                     <TextBlock Grid.Row="2" Text="Ville"/>
-                    <TextBlock Grid.Column="1" Grid.Row="2" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding Ville}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" FontStyle="Italic" TextWrapping="Wrap" Text="{Binding VILLE}"/>
 
                     <TextBlock Grid.Row="3" Text="Quartier"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding Quartier}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding QUARTIER}"/>
 
                     <TextBlock Grid.Row="4" Text="Adresse"/>
-                    <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="{Binding Adresse}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Text="{Binding ADRESSE}"/>
 
                     <TextBlock Grid.Row="5" Text="Architecte"/>
-                    <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="{Binding Architecte}"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" Text="{Binding ARCHITECTE}"/>
 
                     <TextBlock Grid.Row="6" Text="Ingénieur"/>
-                    <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="{Binding Ingenieur}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" TextWrapping="Wrap" Text="{Binding INGENIEUR}"/>
 
                     <TextBlock Grid.Row="7" Text="Style"/>
-                    <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="{Binding Style}"/>
+                    <TextBox Grid.Column="1" Grid.Row="7" TextWrapping="Wrap" Text="{Binding STYLE}"/>
 
                     <TextBlock Grid.Row="8" Text="Matériaux"/>
-                    <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="{Binding Materiaux}"/>
+                    <TextBox Grid.Column="1" Grid.Row="8" TextWrapping="Wrap" Text="{Binding MATERIAUX}"/>
 
                     <TextBlock Grid.Row="9" Text="Hauteur"/>
-                    <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Text="{Binding Hauteur}"/>
+                    <TextBox Grid.Column="1" Grid.Row="9" TextWrapping="Wrap" Text="{Binding HAUTEUR}"/>
 
                     <TextBlock Grid.Row="10" Text="Nombre d'étages"/>
-                    <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="{Binding NbEtages}"/>
+                    <TextBox Grid.Column="1" Grid.Row="10" TextWrapping="Wrap" Text="{Binding NBETAGES}"/>
 
                     <TextBlock Grid.Row="11" Text="Année de construction"/>
-                    <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Text="{Binding Construction}"/>
+                    <TextBox Grid.Column="1" Grid.Row="11" TextWrapping="Wrap" Text="{Binding CONSTRUCTION}"/>
 
                     <TextBlock Grid.Row="12" Text="Année d'ouverture"/>
-                    <TextBox Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" Text="{Binding Ouverture}"/>
+                    <TextBox Grid.Column="1" Grid.Row="12" TextWrapping="Wrap" Text="{Binding OUVERTURE}"/>
 
                     <TextBlock Grid.Row="13" Text="Description"/>
-                    <TextBox Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" Text="{Binding Description}"/>
+                    <TextBox Grid.Column="1" Grid.Row="13" TextWrapping="Wrap" Text="{Binding DESCRIPTION}"/>
                 </Grid>
 
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>

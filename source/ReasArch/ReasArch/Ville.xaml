@@ -12,7 +12,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <Image Source="{Binding ImagePanorama, Converter={StaticResource StringToImageConverter}}" Name="Panorama" Stretch="UniformToFill"/>
+        <Image Source="{Binding IMAGEPANORAMA, Converter={StaticResource StringToImageConverter}}" Name="Panorama" Stretch="UniformToFill"/>
 
         <Grid Grid.Row="1" Background="Black" Name="EnTeteVille">
             <Grid.ColumnDefinitions>
@@ -37,7 +37,7 @@
             <Button Grid.Column="1" Click="Ajouter_Batiment">
                 <Image Source="img/icone_ajouter_blanc.png"/>
             </Button>
-            <TextBlock Grid.Column="2" Name="NomVille" Text="{Binding Nom}" Foreground="White" FontSize="35" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Name="NomVille" Text="{Binding NOM}" Foreground="White" FontSize="35" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
             <Button Grid.Column="3" Click="Modifier_Ville">
                 <Image Source="img/icone_modif_blanc.png"/>
             </Button>
@@ -47,7 +47,7 @@
         </Grid>
 
         <ScrollViewer Grid.Row="2">
-            <ItemsControl Name="Afficheur_Batiments" ItemsSource="{Binding ListeBatiments}" Background="#757575">
+            <ItemsControl Name="Afficheur_Batiments" ItemsSource="{Binding LISTEBATIMENTS}" Background="#757575">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <local:BoutonListeBatiments MouseUp="BoutonListeBatiments_MouseUp" Cursor="Hand"/>

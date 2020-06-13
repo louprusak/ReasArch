@@ -1,17 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 
 namespace Modele
 {
     public class Ville
-    {  
-        public string Nom { get; set; } // nom de la ville
-        public string Pays { get; set; } //Pays dans lequel se trouve la ville
-        public string ImageVignette { get; set; } = null; // Image de la vignette de la ville
-        public string ImagePanorama { get; set; } = null; // Image panoramique de la ville
-        public ObservableCollection<Batiment> ListeBatiments { get; private set; } // liste des batiments contenuent dans la ville
+    {
+        public string NOM
+        {
+            get { return Nom; }
+            set { Nom = value; }
+        }
+        private string Nom; // nom de la ville
+
+        public string PAYS
+        {
+            get { return Pays; }
+            set { Pays = value; }
+        }
+        private string Pays; //Pays dans lequel se trouve la ville
+
+        public string IMAGEVIGNETTE
+        {
+            get { return ImageVignette; }
+            set { ImageVignette = value; }
+        }
+        private string ImageVignette = null; // Image de la vignette de la ville
+
+        public string IMAGEPANORAMA
+        {
+            get { return ImagePanorama; }
+            set { ImagePanorama = value; }
+        }
+        private string ImagePanorama = null; // Image panoramique de la ville
+
+        public ObservableCollection<Batiment> LISTEBATIMENTS
+        {
+            get { return ListeBatiments; }
+            set { ListeBatiments = value; }
+        }
+        private ObservableCollection<Batiment> ListeBatiments; // liste des batiments contenuent dans la ville
+
 
         //-----------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS

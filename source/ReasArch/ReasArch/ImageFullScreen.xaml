@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="ImageFullScreen" Height="600" Width="1000">
     <DockPanel Background="#757575">
-        <Image Name="FullScreenImage" Source="{Binding sourceimage, Converter={StaticResource StringToImageConverter}}"/>
+        <Image Name="FullScreenImage" Source="{Binding SOURCEIMAGE, Converter={StaticResource StringToImageConverter}}"/>
     </DockPanel>
 </Window>

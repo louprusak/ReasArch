@@ -7,24 +7,132 @@ namespace Modele
 {
     public class Batiment
     {
-        public string Nom { get; set; } //Nom du batiment
-        public string Pays { get; set; } = "non spécifié"; //Pays dans lequel se trouve le batiment
-        public string Ville { get; set; } = "non spécifié";//Ville dans laquelle se trouve le batiment
-        public string Quartier { get; set; } = "non spécifié";//Quartier dans lequel se trouve la batiment
-        public string Adresse { get; set; } = "non spécifié";//Adresse du batiment
-        public string Architecte { get; set; } = "non spécifié";//Architecte du batiment
-        public string Ingenieur { get; set; } = "non spécifié";//INgénieur du batiment
-        public string Style { get; set; } = "non spécifié";//Style du batiment
-        public string Materiaux { get; set; } = "non spécifié";//Matériaux utilisés pour construire le batiment
-        public string Hauteur { get; set; } = "non spécifié";//Hauteur en mètres du batiment
-        public string NbEtages { get; set; } = "non spécifié";//Nombre d'étages du batiment
-        public string Construction { get; set; } = "non spécifié";//Années de construction du batiment
-        public string Ouverture { get; set; } = "non spécifié";//Année d'ouverture du batiment
-        public string Description { get; set; } = "aucune description";//Description autre du batiment
-        public string ImagePrincipale { get; set; } = null;//Image Principale du batiment
-        public string ImageArchitecte { get; set; } = null;//Image de l'architecte du batiment
-        public string ImagePlan { get; set; } = null;//Image du plan du batiment
-        public string ImageInterieur { get; set; } = null;//Image de l'intérieur du batiment
+        public String NOM
+        {
+            get { return Nom; }
+            set { Nom = value; }
+        }
+        private String Nom; //nom du batiment
+
+        public String PAYS
+        {
+            get { return Pays; }
+            set { Pays = value; }
+        }
+        private string Pays = "non spécifié"; //Pays dans lequel se trouve le batiment
+
+        public String VILLE
+        {
+            get { return Ville; }
+            set { Ville = value; }
+        }
+        private string Ville = "non spécifié";//Ville dans laquelle se trouve le batiment
+
+        public String QUARTIER
+        {
+            get { return Quartier; }
+            set { Quartier = value; }
+        }
+        private string Quartier = "non spécifié";//Quartier dans lequel se trouve la batiment
+
+        public String ADRESSE
+        {
+            get { return Adresse; }
+            set { Adresse = value; }
+        }
+        private string Adresse = "non spécifié";//Adresse du batiment
+
+        public String ARCHITECTE
+        {
+            get { return Architecte; }
+            set { Architecte = value; }
+        }
+        private string Architecte = "non spécifié";//Architecte du batiment
+
+        public String INGENIEUR
+        {
+            get { return Ingenieur; }
+            set { Ingenieur = value; }
+        }
+        private string Ingenieur = "non spécifié";//INgénieur du batiment
+
+        public String STYLE
+        {
+            get { return Style; }
+            set { Style = value; }
+        }
+        private string Style = "non spécifié";//Style du batiment
+
+        public String MATERIAUX
+        {
+            get { return Materiaux; }
+            set { Materiaux = value; }
+        }
+        private string Materiaux = "non spécifié";//Matériaux utilisés pour construire le batiment
+
+        public String HAUTEUR
+        {
+            get { return Hauteur; }
+            set { Hauteur = value; }
+        }
+        private string Hauteur = "non spécifié";//Hauteur en mètres du batiment
+
+        public String NBETAGES
+        {
+            get { return NbEtages; }
+            set { NbEtages = value; }
+        }
+        private string NbEtages = "non spécifié";//Nombre d'étages du batiment
+
+        public String CONSTRUCTION
+        {
+            get { return Construction; }
+            set { Construction = value; }
+        }
+        private string Construction = "non spécifié";//Années de construction du batiment
+
+        public String OUVERTURE
+        {
+            get { return Ouverture; }
+            set { Ouverture = value; }
+        }
+        private string Ouverture = "non spécifié";//Année d'ouverture du batiment
+
+        public String DESCRIPTION
+        {
+            get { return Description; }
+            set { Description = value; }
+        }
+        private string Description = "aucune description";//Description autre du batiment
+
+        public String IMAGEPRINCIPALE
+        {
+            get { return ImagePrincipale; }
+            set { ImagePrincipale = value; }
+        }
+        private string ImagePrincipale = null;//Image Principale du batiment
+
+        public String IMAGEARCHITECTE
+        {
+            get { return ImageArchitecte; }
+            set { ImageArchitecte = value; }
+        }
+        private string ImageArchitecte = null;//Image de l'architecte du batiment
+
+        public String IMAGEPLAN
+        {
+            get { return ImagePlan; }
+            set { ImagePlan = value; }
+        }
+        private string ImagePlan = null;//Image du plan du batiment
+
+        public String IMAGEINTERIEUR
+        {
+            get { return ImageInterieur; }
+            set { ImageInterieur = value; }
+        }
+        private string ImageInterieur = null;//Image de l'intérieur du batiment
+
 
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS

@@ -35,13 +35,13 @@
             <RowDefinition Height="3*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="300" Source="{Binding ImagePrincipale, Converter={StaticResource StringToImageConverter}}">
+        <Image Width="auto" Grid.RowSpan="2" Grid.ColumnSpan="2" MaxHeight="300" Source="{Binding IMAGEPRINCIPALE, Converter={StaticResource StringToImageConverter}}">
             <Image.BitmapEffect>
                 <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
             </Image.BitmapEffect>
         </Image>
         
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding Nom}" Margin="8" />
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding NOM}" Margin="8" />
         
         <Button Grid.Column="2" Grid.Row="1" Click="Modifier_Batiment">
             <Image Source="img/icone_modif_blanc.png"/>
