@@ -31,14 +31,16 @@ namespace Data
             test.AjouterBatimentSimple("New York", "Metropolitan Museum Of Art", "USA", "New York", "Description", "MMOA/mmoa.jpg", "MMOA/architecte.jpg", "MMOA/plan.jpg", "MMOA/interieur.jpg");
 
             test.AjouterBatimentSimple("Paris", "Tour Eiffel", "France", "Paris", "Description", "TourEiffel/toureiffel.webp", "TourEiffel/archtoureiffel.jpg", "TourEiffel/plantoureiffel.jpg", "TourEiffel/intertoureiffel.jpg");
-            test.AjouterBatimentSimple("Paris", "Arc de triomphe", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Pyramide du Louvre", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Notre-Dame de Paris", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Obélisque de Louxor", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Chateau de Versaille", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Grande Arche de la Défense", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Fondation Louis Vuitton", "France", "Paris", "Description", "", "", "", "");
-            test.AjouterBatimentSimple("Paris", "Gare du Nord", "France", "Paris", "Description", "", "", "", "");
+            test.AjouterBatimentSimple("Paris", "Arc de triomphe", "France", "Paris", "Description", "ArcDeTriomphe/arcdetriomphe.jpg", "ArcDeTriomphe/archarcdetriomphe.jpg", "ArcDeTriomphe/planarcdetriomphe.jpg", "ArcDeTriomphe/interarcdetriomphe.jpg");
+            test.AjouterBatimentSimple("Paris", "Pyramide du Louvre", "France", "Paris", "Description", "PyramideDuLouvre/pyramidedulouvre.jpg", "PyramideDuLouvre/archpyramidedulouvre.jpg", "PyramideDuLouvre/planpyramidedulouvre.jfif", "PyramideDuLouvre/interpyramidedulouvre.jfif");
+            test.AjouterBatimentSimple("Paris", "Notre-Dame de Paris", "France", "Paris", "Description", "NotreDameDeParis/notredamedeparis.jpg", "NotreDameDeParis/archnotredamedeparis.jpg", "NotreDameDeParis/plannotredamedeparis.jpg", "NotreDameDeParis/internotredamedeparis.jpg");
+            test.AjouterBatimentSimple("Paris", "Obélisque de Louxor", "France", "Paris", "Description", "ObelisqueDeLouxor/obelisquedelouxor.jpg", "ObelisqueDeLouxor/archobelisquedelouxor.jpg", "ObelisqueDeLouxor/planobelisquedelouxor.jpg", "ObelisqueDeLouxor/interobelisquedelouxor.jpg");
+            test.AjouterBatimentSimple("Paris", "Grande Arche de la Défense", "France", "Paris", "Description", "GrandeArcheDeLaDefense/grandearchdeladefense.jpg", "GrandeArcheDeLaDefense/archgrandearchdeladefense.jpg", "GrandeArcheDeLaDefense/plangrandearchdeladefense.jpg", "GrandeArcheDeLaDefense/intergrandearchdeladefense.jpg");
+
+            test.AjouterBatimentSimple("Londres", "Big Ben", "USA", "San Francisco", "Description", "BigBen/bigben.jpeg", "BigBen/archbigben.jpg", "BigBen/planbigben.jpg", "BigBen/interbigben.jpg");
+            test.AjouterBatimentSimple("Londres", "Palais de Westminster", "USA", "San Francisco", "Description", "PalaisDeWestminster/palaisdewestminster.jpg", "PalaisDeWestminster/archpalaisdewestminster.jpg", "PalaisDeWestminster/planpalaisdewestminster.jpg", "PalaisDeWestminster/interpalaisdewestminster.jpg");
+            test.AjouterBatimentSimple("Londres", "London Eye", "USA", "San Francisco", "Description", "LondonEye/londoneye.jpg", "LondonEye/archlondoneye.jpg", "LondonEye/planlondoneye.jpg", "LondonEye/interlondoneye.jpg");
+            test.AjouterBatimentSimple("Londres", "L'Ogive de Foster", "USA", "San Francisco", "Description", "LOgiveDeFoster/logivedefoster.jpg", "LOgiveDeFoster/archlogivedefoster.jpg", "LOgiveDeFoster/planlogivedefoster.jfif", "LOgiveDeFoster/interlogivedefoster.jpg");
 
             return test;
         }
