@@ -14,10 +14,10 @@ namespace Data
         public static Monde CreerEnsemble()
         {
             Monde test = new Monde();
-            test.AjouterVille("San Francisco", "SanFrancisco/vignette.jpg", "SanFrancisco/panorama.jpg");
-            test.AjouterVille("New York", "NewYork/vignette.jpg", "NewYork/panorama.jpg");
-            test.AjouterVille("Paris", "Paris/vignette.jpg", "Paris/panorama.jpg");
-            test.AjouterVille("Londres", "Londres/vignette.jpg", "Londres/panorama.jpg");
+            test.AjouterVille("San Francisco","Etats Unis d'Amérique", "SanFrancisco/vignette.jpg", "SanFrancisco/panorama.jpg");
+            test.AjouterVille("New York", "Etats Unis d'Amérique", "NewYork/vignette.jpg", "NewYork/panorama.jpg");
+            test.AjouterVille("Paris", "France", "Paris/vignette.jpg", "Paris/panorama.jpg");
+            test.AjouterVille("Londres", "Royaume Uni", "Londres/vignette.jpg", "Londres/panorama.jpg");
 
             test.AjouterBatimentSimple("San Francisco", "Golden Gate", "USA", "San Francisco", "Description", "GoldenGate/golden_gate.jpg", "GoldenGate/architecte.jpg", "GoldenGate/plan.jpg", "GoldenGate/interieur.jpg");
             test.AjouterBatimentSimple("San Francisco", "Coit Tower", "USA", "San Francisco", "Description", "CoitTower/coit_tower.jpg", "CoitTower/architecte.jpg", "CoitTower/plan.gif", "CoitTower/interieur.jpg");
@@ -41,11 +41,11 @@ namespace Data
             test.AjouterBatimentSimple("Londres", "Palais de Westminster", "USA", "San Francisco", "Description", "PalaisDeWestminster/palaisdewestminster.jpg", "PalaisDeWestminster/archpalaisdewestminster.jpg", "PalaisDeWestminster/planpalaisdewestminster.jpg", "PalaisDeWestminster/interpalaisdewestminster.jpg");
             test.AjouterBatimentSimple("Londres", "London Eye", "USA", "San Francisco", "Description", "LondonEye/londoneye.jpg", "LondonEye/archlondoneye.jpg", "LondonEye/planlondoneye.jpg", "LondonEye/interlondoneye.jpg");
             test.AjouterBatimentSimple("Londres", "L'Ogive de Foster", "USA", "San Francisco", "Description", "LOgiveDeFoster/logivedefoster.jpg", "LOgiveDeFoster/archlogivedefoster.jpg", "LOgiveDeFoster/planlogivedefoster.jfif", "LOgiveDeFoster/interlogivedefoster.jpg");
-
+            
             return test;
         }
 
-        public static Ville CreerVille()
+        /*public static Ville CreerVille()
         {
             Ville ville = new Ville("Londres", "londrezs.jpg", "statue_liberte.jpg");
             ville.AjouterBatimentSimple("BigBen", "Angleterre", "Londres", "Description", "londrezs.jpg", "avis.png", "plan empire state.jpg", "icone_londres.png");
@@ -71,6 +71,6 @@ namespace Data
             Batiment batiment = new Batiment("Tour de Pise","Italie","Pise","Pise","adresse pise", "on sait pas","pas qui c'est","vieux","pierre","haut","compte pour voir","ya longtemps",
                 "très longtemps","bah elle penche quoi ...","icone_newyork.png", "icone_newyork.png", "icone_newyork.png", "icone_newyork.png");
             return batiment;
-        }
+        }*/
     }
 }

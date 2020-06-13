@@ -36,9 +36,9 @@ namespace Modele
         /// Ajouter une ville dans la liste de villes
         /// </summary>
         /// <returns>Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
-        public bool AjouterVille (string nom, string imagevignette, string imagepanorama)
+        public bool AjouterVille (string nom, string pays, string imagevignette, string imagepanorama)
         {
-            Ville ville = new Ville(nom, imagevignette, imagepanorama);
+            Ville ville = new Ville(nom, pays, imagevignette, imagepanorama);
             ListeVilles.Add(ville);
             if (ListeVilles.Contains(ville)) return true;
             else return false;
@@ -85,7 +85,7 @@ namespace Modele
         /// <returns>Retourne true si le batiment a été ajouté dans la liste sinon retourne false</returns>
         public bool AjouterBatimentSimple(string nomville, string nombat, string pays, string ville, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            bool res = ListeVilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
+            bool res = ListeVilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }
 
@@ -97,7 +97,8 @@ namespace Modele
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur, 
             string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            bool res = ListeVilles[RechercherVille(nomville)].AjouterBatimentComplet(nombat, pays, ville, quartier, adresse, architecte, ingenieur
+            Modele.Ville v = ListeVilles[RechercherVille(nomville)];
+            bool res = v.AjouterBatimentComplet(nombat, quartier, adresse, architecte, ingenieur
                 , style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }

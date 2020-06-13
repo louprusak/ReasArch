@@ -48,13 +48,20 @@ namespace Modele
 
         public bool AjouterVille(Modele.Ville ville)
         {
-            bool res = monde.AjouterVille(ville.Nom, ville.ImageVignette, ville.ImagePanorama);
+            bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.ImageVignette, ville.ImagePanorama);
             return res;
         }
 
         public bool SupprimerVille(Modele.Ville ville)
         {
             bool res = monde.SupprimerVille(ville.Nom);
+            return res;
+        }
+
+        public bool AjouterBatiment(Modele.Batiment b)
+        {
+            bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
+                b.Hauteur, b.NbEtages, b.Construction, b.Ouverture, b.Description, b.ImagePrincipale, b.ImageArchitecte, b.ImagePlan, b.ImageInterieur);
             return res;
         }
 
