@@ -202,20 +202,16 @@ namespace Modele
         /// <summary>
         /// Constructeur de la class Batiment
         /// </summary>
-        public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imageArchitecte, string imageplan, string imageinterieur)
+        public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imageArchitecte, 
+            string imageplan, string imageinterieur):this(nom)
         {
-            if (!String.IsNullOrEmpty(Nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(Ville) | String.IsNullOrEmpty(Description))
-            {
-                Nom = nom;
-                Pays = pays;
-                Ville = ville;
-                Description = description;
-                Imageprincipale = imageprincipale;
-                Imagearchitecte = imageArchitecte;
-                Imageplan = imageplan;
-                Imageinterieur = imageinterieur;
-            }
-            else throw new ArgumentException();
+            Pays = pays;
+            Ville = ville;
+            Description = description;
+            Imageprincipale = imageprincipale;
+            Imagearchitecte = imageArchitecte;
+            Imageplan = imageplan;
+            Imageinterieur = imageinterieur;
         }
 
 

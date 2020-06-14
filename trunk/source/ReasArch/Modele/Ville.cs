@@ -67,12 +67,8 @@ namespace Modele
         /// </summary>
         public Ville(string nom)
         {
-            if (!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
-            {
-                Nom = nom;
-                Listebatiments = new ObservableCollection<Batiment>();
-            }
-            else throw new ArgumentException();
+            Nom = nom;
+            Listebatiments = new ObservableCollection<Batiment>();
         }
 
 

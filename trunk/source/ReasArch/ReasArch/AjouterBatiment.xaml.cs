@@ -54,6 +54,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath,filename));
                 LeBatiment.Imageprincipale = filename;
             }
@@ -69,6 +75,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while(File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
                 LeBatiment.Imagearchitecte = filename;
             }
@@ -84,6 +96,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
                 LeBatiment.Imageplan = filename;
             }
@@ -99,6 +117,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
                 LeBatiment.Imageinterieur = filename;
             }
