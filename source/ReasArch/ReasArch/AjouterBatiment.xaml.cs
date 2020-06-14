@@ -27,9 +27,9 @@ namespace ReasArch
         public AjouterBatiment()
         {
             InitializeComponent();
-            var b = new Modele.Batiment("", manager.VilleSelectionnee.PAYS, manager.VilleSelectionnee.NOM,"" , "", "", "", "", "", "", "", "", "", "", "", "", "", "");
-            LeBatiment = new Modele.Batiment(b.NOM, b.PAYS, b.VILLE, b.QUARTIER, b.ADRESSE, b.ARCHITECTE, b.INGENIEUR, b.STYLE, b.MATERIAUX,
-                b.HAUTEUR, b.NBETAGES, b.CONSTRUCTION, b.OUVERTURE, b.DESCRIPTION, b.IMAGEPRINCIPALE, b.IMAGEARCHITECTE, b.IMAGEPLAN, b.IMAGEINTERIEUR);
+            var b = new Modele.Batiment("", manager.VilleSelectionnee.Pays, manager.VilleSelectionnee.Nom,"" , "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+            LeBatiment = new Modele.Batiment(b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
+                b.Hauteur, b.Nbetages, b.Construction, b.Ouverture, b.Description, b.Imageprincipale, b.Imagearchitecte, b.Imageplan, b.Imageinterieur);
             DataContext = LeBatiment;
         }
 
@@ -55,7 +55,7 @@ namespace ReasArch
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath,filename));
-                LeBatiment.IMAGEPRINCIPALE = filename;
+                LeBatiment.Imageprincipale = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
@@ -70,7 +70,7 @@ namespace ReasArch
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
-                LeBatiment.IMAGEARCHITECTE = filename;
+                LeBatiment.Imagearchitecte = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
@@ -85,7 +85,7 @@ namespace ReasArch
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
-                LeBatiment.IMAGEPLAN = filename;
+                LeBatiment.Imageplan = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
@@ -100,7 +100,7 @@ namespace ReasArch
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
-                LeBatiment.IMAGEINTERIEUR = filename;
+                LeBatiment.Imageinterieur = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
