@@ -22,17 +22,20 @@ namespace ReasArch
     public partial class ModifierVille : Window
     {
         public Manager manager => (App.Current as App).LeManager;
-        public Modele.Ville CetteVille { get; set; }
+        public Modele.Ville OldVille { get; set; }
+        public Modele.Ville NewVille { get; set; }
 
         public ModifierVille()
         {
             InitializeComponent();
-            CetteVille = manager.VilleSelectionnee;
-            DataContext = CetteVille;
+            OldVille = manager.VilleSelectionnee;
+            NewVille = new Modele.Ville(OldVille.Nom, OldVille.Pays, OldVille.Imagevignette, OldVille.Imagepanorama);
+            DataContext = NewVille;
         }
 
         private void Sauvegarder(object sender, RoutedEventArgs e)
         {
+            manager.ModifierVille(OldVille, NewVille);
             Close();
         }
 
@@ -50,8 +53,14 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
-                CetteVille.Imagevignette = filename;
+                NewVille.Imagevignette = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
@@ -65,8 +74,14 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
-                CetteVille.Imagepanorama = filename;
+                NewVille.Imagepanorama = filename;
             }
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }

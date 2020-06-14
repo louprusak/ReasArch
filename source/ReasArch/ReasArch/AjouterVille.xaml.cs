@@ -28,7 +28,7 @@ namespace ReasArch
         public AjouterVille()
         {
             InitializeComponent();
-            var v = new Modele.Ville("//unknown//", "//unknown//", "", "");
+            var v = new Modele.Ville("", "", "", "");
             LaVille = new Modele.Ville(v.Nom, v.Pays, v.Imagevignette, v.Imagepanorama);
             DataContext = LaVille;
         }
@@ -54,6 +54,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
                 LaVille.Imagevignette = filename;
             }
@@ -69,6 +75,12 @@ namespace ReasArch
             {
                 FileInfo fi = new FileInfo(dialog.FileName);
                 string filename = fi.Name;
+                int i = 0;
+                while (File.Exists(System.IO.Path.Combine(StringToImageConverter.imagesPath, filename)))
+                {
+                    i++;
+                    filename = $"{fi.Name.Remove(fi.Name.LastIndexOf('.'))}_{i}.{fi.Extension}";
+                }
                 File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
                 LaVille.Imagepanorama = filename;
             }

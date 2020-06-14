@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 
 namespace Modele
@@ -63,8 +64,6 @@ namespace Modele
             bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.Imagevignette, ville.Imagepanorama);
             return res;
         }
-
-
         /// <summary>
         /// Permet de supprimer une ville de la collection de ville
         /// </summary>
@@ -73,6 +72,15 @@ namespace Modele
         {
             bool res = monde.SupprimerVille(ville.Nom);
             return res;
+        }
+        public void ModifierVille(Modele.Ville oldville, Modele.Ville newville)
+        {
+            Type typeville = typeof(Modele.Ville);
+            var villeproperties = typeville.GetProperties();
+            foreach (var property in villeproperties.Where(ppty => ppty.CanWrite))
+            {
+                property.SetValue(oldville, property.GetValue(newville));
+            }
         }
 
 
@@ -85,6 +93,16 @@ namespace Modele
             bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
                 b.Hauteur, b.Nbetages, b.Construction, b.Ouverture, b.Description, b.Imageprincipale, b.Imagearchitecte, b.Imageplan, b.Imageinterieur);
             return res;
+        }
+
+        public void ModifierBatiment(Modele.Batiment oldbatiment, Modele.Batiment newbatiment)
+        {
+            Type typebatiment = typeof(Modele.Batiment);
+            var batimentproperties = typebatiment.GetProperties();
+            foreach(var property in batimentproperties.Where(ppty => ppty.CanWrite))
+            {
+                property.SetValue(oldbatiment, property.GetValue(newbatiment));
+            }
         }
 
 
