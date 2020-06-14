@@ -54,6 +54,8 @@ namespace Modele
         }
         private Batiment batimentSelectionne;  // initialistaion de la variable contenant le bâtiment sélectionné
 
+        //------------------------------------------------------------------------------------//
+        //METHODES
 
         /// <summary>
         /// Permet d'ajouter une ville à la collection de ville
@@ -64,6 +66,8 @@ namespace Modele
             bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.Imagevignette, ville.Imagepanorama);
             return res;
         }
+
+
         /// <summary>
         /// Permet de supprimer une ville de la collection de ville
         /// </summary>
@@ -73,6 +77,11 @@ namespace Modele
             bool res = monde.SupprimerVille(ville.Nom);
             return res;
         }
+
+
+        /// <summary>
+        /// Permet de modifier une ville
+        /// </summary>
         public void ModifierVille(Modele.Ville oldville, Modele.Ville newville)
         {
             Type typeville = typeof(Modele.Ville);
@@ -95,6 +104,10 @@ namespace Modele
             return res;
         }
 
+
+        /// <summary>
+        /// Permet de modifier un batiment
+        /// </summary>
         public void ModifierBatiment(Modele.Batiment oldbatiment, Modele.Batiment newbatiment)
         {
             Type typebatiment = typeof(Modele.Batiment);
