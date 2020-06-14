@@ -182,7 +182,10 @@ namespace Modele
         public String Imageinterieur
         {
             get { return imageinterieur; }
-            set { imageinterieur = value; }
+            set {
+                if (imageinterieur != value)
+                { imageinterieur = value; OnPropertyChanged(); }
+            }
         }
         private string imageinterieur = null;//Image de l'intérieur du batiment
 

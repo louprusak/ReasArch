@@ -33,16 +33,6 @@ namespace Modele
         //METHODES
 
         /// <summary>
-        /// Recherche la ville associé au nom donné
-        /// </summary>
-        /// <returns> Retourne la ville </returns>
-        public Modele.Ville GetVille(string nom)
-        {
-            return Listevilles.SingleOrDefault(v => v.Nom == nom);
-        }
-
-
-        /// <summary>
         /// Ajouter une ville dans la liste de villes
         /// </summary>
         /// <returns> Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
