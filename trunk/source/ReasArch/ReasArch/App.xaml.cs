@@ -19,7 +19,7 @@ namespace ReasArch
 
         public App()
         {
-            LeManager.MONDE = Stub.CreerEnsemble();
+            LeManager.Monde = Stub.CreerEnsemble();
         }
     }
 }

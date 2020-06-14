@@ -1,6 +1,9 @@
-﻿using Modele;
+﻿using Microsoft.Win32;
+using Modele;
+using ReasArch.converters;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,16 +29,12 @@ namespace ReasArch
         {
             InitializeComponent();
             var v = new Modele.Ville("//unknown//", "//unknown//", "", "");
-            LaVille = new Modele.Ville(v.NOM, v.PAYS, v.IMAGEVIGNETTE, v.IMAGEPANORAMA);
+            LaVille = new Modele.Ville(v.Nom, v.Pays, v.Imagevignette, v.Imagepanorama);
             DataContext = LaVille;
         }
 
         private void Ajouter_Ville(object sender, RoutedEventArgs e)
         {
-            /*if(manager.monde.GetVille(LaVille.Nom) != null)
-            {
-                MessageBox.Show("Une ville avec ce nom est déjà présente dans l'application !", "", MessageBoxButton.OK, MessageBoxImage.Error);
-            }*/
             bool res = manager.AjouterVille(LaVille);
             if(res == false) { MessageBox.Show("Erreur lors de l'ajout de la ville...", "", MessageBoxButton.OK, MessageBoxImage.Error); }
             Close();
@@ -45,5 +44,36 @@ namespace ReasArch
         {
             Close();
         }
+
+        private void ImageVignette_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true)
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
+                LaVille.Imagevignette = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void ImagePanorama_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Images | *.png; *.jpg; *.gif";
+            bool? retour = dialog.ShowDialog();
+            if (retour == true)
+            {
+                FileInfo fi = new FileInfo(dialog.FileName);
+                string filename = fi.Name;
+                File.Copy(dialog.FileName, System.IO.Path.Combine(StringToImageConverter.imagesPath, filename));
+                LaVille.Imagepanorama = filename;
+            }
+            else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+        
     }
 }

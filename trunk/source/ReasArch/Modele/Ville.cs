@@ -2,46 +2,61 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Modele
 {
-    public class Ville
+    public class Ville : INotifyPropertyChanged
     {
-        public string NOM
+        public string Nom
         {
-            get { return Nom; }
-            set { Nom = value; }
+            get { return nom; }
+            set {
+                if (nom != value)
+                { nom = value; OnPropertyChanged(); }
+            }
         }
-        private string Nom; // nom de la ville
+        private string nom; // nom de la ville
 
-        public string PAYS
+        public string Pays
         {
-            get { return Pays; }
-            set { Pays = value; }
+            get { return pays; }
+            set {
+                if (pays != value)
+                { pays = value; OnPropertyChanged(); }
+            }
         }
-        private string Pays; //Pays dans lequel se trouve la ville
+        private string pays; //Pays dans lequel se trouve la ville
 
-        public string IMAGEVIGNETTE
+        public string Imagevignette
         {
-            get { return ImageVignette; }
-            set { ImageVignette = value; }
+            get { return imagevignette; }
+            set {
+                if (imagevignette != value)
+                { imagevignette= value; OnPropertyChanged(); }
+            }
         }
-        private string ImageVignette = null; // Image de la vignette de la ville
+        private string imagevignette = null; // Image de la vignette de la ville
 
-        public string IMAGEPANORAMA
+        public string Imagepanorama
         {
-            get { return ImagePanorama; }
-            set { ImagePanorama = value; }
+            get { return imagepanorama; }
+            set {
+                if (imagepanorama != value)
+                { imagepanorama = value; OnPropertyChanged(); }
+            }
         }
-        private string ImagePanorama = null; // Image panoramique de la ville
+        private string imagepanorama = null; // Image panoramique de la ville
 
-        public ObservableCollection<Batiment> LISTEBATIMENTS
+        public ObservableCollection<Batiment> Listebatiments
         {
-            get { return ListeBatiments; }
-            set { ListeBatiments = value; }
+            get { return listebatiments; }
+            set { listebatiments = value; }
         }
-        private ObservableCollection<Batiment> ListeBatiments; // liste des batiments contenuent dans la ville
+        private ObservableCollection<Batiment> listebatiments; // liste des batiments contenuent dans la ville
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
         //-----------------------------------------------------------------------------------------------------------//
@@ -55,7 +70,7 @@ namespace Modele
             if (!String.IsNullOrEmpty(nom) | !String.IsNullOrWhiteSpace(nom))
             {
                 Nom = nom;
-                ListeBatiments = new ObservableCollection<Batiment>();
+                Listebatiments = new ObservableCollection<Batiment>();
             }
             else throw new ArgumentException();
         }
@@ -67,8 +82,8 @@ namespace Modele
         public Ville (string nom, string pays, string imagevignette, string imagepanorama):this(nom)
         {
             Pays = pays;
-            ImageVignette = imagevignette;
-            ImagePanorama = imagepanorama;
+            Imagevignette = imagevignette;
+            Imagepanorama = imagepanorama;
         }
 
 
@@ -83,8 +98,8 @@ namespace Modele
             string imagearchitecte, string imageplan, string imageinterieur)
         {
             Batiment batiment = new Batiment(nom, this.Pays, this.Nom, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
-            ListeBatiments.Add(batiment);
-            if(ListeBatiments.Contains(batiment)) { return true; }
+            Listebatiments.Add(batiment);
+            if(Listebatiments.Contains(batiment)) { return true; }
             else { return false; }
         }
 
@@ -99,8 +114,8 @@ namespace Modele
         {
             Batiment batiment = new Batiment(nom, this.Pays, this.Nom, quartier, adresse, architecte, ingenieur, style, materiaux,
                 hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
-            ListeBatiments.Add(batiment);
-            if (ListeBatiments.Contains(batiment)) { return true; }
+            Listebatiments.Add(batiment);
+            if (Listebatiments.Contains(batiment)) { return true; }
             else { return false; }
         }
 
@@ -112,8 +127,8 @@ namespace Modele
         public bool SupprimerBatiment(string nom)
         {
             Batiment batiment = new Batiment(nom);
-            ListeBatiments.Remove(batiment);
-            if (ListeBatiments.Contains(batiment)){ return false; }
+            Listebatiments.Remove(batiment);
+            if (Listebatiments.Contains(batiment)){ return false; }
             else return true;
         }
 
@@ -125,7 +140,7 @@ namespace Modele
         public int RechercherBatiment(string nombat)
         {
             Batiment batiment = new Batiment(nombat);
-            int index = ListeBatiments.IndexOf(batiment);
+            int index = Listebatiments.IndexOf(batiment);
             return index;
         }
 
@@ -139,7 +154,7 @@ namespace Modele
             string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
             int index = RechercherBatiment(nombat);
-            bool res = ListeBatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
+            bool res = Listebatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
                 ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }
@@ -169,11 +184,17 @@ namespace Modele
         public override string ToString()
         {
             string message = $"Description de la ville {Nom.ToUpper()} et de ses batiments :\n\n";
-            foreach(Batiment batiment in ListeBatiments)
+            foreach(Batiment batiment in Listebatiments)
             {
                 message += batiment.ToString();
             }
             return message;
         }
+
+        /// <summary>
+        /// Méthode appelée lors du changement de propriété des objects afin de refaire remonter l'information et ainsi de modifier le visuel XAML
+        /// </summary>
+        void OnPropertyChanged([CallerMemberName] string PropertyName = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
     }
 }

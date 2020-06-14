@@ -9,12 +9,12 @@ namespace Modele
 {
     public class Monde
     {
-        public ObservableCollection<Ville> LISTEVILLES
+        public ObservableCollection<Ville> Listevilles
         {
-            get { return ListeVilles; }
-            set { ListeVilles = value; }
+            get { return listevilles; }
+            set { listevilles = value; }
         }
-        private ObservableCollection<Ville> ListeVilles; //liste des villes contenues dans l'application
+        private ObservableCollection<Ville> listevilles; //liste des villes contenues dans l'application
 
 
         //------------------------------------------------------------------------------------//
@@ -25,7 +25,7 @@ namespace Modele
         /// </summary>
         public Monde()
         {
-            ListeVilles = new ObservableCollection<Ville>();
+            listevilles = new ObservableCollection<Ville>();
         }
 
 
@@ -38,7 +38,7 @@ namespace Modele
         /// <returns> Retourne la ville </returns>
         public Modele.Ville GetVille(string nom)
         {
-            return ListeVilles.SingleOrDefault(v => v.NOM == nom);
+            return Listevilles.SingleOrDefault(v => v.Nom == nom);
         }
 
 
@@ -49,8 +49,8 @@ namespace Modele
         public bool AjouterVille (string nom, string pays, string imagevignette, string imagepanorama)
         {
             Ville ville = new Ville(nom, pays, imagevignette, imagepanorama);
-            ListeVilles.Add(ville);
-            if (ListeVilles.Contains(ville)) return true;
+            Listevilles.Add(ville);
+            if (Listevilles.Contains(ville)) return true;
             else return false;
         }
 
@@ -62,8 +62,8 @@ namespace Modele
         public bool SupprimerVille (string nom)
         {
             Ville ville = new Ville(nom);
-            ListeVilles.Remove(ville);
-            if (ListeVilles.Contains(ville)) return false;
+            Listevilles.Remove(ville);
+            if (Listevilles.Contains(ville)) return false;
             else return true;
         }
 
@@ -75,7 +75,7 @@ namespace Modele
         public int RechercherVille(string nomville)
         {
             Ville ville = new Ville(nomville);
-            int index = ListeVilles.IndexOf(ville);
+            int index = Listevilles.IndexOf(ville);
             return index;
         }
 
@@ -87,8 +87,8 @@ namespace Modele
         public bool ModifierVille(string nomville, string nvnomville)
         {
             int index = RechercherVille(nomville);
-            ListeVilles[index].NOM = nvnomville;
-            if (ListeVilles[index].NOM == nvnomville) return true;
+            Listevilles[index].Nom = nvnomville;
+            if (Listevilles[index].Nom == nvnomville) return true;
             else return false;
         }
 
@@ -99,7 +99,7 @@ namespace Modele
         /// <returns> Retourne true si le batiment a été ajouté dans la liste sinon retourne false</returns>
         public bool AjouterBatimentSimple(string nomville, string nombat, string pays, string ville, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            bool res = ListeVilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
+            bool res = Listevilles[RechercherVille(nomville)].AjouterBatimentSimple(nombat, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
         }
 
@@ -112,7 +112,7 @@ namespace Modele
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur, 
             string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            Modele.Ville v = ListeVilles[RechercherVille(nomville)];
+            Modele.Ville v = Listevilles[RechercherVille(nomville)];
             bool res = v.AjouterBatimentComplet(nombat, quartier, adresse, architecte, ingenieur
                 , style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
             return res;
@@ -126,7 +126,7 @@ namespace Modele
         public bool SupprimerBatiment (string nomville, string nombat)
         {
             Batiment batiment = new Batiment(nombat);
-            bool res = ListeVilles[RechercherVille(nomville)].LISTEBATIMENTS.Remove(batiment);
+            bool res = Listevilles[RechercherVille(nomville)].Listebatiments.Remove(batiment);
             return res;
         }
 
@@ -139,7 +139,7 @@ namespace Modele
             string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
             string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
         {
-            bool res = ListeVilles[RechercherVille(nomville)].ModifierBatiment(nombat, nvnom, pays, ville, quartier, adresse,
+            bool res = Listevilles[RechercherVille(nomville)].ModifierBatiment(nombat, nvnom, pays, ville, quartier, adresse,
                 architecte, ingenieur, style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan,  imageinterieur);
             return res;
         }
@@ -154,7 +154,7 @@ namespace Modele
         public override string ToString()
         {
             string message = "///---Affichage de toutes les données des villes contenues dans l'application:---///\n\n";
-            foreach(Ville ville in ListeVilles)
+            foreach(Ville ville in Listevilles)
             {
                 message += ville.ToString();
             }

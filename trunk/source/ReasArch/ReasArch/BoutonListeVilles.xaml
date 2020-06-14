@@ -24,10 +24,10 @@
         <StackPanel Name="AfficheurVignetteVille">
             <Ellipse Width="90" Height="90" StrokeThickness="2" Stroke="Black">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="{Binding IMAGEVIGNETTE, Converter={StaticResource StringToImageConverter}}" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="{Binding Imagevignette, Converter={StaticResource StringToImageConverter}}" Stretch="UniformToFill"/>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock Text="{Binding NOM}">
+            <TextBlock Text="{Binding Nom}">
                 <TextBlock.BitmapEffect>
                     <DropShadowBitmapEffect Color="Black" Direction="0" ShadowDepth="0"/>
                 </TextBlock.BitmapEffect>

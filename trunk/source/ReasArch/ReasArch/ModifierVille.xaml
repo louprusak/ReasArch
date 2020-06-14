@@ -5,19 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReasArch"
         mc:Ignorable="d"
-        Title="ModifierVille" Height="500" Width="800">
+        Title="ModifierVille" Height="520" Width="800">
     <DockPanel Background="#757575">
         <TextBlock Background="Black" Text="Modifier une Ville" DockPanel.Dock="Top" FontSize="30" Foreground="White" FontWeight="Bold" TextAlignment="Center" Padding="10"/>
         <ScrollViewer>
             <StackPanel Margin="0,10,0,0">
                 <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="Viewbox">
+                            <Setter Property="MaxHeight" Value="50"/>
+                        </Style>
+                    </Grid.Resources>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <local:TextBlock_Bouton Texte="Icône Ville"/>
-                    <local:TextBlock_Bouton Grid.Column="1" Texte="Image Panorama Ville"/>
+                    <local:TextBlock_Bouton Grid.Column="1" Texte="Vignette Ville" MouseUp="ImageVignette_MouseUp"/>
+                    <local:TextBlock_Bouton Grid.Column="2" Texte="Panorama Ville" MouseUp="ImagePanorama_MouseUp"/>
+                    <Viewbox Grid.Column="0">
+                        <Image Source="{Binding Imagevignette, Converter={StaticResource StringToImageConverter}}"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="3">
+                        <Image Source="{Binding Imagepanorama, Converter={StaticResource StringToImageConverter}}"/>
+                    </Viewbox>
                 </Grid>
+                
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>
 
                 <Grid>
@@ -41,10 +55,10 @@
                         </Style>
                     </Grid.Resources>
                     <TextBlock Text="Nom de la Ville"/>
-                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding NOM}"/>
+                    <TextBox Grid.Column="1" TextWrapping="Wrap" Text="{Binding Nom}"/>
 
                     <TextBlock Grid.Row="1" Text="Pays de la ville"/>
-                    <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding PAYS}"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Pays}"/>
                 </Grid>
 
                 <Rectangle Stroke="Black" Height="10" Margin="20" Fill="Black" RadiusX="10" RadiusY="10"/>

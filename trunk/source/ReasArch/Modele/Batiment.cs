@@ -9,182 +9,182 @@ namespace Modele
 {
     public class Batiment : INotifyPropertyChanged
     {
-        public String NOM
+        public String Nom
         {
-            get { return Nom; }
+            get { return nom; }
             set {
-                if (Nom != value)
-                { Nom = value;OnPropertyChanged();}
+                if (nom != value)
+                { nom = value;OnPropertyChanged();}
             }
         }
-        private String Nom; //nom du batiment
+        private String nom; //Nom du batiment
 
-        public String PAYS
+        public String Pays
         {
-            get { return Pays; }
+            get { return pays; }
             set {
-                if (Pays != value)
-                { Pays = value; OnPropertyChanged(); }
+                if (pays != value)
+                { pays = value; OnPropertyChanged(); }
             }
         }
-        private string Pays = "non spécifié"; //Pays dans lequel se trouve le batiment
+        private string pays = "non spécifié"; //Pays dans lequel se trouve le batiment
 
-        public String VILLE
+        public String Ville
         {
-            get { return Ville; }
+            get { return ville; }
             set {
-                if (Ville != value)
-                { Ville = value; OnPropertyChanged(); }
+                if (ville != value)
+                { ville = value; OnPropertyChanged(); }
             }
         }
-        private string Ville = "non spécifié";//Ville dans laquelle se trouve le batiment
+        private string ville = "non spécifié";//Ville dans laquelle se trouve le batiment
 
-        public String QUARTIER
+        public String Quartier
         {
-            get { return Quartier; }
+            get { return quartier; }
             set {
-                if (Quartier != value)
-                { Quartier= value; OnPropertyChanged(); }
+                if (quartier != value)
+                { quartier= value; OnPropertyChanged(); }
             }
         }
-        private string Quartier = "non spécifié";//Quartier dans lequel se trouve la batiment
+        private string quartier = "non spécifié";//Quartier dans lequel se trouve la batiment
 
-        public String ADRESSE
+        public String Adresse
         {
-            get { return Adresse; }
+            get { return adresse; }
             set {
-                if (Adresse != value)
-                { Adresse = value; OnPropertyChanged(); }
+                if (adresse != value)
+                { adresse = value; OnPropertyChanged(); }
             }
         }
-        private string Adresse = "non spécifié";//Adresse du batiment
+        private string adresse = "non spécifié";//Adresse du batiment
 
-        public String ARCHITECTE
+        public String Architecte
         {
-            get { return Architecte; }
+            get { return architecte; }
             set {
-                if (Architecte != value)
-                { Architecte = value; OnPropertyChanged(); }
+                if (architecte != value)
+                { architecte = value; OnPropertyChanged(); }
             }
         }
-        private string Architecte = "non spécifié";//Architecte du batiment
+        private string architecte = "non spécifié";//Architecte du batiment
 
-        public String INGENIEUR
+        public String Ingenieur
         {
-            get { return Ingenieur; }
+            get { return ingenieur; }
             set {
-                if (Ingenieur != value)
-                { Ingenieur = value; OnPropertyChanged(); }
+                if (ingenieur != value)
+                { ingenieur = value; OnPropertyChanged(); }
             }
         }
-        private string Ingenieur = "non spécifié";//INgénieur du batiment
+        private string ingenieur = "non spécifié";//INgénieur du batiment
 
-        public String STYLE
+        public String Style
         {
-            get { return Style; }
+            get { return style; }
             set {
-                if (Style != value)
-                { Style = value; OnPropertyChanged(); }
+                if (style != value)
+                { style = value; OnPropertyChanged(); }
             }
         }
-        private string Style = "non spécifié";//Style du batiment
+        private string style = "non spécifié";//Style du batiment
 
-        public String MATERIAUX
+        public String Materiaux
         {
-            get { return Materiaux; }
+            get { return materiaux; }
             set {
-                if (Materiaux != value)
-                { Materiaux = value; OnPropertyChanged(); }
+                if (materiaux != value)
+                { materiaux = value; OnPropertyChanged(); }
             }
         }
-        private string Materiaux = "non spécifié";//Matériaux utilisés pour construire le batiment
+        private string materiaux = "non spécifié";//Matériaux utilisés pour construire le batiment
 
-        public String HAUTEUR
+        public String Hauteur
         {
-            get { return Hauteur; }
+            get { return hauteur; }
             set {
-                if (Hauteur != value)
-                { Hauteur = value; OnPropertyChanged(); }
+                if (hauteur != value)
+                { hauteur = value; OnPropertyChanged(); }
             }
         }
-        private string Hauteur = "non spécifié";//Hauteur en mètres du batiment
+        private string hauteur = "non spécifié";//Hauteur en mètres du batiment
 
-        public String NBETAGES
+        public String Nbetages
         {
-            get { return NbEtages; }
+            get { return nbetages; }
             set {
-                if (NbEtages != value)
-                { NbEtages = value; OnPropertyChanged(); }
+                if (nbetages != value)
+                { nbetages = value; OnPropertyChanged(); }
             }
         }
-        private string NbEtages = "non spécifié";//Nombre d'étages du batiment
+        private string nbetages = "non spécifié";//Nombre d'étages du batiment
 
-        public String CONSTRUCTION
+        public String Construction
         {
-            get { return Construction; }
+            get { return construction; }
             set {
-                if (Construction != value)
-                { Construction = value; OnPropertyChanged(); }
+                if (construction != value)
+                { construction = value; OnPropertyChanged(); }
             }
         }
-        private string Construction = "non spécifié";//Années de construction du batiment
+        private string construction = "non spécifié";//Années de Construction du batiment
 
-        public String OUVERTURE
+        public String Ouverture
         {
-            get { return Ouverture; }
+            get { return ouverture; }
             set {
-                if (Ouverture != value)
-                { Ouverture = value; OnPropertyChanged(); }
+                if (ouverture != value)
+                { ouverture = value; OnPropertyChanged(); }
             }
         }
-        private string Ouverture = "non spécifié";//Année d'ouverture du batiment
+        private string ouverture = "non spécifié";//Année d'Ouverture du batiment
 
-        public String DESCRIPTION
+        public String Description
         {
-            get { return Description; }
+            get { return description; }
             set {
-                if (Description != value)
-                { Description = value; OnPropertyChanged(); }
+                if (description != value)
+                { description = value; OnPropertyChanged(); }
             }
         }
-        private string Description = "aucune description";//Description autre du batiment
+        private string description = "aucune Description";//Description autre du batiment
 
-        public String IMAGEPRINCIPALE
+        public String Imageprincipale
         {
-            get { return ImagePrincipale; }
+            get { return imageprincipale; }
             set {
-                if (ImagePrincipale != value)
-                { ImagePrincipale = value; OnPropertyChanged(); }
+                if (imageprincipale != value)
+                { imageprincipale = value; OnPropertyChanged(); }
             }
         }
-        private string ImagePrincipale = null;//Image Principale du batiment
+        private string imageprincipale = null;//Image Principale du batiment
 
-        public String IMAGEARCHITECTE
+        public String Imagearchitecte
         {
-            get { return ImageArchitecte; }
+            get { return imagearchitecte; }
             set {
-                if (ImageArchitecte != value)
-                { ImageArchitecte = value; OnPropertyChanged(); }
+                if (imagearchitecte != value)
+                { imagearchitecte = value; OnPropertyChanged(); }
             }
         }
-        private string ImageArchitecte = null;//Image de l'architecte du batiment
+        private string imagearchitecte = null;//Image de l'Architecte du batiment
 
-        public String IMAGEPLAN
+        public String Imageplan
         {
-            get { return ImagePlan; }
+            get { return imageplan; }
             set {
-                if (ImagePlan != value)
-                { ImagePlan= value; OnPropertyChanged(); }
+                if (imageplan != value)
+                { imageplan= value; OnPropertyChanged(); }
             }
         }
-        private string ImagePlan = null;//Image du plan du batiment
+        private string imageplan = null;//Image du plan du batiment
 
-        public String IMAGEINTERIEUR
+        public String Imageinterieur
         {
-            get { return ImageInterieur; }
-            set { ImageInterieur = value; }
+            get { return imageinterieur; }
+            set { imageinterieur = value; }
         }
-        private string ImageInterieur = null;//Image de l'intérieur du batiment
+        private string imageinterieur = null;//Image de l'intérieur du batiment
 
 
         //----------------------------------------------------------------------------------------------------------------------//
@@ -202,18 +202,18 @@ namespace Modele
         /// <summary>
         /// Constructeur de la class Batiment
         /// </summary>
-        public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
+        public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imageArchitecte, string imageplan, string imageinterieur)
         {
-            if (!String.IsNullOrEmpty(nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(ville) | String.IsNullOrEmpty(description))
+            if (!String.IsNullOrEmpty(Nom) | !String.IsNullOrEmpty(pays) | !String.IsNullOrEmpty(Ville) | String.IsNullOrEmpty(Description))
             {
                 Nom = nom;
                 Pays = pays;
                 Ville = ville;
                 Description = description;
-                ImagePrincipale = imageprincipale;
-                ImageArchitecte = imagearchitecte;
-                ImagePlan = imageplan;
-                ImageInterieur = imageinterieur;
+                Imageprincipale = imageprincipale;
+                Imagearchitecte = imageArchitecte;
+                Imageplan = imageplan;
+                Imageinterieur = imageinterieur;
             }
             else throw new ArgumentException();
         }
@@ -224,8 +224,8 @@ namespace Modele
         /// </summary>
         public Batiment(string nom, string pays, string ville, string quartier, string adresse, string architecte,
             string ingenieur, string style, string materiaux, string hauteur, string nbetages, string construction,
-            string ouverture, string description, string imageprincipale, string imagearchitecte, 
-            string imageplan, string imageinterieur) : this(nom, pays, ville, description, imageprincipale, imagearchitecte, imageplan, imageinterieur)
+            string ouverture, string description, string imageprincipale, string imageArchitecte, 
+            string imageplan, string imageinterieur) : this(nom, pays, ville, description, imageprincipale, imageArchitecte, imageplan, imageinterieur)
         {
             Quartier = quartier;
             Adresse = adresse;
@@ -234,7 +234,7 @@ namespace Modele
             Style = style;
             Materiaux = materiaux;
             Hauteur = hauteur;
-            NbEtages = nbetages;
+            Nbetages = nbetages;
             Construction = construction;
             Ouverture = ouverture;
         }
@@ -256,13 +256,13 @@ namespace Modele
         {
             Nom = nvnom; Pays = pays; Ville = ville;  Quartier = quartier; Adresse = adresse;
             Architecte = architecte; Ingenieur = ingenieur; Style = style; Materiaux = materiaux;
-            Hauteur = hauteur; NbEtages = nbetages; Construction = construction;
-            Ouverture = ouverture; Description = description; ImagePrincipale = imageprincipale;
-            ImageArchitecte = imagearchitecte; ImagePlan = imageplan; ImageInterieur = imageinterieur;
+            Hauteur = hauteur; Nbetages = nbetages; Construction = construction;
+            Ouverture = ouverture; Description = description; Imageprincipale = imageprincipale;
+            Imagearchitecte = imagearchitecte; Imageplan = imageplan; Imageinterieur = imageinterieur;
 
             if(Nom == nvnom && Pays == pays && Ville == ville && Quartier == quartier && Adresse == adresse &&
             Architecte == architecte && Ingenieur == ingenieur && Style == style && Materiaux == materiaux &&
-            Hauteur == hauteur && NbEtages == nbetages && Construction == construction &&
+            Hauteur == hauteur && Nbetages == nbetages && Construction == construction &&
             Ouverture == ouverture && Description == description) return true;
             else return false;
         }
@@ -272,13 +272,13 @@ namespace Modele
         //REDEFINITION DE METHODES 
 
         /// <summary>
-        /// Définit l'affichage de la description du batiment
+        /// Définit l'affichage de la Description du batiment
         /// </summary>
         /// <returns>Retourne le message à afficher</returns>
         public override string ToString()
         {
             string message = $"Nom : {Nom}\nPays : {Pays}\nQuartier : {Quartier}\nAdresse : {Adresse}\nArchitecte : {Architecte}\n" +
-                $"Ingénieur : {Ingenieur}\nStyle : {Style}\nMatériaux : {Materiaux}\nHauteur : {Hauteur}\nNombre d'Etages : {NbEtages}\n" +
+                $"Ingénieur : {Ingenieur}\nStyle : {Style}\nMatériaux : {Materiaux}\nHauteur : {Hauteur}\nNombre d'Etages : {Nbetages}\n" +
                 $"Construction : {Construction}\nOuverture : {Ouverture}\n\n" +
                 $"{Description}\n\n";
             return message;
