@@ -20,38 +20,30 @@ namespace ReasArch
     public partial class BoutonListeBatiments : UserControl
     {
         public Manager manager => (App.Current as App).LeManager;
+        public Modele.Batiment CeBatiment { get; set; }
 
         public BoutonListeBatiments()
         {
             InitializeComponent();
         }
 
-        /*public System.Windows.Media.ImageSource Source
-        {
-            set
-            {
-                Image.Source = value;
-            }
-        }
-
-        public string NomBat
-        {
-            set
-            {
-                Titre.Text = value;
-            }
-        }*/
-
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {
-            Modele.Batiment batiment = DataContext as Modele.Batiment;
-            Window modif = new ModifierBatiment(batiment);
+            CeBatiment = DataContext as Modele.Batiment;
+            Window modif = new ModifierBatiment(CeBatiment);
             modif.ShowDialog();
         }
 
         private void Supprimer_Batiment(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult res = MessageBox.Show("Voulez-vous vraiment supprimer ce bâtiment ?", "Suppression du bâtiment", MessageBoxButton.OKCancel);
+            CeBatiment = DataContext as Modele.Batiment;
+            MessageBoxResult res = MessageBox.Show($"Voulez-vous vraiment supprimer le batiment :\n '{CeBatiment.Nom}' ?", "Suppression du batiment", MessageBoxButton.OKCancel);
+            if (res == MessageBoxResult.OK)
+            {
+                bool suppr = manager.SupprimerBatiment(CeBatiment);
+                if (suppr == false)
+                { MessageBox.Show("Erreur lors de la suppression du batiment...", "", MessageBoxButton.OK, MessageBoxImage.Error); }
+            }
         }
     }
 }

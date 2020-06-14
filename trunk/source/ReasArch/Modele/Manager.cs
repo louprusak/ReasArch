@@ -60,7 +60,7 @@ namespace Modele
         /// <summary>
         /// Permet d'ajouter une ville à la collection de ville
         /// </summary>
-        /// <returns> Retourne true si la liste a bien été ajoutée à la liste sinon retourne false</returns>
+        /// <returns> Retourne true si la ville a bien été ajoutée à la liste sinon retourne false</returns>
         public bool AjouterVille(Modele.Ville ville)
         {
             bool res = monde.AjouterVille(ville.Nom, ville.Pays, ville.Imagevignette, ville.Imagepanorama);
@@ -104,6 +104,11 @@ namespace Modele
             return res;
         }
 
+        public bool SupprimerBatiment(Modele.Batiment batiment)
+        {
+            bool res = monde.SupprimerBatiment(villeSelectionnee.Nom, batiment.Nom);
+            return res;
+        }
 
         /// <summary>
         /// Permet de modifier un batiment
