@@ -6,10 +6,13 @@ using System.Text;
 
 namespace Modele
 {
+    /// <summary>
+    /// Classe Manager de l'application: c'est la seul classe qui sera en lien avec les fenêtres XAML et c'est également la seul qui gérera les données de l'application
+    /// </summary>
     public class Manager : INotifyPropertyChanged
     {
         /// <summary>
-        /// Attribut Monde du manager qui regroupe toutes les villes et les batiments de l'application
+        /// Propriété Monde du manager qui regroupe toutes les villes et les batiments de l'application
         /// </summary>
         public Monde Monde
         {
@@ -20,7 +23,7 @@ namespace Modele
 
 
         /// <summary>
-        /// Attribut Ville Sélectionnée de manager ce qui permet de faire le lien avec le data binding et les usercontrols
+        /// Propriété Ville Sélectionnée de manager qui permet de faire le lien avec le data binding et les usercontrols du XAML
         /// </summary>
         public Ville VilleSelectionnee
         {
@@ -34,11 +37,11 @@ namespace Modele
                 }
             }
         }
-        private Ville villeSelectionnee; // initialistaion de la variable contenant la ville sélectionnée
+        private Ville villeSelectionnee; 
 
 
         /// <summary>
-        /// Attribut Batiment Sélectionné de manager ce qui permet de faire le lien avec le data binding et les usercontrols
+        /// Propriété Batiment Sélectionné de manager qui permet de faire le lien avec le data binding et les usercontrols du XAML
         /// </summary>
         public Batiment BatimentSelectionne
         {
@@ -52,14 +55,17 @@ namespace Modele
                 }
             }
         }
-        private Batiment batimentSelectionne;  // initialistaion de la variable contenant le bâtiment sélectionné
+        private Batiment batimentSelectionne;
+
 
         //------------------------------------------------------------------------------------//
         //METHODES
 
+
         /// <summary>
-        /// Permet d'ajouter une ville à la collection de ville
+        /// Permet d'ajouter une ville à la collection de ville en passant comme paramètre l'objet de type Modele.Ville que l'on veut ajouter
         /// </summary>
+        /// <param name="ville">Objet de type Modele.Ville à ajouter à la liste</param>
         /// <returns> Retourne true si la ville a bien été ajoutée à la liste sinon retourne false</returns>
         public bool AjouterVille(Modele.Ville ville)
         {
@@ -67,21 +73,22 @@ namespace Modele
             return res;
         }
 
-
         /// <summary>
-        /// Permet de supprimer une ville de la collection de ville
+        /// Permet de supprimer une ville de la collection de ville en passant comme paramètre l'objet de type Modele.Ville que l'on veut supprimer
         /// </summary>
-        /// <returns> Retourne true si la liste a bien été supprimée à la liste sinon retourne false</returns>
+        /// <param name="ville">Objet de type Modele.Ville à supprimer de la liste</param>
+        /// <returns> Retourne true si la ville a bien été supprimée de la liste sinon retourne false</returns>
         public bool SupprimerVille(Modele.Ville ville)
         {
             bool res = monde.SupprimerVille(ville.Nom);
             return res;
         }
 
-
         /// <summary>
-        /// Permet de modifier une ville
+        /// Permet de modifier une ville dans la collection en passant comme paramètre la ville sans les modifications et la ville avec les modifications
         /// </summary>
+        /// <param name="oldville">Ancienne ville affichée sans les modifications</param>
+        /// <param name="newville">Nouvelle ville qui sera affichée avec les modidications</param>
         public void ModifierVille(Modele.Ville oldville, Modele.Ville newville)
         {
             Type typeville = typeof(Modele.Ville);
@@ -92,18 +99,23 @@ namespace Modele
             }
         }
 
-
         /// <summary>
-        /// Permet d'ajouter un batiment complet à la liste des batiments dans une ville sélectionnée
+        /// Permet d'ajouter un batiment avec description complète à la liste des batiments dans la ville sélectionnée de l'application
         /// </summary>
-        /// <returns> Retourne true si le batiment à bien été ajouté </returns>
+        /// <param name="b">Objet de type Modele.Batiment à ajouter à la liste</param>
+        /// <returns> Retourne true si le batiment à bien été ajouté à la liste de batiments de la ville sinon retourne false</returns>
         public bool AjouterBatiment(Modele.Batiment b)
         {
-            bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Pays, b.Ville, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
+            bool res = monde.AjouterBatimentComplet(VilleSelectionnee.Nom,b.Nom, b.Quartier, b.Adresse, b.Architecte, b.Ingenieur, b.Style, b.Materiaux,
                 b.Hauteur, b.Nbetages, b.Construction, b.Ouverture, b.Description, b.Imageprincipale, b.Imagearchitecte, b.Imageplan, b.Imageinterieur);
             return res;
         }
 
+        /// <summary>
+        /// Permet de supprimer un batiment de la liste de batiments de la ville sélectionnée de l'application
+        /// </summary>
+        /// <param name="batiment">Objet de type Modele.Batiment à supprimer de la liste</param>
+        /// <returns>Retourne true si le batiment à bien été supprimé de la liste sinon retourne false</returns>
         public bool SupprimerBatiment(Modele.Batiment batiment)
         {
             bool res = monde.SupprimerBatiment(villeSelectionnee.Nom, batiment.Nom);
@@ -111,8 +123,10 @@ namespace Modele
         }
 
         /// <summary>
-        /// Permet de modifier un batiment
+        /// Permet de modifier un batiment donné dans la collection d'une ville donnée
         /// </summary>
+        /// <param name="oldbatiment">Ancien Batiment affiché sans les modifications</param>
+        /// <param name="newbatiment">Nouveau Batiment qui sera affiché avec les modifications</param>
         public void ModifierBatiment(Modele.Batiment oldbatiment, Modele.Batiment newbatiment)
         {
             Type typebatiment = typeof(Modele.Batiment);
@@ -122,6 +136,10 @@ namespace Modele
                 property.SetValue(oldbatiment, property.GetValue(newbatiment));
             }
         }
+
+
+        //------------------------------------------------------------------------------------//
+        //REDEFINITION DE METHODES
 
 
         /// <summary>

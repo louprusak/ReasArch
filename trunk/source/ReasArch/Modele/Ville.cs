@@ -7,8 +7,24 @@ using System.Text;
 
 namespace Modele
 {
+    /// <summary>
+    /// Classe ville de l'application et du master, elle contient une liste de batiments
+    /// </summary>
     public class Ville : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Liste des batiment contenus dans la ville
+        /// </summary>
+        public ObservableCollection<Batiment> Listebatiments
+        {
+            get { return listebatiments; }
+            set { listebatiments = value; }
+        }
+        private ObservableCollection<Batiment> listebatiments;
+
+        /// <summary>
+        /// Nom de la ville
+        /// </summary>
         public string Nom
         {
             get { return nom; }
@@ -17,8 +33,11 @@ namespace Modele
                 { nom = value; OnPropertyChanged(); }
             }
         }
-        private string nom; // nom de la ville
+        private string nom;
 
+        /// <summary>
+        /// Pays dans lequel se trouve la ville
+        /// </summary>
         public string Pays
         {
             get { return pays; }
@@ -27,8 +46,11 @@ namespace Modele
                 { pays = value; OnPropertyChanged(); }
             }
         }
-        private string pays; //Pays dans lequel se trouve la ville
+        private string pays;
 
+        /// <summary>
+        /// Image Vignette de la ville
+        /// </summary>
         public string Imagevignette
         {
             get { return imagevignette; }
@@ -37,8 +59,11 @@ namespace Modele
                 { imagevignette= value; OnPropertyChanged(); }
             }
         }
-        private string imagevignette = null; // Image de la vignette de la ville
+        private string imagevignette = null;
 
+        /// <summary>
+        /// Image Panorama de la ville
+        /// </summary>
         public string Imagepanorama
         {
             get { return imagepanorama; }
@@ -47,23 +72,20 @@ namespace Modele
                 { imagepanorama = value; OnPropertyChanged(); }
             }
         }
-        private string imagepanorama = null; // Image panoramique de la ville
+        private string imagepanorama = null;
 
-        public ObservableCollection<Batiment> Listebatiments
-        {
-            get { return listebatiments; }
-            set { listebatiments = value; }
-        }
-        private ObservableCollection<Batiment> listebatiments; // liste des batiments contenuent dans la ville
-
+        /// <summary>
+        /// Event de changement de propriété des objets
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
 
         //-----------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
+
         /// <summary>
-        /// Constructeur de la class Ville sans l'image
+        /// Constructeur simple de la classe Modele.Ville avec le nom
         /// </summary>
         public Ville(string nom)
         {
@@ -73,7 +95,7 @@ namespace Modele
 
 
         /// <summary>
-        /// Constructeur de la class Ville avec l'image
+        /// Constructeur détaillé de la classe Modele.Ville avec le pays et les images
         /// </summary>
         public Ville (string nom, string pays, string imagevignette, string imagepanorama):this(nom)
         {
@@ -86,8 +108,9 @@ namespace Modele
         //-----------------------------------------------------------------------------------------------------------//
         //METHODES
 
+
         /// <summary>
-        /// Ajouter un batiment avec un détail simple à cette ville
+        /// Ajoute un batiment avec un détail simple à cette ville
         /// </summary>
         /// <returns>Retourne true si le batiment a bien été ajouté à la liste sinon retourne false</returns>
         public bool AjouterBatimentSimple(string nom, string description, string imageprincipale,
@@ -98,7 +121,6 @@ namespace Modele
             if(Listebatiments.Contains(batiment)) { return true; }
             else { return false; }
         }
-
 
         /// <summary>
         /// Ajouter un batiment avec un détail complet à cette ville
@@ -116,51 +138,12 @@ namespace Modele
         }
 
 
-        /// <summary>
-        /// Supprime un batiment de la liste avec un nom donné
-        /// </summary>
-        /// <returns>Retourne true si le batiment n'est plus présent dans la liste sinon retourne false</returns>
-        public bool SupprimerBatiment(string nom)
-        {
-            Batiment batiment = new Batiment(nom);
-            Listebatiments.Remove(batiment);
-            if (Listebatiments.Contains(batiment)){ return false; }
-            else return true;
-        }
-
-
-        /// <summary>
-        /// Recherche un batiment à partir d'un nom bonné
-        /// </summary>
-        /// <returns>Retourne la position où ce trouve le batiment dans la liste</returns>
-        public int RechercherBatiment(string nombat)
-        {
-            Batiment batiment = new Batiment(nombat);
-            int index = Listebatiments.IndexOf(batiment);
-            return index;
-        }
-
-
-        /// <summary>
-        /// Modifier un batiment présent dans la liste
-        /// </summary>
-        /// <returns>Retourne true si le batiment à bien été modifié sinon retourne false</returns>
-        public bool ModifierBatiment(string nombat, string nvnom, string pays, string ville, string quartier,
-            string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
-            string nbetages, string construction, string ouverture, string description, string imageprincipale, string imagearchitecte, string imageplan, string imageinterieur)
-        {
-            int index = RechercherBatiment(nombat);
-            bool res = Listebatiments[index].ModifierBatiment(nvnom, pays, ville, quartier, adresse, architecte,
-                ingenieur,style, materiaux, hauteur, nbetages, construction, ouverture, description, imageprincipale, imagearchitecte, imageplan, imageinterieur);
-            return res;
-        }
-
-
         //-----------------------------------------------------------------------------------------------------------//
         //REDEFINITION DE METHODES
 
+
         /// <summary>
-        /// Compare si l'objet envoyé est le même que la ville 
+        /// Compare si l'objet envoyé est le même que cet instance de Modele.Ville 
         /// </summary>
         /// <returns>Retourne true si ce sont tout deux la même ville</returns>
         public override bool Equals(object obj)
@@ -171,7 +154,6 @@ namespace Modele
             Ville other = (Ville)obj;
             return Nom.Equals(other.Nom);
         }
-
 
         /// <summary>
         /// Redéfinition du ToString de la classe ville

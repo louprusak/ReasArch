@@ -23,26 +23,9 @@ namespace ReasArch
 
         public Manager manager => (App.Current as App).LeManager;
 
-
         public BoutonListeVilles()
         {
             InitializeComponent();
-        }
-
-        public System.Windows.Media.ImageSource Source
-        {
-            set
-            {
-               // IMGVille.ImageSource = value;
-            }
-        }
-
-        public string Texte
-        {
-            set
-            {
-               // TBListeVille.Text = value;
-            }
         }
     }
 }
