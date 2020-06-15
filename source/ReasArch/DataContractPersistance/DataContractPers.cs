@@ -7,13 +7,16 @@ namespace DataContractPersistance
 {
     public class DataContractPers : IPersistanceManager
     {
-        public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..//XML");
+        public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..//XML");     // lieu ou enregister le fichier
 
-        public string FileName { get; set; } = "ReasArch.xml";
+        public string FileName { get; set; } = "ReasArch.xml";      // nom du fichier à enregister
 
         private DataContractSerializer Serializer { get; set; } = new DataContractSerializer(typeof(Monde),
-            new DataContractSerializerSettings() { PreserveObjectReferences = true });
+            new DataContractSerializerSettings() { PreserveObjectReferences = true });      // permet de lire le fichier
 
+        /// <summary>
+        /// Charge les données du fichier indiqué
+        /// </summary>
         public Monde ChargeDonnées()
         {
             if (!Directory.Exists(FilePath))
@@ -28,6 +31,9 @@ namespace DataContractPersistance
             return LeMonde;
         }
 
+        /// <summary>
+        /// Indique comment sauvegarder les données et où
+        /// </summary>
         public void SauvegardeDonnées(Monde LeMonde)
         {
             var serializer = new DataContractSerializer(typeof(Monde));

@@ -58,9 +58,12 @@ namespace Modele
         private Batiment batimentSelectionne;
 
 
-        public IPersistanceManager Persistance { get; set; }
+        public IPersistanceManager Persistance { get; set; }   // création du chemin pour utiliser les fichiers
 
 
+        /// <summary>
+        /// Charge les données dans le liste
+        /// </summary>
         public void ChargeDonnées()
         {
             Monde LeMonde = Persistance.ChargeDonnées();
@@ -72,16 +75,27 @@ namespace Modele
         }
 
 
+        /// <summary>
+        /// Sauvegarde le monde dans le fichier donné
+        /// </summary>
         public void SauvegardeDonnées()
         {
             Persistance.SauvegardeDonnées(monde);
         }
 
+
+        /// <summary>
+        /// Constructeur du manager
+        /// </summary>
         public Manager()
         {
             Monde monde = new Monde();
         }
 
+
+        /// <summary>
+        /// Constructeur du manager
+        /// </summary>
         public Manager(IPersistanceManager persistance)
         {
             Persistance = persistance;
