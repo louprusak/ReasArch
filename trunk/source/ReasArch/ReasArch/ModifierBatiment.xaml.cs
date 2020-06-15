@@ -21,15 +21,30 @@ namespace ReasArch
     /// </summary>
     public partial class ModifierBatiment : Window
     {
+        /// <summary>
+        /// Lien vers la manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
+        /// <summary>
+        /// Référence du batiment avant modif
+        /// </summary>
         public Modele.Batiment OldBatiment { get; set; }
+        /// <summary>
+        /// Référence crée avec les modifs
+        /// </summary>
         public Modele.Batiment NewBatiment { get; set; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public ModifierBatiment()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructeur de la fenetre en fonction de l'instance de batiment passée en paramètre
+        /// </summary>
         public ModifierBatiment(Modele.Batiment batiment)
         {
             InitializeComponent();
@@ -40,17 +55,26 @@ namespace ReasArch
             DataContext = NewBatiment;
         }
 
+        /// <summary>
+        /// Sauvegarde du batiment modifié : appel de la méthode de sauvegarde de manager et fermeture de la fenetre
+        /// </summary>
         private void Sauvegarder(object sender, RoutedEventArgs e)
         {
             manager.ModifierBatiment(OldBatiment, NewBatiment);
             Close();
         }
 
+        /// <summary>
+        /// Ferme la fenetre si click sur la bouton annuler
+        /// </summary>
         private void Annuler(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image principale lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImagePrincipale_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -72,6 +96,9 @@ namespace ReasArch
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image architecte lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImageArchitecte_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -93,6 +120,9 @@ namespace ReasArch
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image plan lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImagePlan_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -114,6 +144,9 @@ namespace ReasArch
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image interieur lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImageInterieur_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();

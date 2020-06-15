@@ -11,6 +11,7 @@ namespace Data
 {
     public class Stub
     {
+
         public static Monde CreerEnsemble()
         {
             Monde test = new Monde();
@@ -41,8 +42,43 @@ namespace Data
             test.AjouterBatimentSimple("Londres", "Palais de Westminster",  "Description", "PalaisDeWestminster/palaisdewestminster.jpg", "PalaisDeWestminster/archpalaisdewestminster.jpg", "PalaisDeWestminster/planpalaisdewestminster.jpg", "PalaisDeWestminster/interpalaisdewestminster.jpg");
             test.AjouterBatimentSimple("Londres", "London Eye",  "Description", "LondonEye/londoneye.jpg", "LondonEye/archlondoneye.jpg", "LondonEye/planlondoneye.jpg", "LondonEye/interlondoneye.jpg");
             test.AjouterBatimentSimple("Londres", "L'Ogive de Foster",  "Description", "LOgiveDeFoster/logivedefoster.jpg", "LOgiveDeFoster/archlogivedefoster.jpg", "LOgiveDeFoster/planlogivedefoster.jfif", "LOgiveDeFoster/interlogivedefoster.jpg");
-            
+
             return test;
+        }
+
+        public static Manager CreerManager()
+        {
+            Manager manager = new Manager();
+            manager.Monde = CreerEnsemble();
+            return manager;
+        }
+
+        public static Ville CreerVille()
+        {
+            Ville ville = new Ville("Londres", "Angleterre", "no_image_available.png", "no_image_available.png");
+            ville.AjouterBatimentSimple("BigBen", "Description bigben", "no_image_available.png", "no_image_available.png", "no_image_available.png", "no_image_available.png");
+            ville.AjouterBatimentSimple("LondonEye", "Description london eye", "no_image_available.png", "no_image_available.png", "img/plan empire state.jpg", "img/icone_londres.png");
+
+            return ville;
+        }
+
+        public static Batiment CreerBatimentAvecNom()
+        {
+            Batiment batiment = new Batiment("Centre Jaude");
+            return batiment;
+        }
+
+        public static Batiment CreerBatimentSimple()
+        {
+            Batiment batiment = new Batiment("Cathédrale", "France", "Clermont-Ferrand", "Ceci est la decription de la cathédrale de Clermont-Ferrand", "", "", "", "");
+            return batiment;
+        }
+
+        public static Batiment CreerBatimentComplet()
+        {
+            Batiment batiment = new Batiment("Tour de Pise", "Italie", "Pise", "Pise", "adresse pise", "on sait pas", "pas qui c'est", "vieux", "pierre", "haut", "compte pour voir", "ya longtemps",
+                "très longtemps", "bah elle penche quoi ...", "img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png");
+            return batiment;
         }
     }
 }

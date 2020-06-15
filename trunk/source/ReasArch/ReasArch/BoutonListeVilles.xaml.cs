@@ -20,9 +20,14 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeVilles : UserControl
     {
-
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public BoutonListeVilles()
         {
             InitializeComponent();

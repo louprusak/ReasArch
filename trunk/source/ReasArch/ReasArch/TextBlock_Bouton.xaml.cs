@@ -20,13 +20,22 @@ namespace ReasArch
     /// </summary>
     public partial class TextBlock_Bouton : UserControl
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public TextBlock_Bouton()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Texte du bouton
+        /// </summary>
         public string Texte
         {
             set
@@ -35,6 +44,9 @@ namespace ReasArch
             }
         }
 
+        /// <summary>
+        /// Ouvre une fenetre de choix d'image dans les fichiers
+        /// </summary>
         private void Choisir_Image(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
