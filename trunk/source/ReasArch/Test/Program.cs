@@ -12,7 +12,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            /*WriteLine("------------------------------------------------------------------------------------------------------------\n" +
+            WriteLine("------------------------------------------------------------------------------------------------------------\n" +
                 "Hello World! Voici les tests console de notre application ReasArch ! Enjoy !\n" +
                 "------------------------------------------------------------------------------------------------------------\n\n");
             WriteLine("1) Instanciation de la classe Batiment:\n\n");
@@ -80,31 +80,31 @@ namespace Test
             WriteLine("ToString de Monde juste après ajout d'une nouvelle ville:\n"+manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
-            bool ajoutsimplemanager = manager.AjouterBatimentSimple("Clermont-Fd","Cathédrale","Ceci est la decription de la cathédrale de Clermont - Ferrand","","","","");
+            bool ajoutsimplemanager = manager.AjouterBatimentSimple("Clermont-Ferrand","Cathédrale","Ceci est la decription de la cathédrale de Clermont - Ferrand","","","","");
             WriteLine($"Test variable ajoutsimplemanager:{ajoutsimplemanager}");
             WriteLine("ToString de Monde juste après ajout simple d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
-            bool ajoutcompletmanager = manager.AjouterBatimentComplet("Clermont-Fd", "Clermont-Ferrand", "Centre de Clermont", "Place de Jaude", "M.Jenesaispas", "M.Jenesaisqui",
+            bool ajoutcompletmanager = manager.AjouterBatimentComplet("Clermont-Ferrand", "Clermont-Ferrand", "Centre de Clermont", "Place de Jaude", "M.Jenesaispas", "M.Jenesaisqui",
                 "Comtemporain", "Pierre de Volvic", "50", "4", "2010", "2012", "Ceci est la description du centre Jaude 2","","","","");
             WriteLine($"Test variable ajoutcompletmanager:{ajoutcompletmanager}");
             WriteLine("ToString de Monde juste après ajout complet d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
-            bool supprimerbatimentmanager = manager.SupprimerBatiment("Clermont-Fd","Cathédrale");
+            bool supprimerbatimentmanager = manager.SupprimerBatiment("Clermont-Ferrand","Cathédrale");
             WriteLine($"Test variable suppressionbatimentmanager:{supprimerbatimentmanager}");
             WriteLine("ToString de Monde juste après suppression d'un batiment:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
-            bool supprimerville = manager.SupprimerVille("Clermont-Fd");
+            bool supprimerville = manager.SupprimerVille("Clermont-Ferrand");
             WriteLine($"Test de la variable de suppression d'une ville:{supprimerville}");
             WriteLine("ToString de Monde juste après la suppression d'une ville:\n" + manager.ToString());
-            WriteLine("-    -   -   -   -   -");*/
+            WriteLine("-    -   -   -   -   -");
 
 
 
 
-            WriteLine("------------------------------------------------------------------------------------------------------------\n");
+           /* WriteLine("------------------------------------------------------------------------------------------------------------\n");
             WriteLine("\n4) Instanciation de la classe Manager:\n\n");
 
 
@@ -142,7 +142,7 @@ namespace Test
             bool mngsupprville = testmanager.SupprimerVille(villemodif);
             WriteLine($"Test de la variable de suppression d'une ville au monde du manager:{mngsupprville}");
             WriteLine("ToString de Monde juste après:\n" + testmanager.Monde.ToString());
-            WriteLine("-    -   -   -   -   -");
+            WriteLine("-    -   -   -   -   -");*/
 
 
         }
