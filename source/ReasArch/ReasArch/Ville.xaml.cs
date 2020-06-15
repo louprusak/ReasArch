@@ -66,7 +66,7 @@ namespace ReasArch
         /// </summary>
         private void Supprimer_Ville(object sender, RoutedEventArgs e)
         {
-            MainWindow main = Window.GetWindow(this) as MainWindow;
+            MainWindow main =(App.Current.MainWindow as MainWindow);
             MessageBoxResult res = MessageBox.Show($"Voulez-vous vraiment supprimer la ville :\n '{ville.Nom}' ainsi que tous les batiments associés ?", "Suppression de la ville", MessageBoxButton.OKCancel);
             if (res == MessageBoxResult.OK)
             {

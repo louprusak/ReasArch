@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Modele
@@ -10,11 +11,13 @@ namespace Modele
     /// <summary>
     /// Classe Batiment de l'application c'est l'élément de présentation essentiel de l'application
     /// </summary>
+    [DataContract]
     public class Batiment : INotifyPropertyChanged
     {
         /// <summary>
         /// Nom du Batiment
         /// </summary>
+        [DataMember]
         public String Nom
         {
             get { return nom; }
@@ -28,6 +31,7 @@ namespace Modele
         /// <summary>
         /// Pays dans lequel se trouve le Batiment
         /// </summary>
+        [DataMember]
         public String Pays
         {
             get { return pays; }
@@ -41,6 +45,7 @@ namespace Modele
         /// <summary>
         /// Ville dans laquelle se trouve le batiment
         /// </summary>
+        [DataMember]
         public String Ville
         {
             get { return ville; }
@@ -54,6 +59,7 @@ namespace Modele
         /// <summary>
         /// Quartier de la ville dans lequel se trouve le batiment
         /// </summary>
+        [DataMember]
         public String Quartier
         {
             get { return quartier; }
@@ -67,6 +73,7 @@ namespace Modele
         /// <summary>
         /// Adresse à laquelle se trouve le batiment
         /// </summary>
+        [DataMember]
         public String Adresse
         {
             get { return adresse; }
@@ -80,6 +87,7 @@ namespace Modele
         /// <summary>
         /// Architecte du Batiment
         /// </summary>
+        [DataMember]
         public String Architecte
         {
             get { return architecte; }
@@ -93,6 +101,7 @@ namespace Modele
         /// <summary>
         /// Ingénieur du batiment
         /// </summary>
+        [DataMember]
         public String Ingenieur
         {
             get { return ingenieur; }
@@ -106,6 +115,7 @@ namespace Modele
         /// <summary>
         /// Style architectural du batiment
         /// </summary>
+        [DataMember]
         public String Style
         {
             get { return style; }
@@ -119,6 +129,7 @@ namespace Modele
         /// <summary>
         /// Matériaux utilisés pour construire le batiment
         /// </summary>
+        [DataMember]
         public String Materiaux
         {
             get { return materiaux; }
@@ -132,6 +143,7 @@ namespace Modele
         /// <summary>
         /// Hauteur en mètres du batiment
         /// </summary>
+        [DataMember]
         public String Hauteur
         {
             get { return hauteur; }
@@ -145,6 +157,7 @@ namespace Modele
         /// <summary>
         /// Nombre d'étages du batiment
         /// </summary>
+        [DataMember]
         public String Nbetages
         {
             get { return nbetages; }
@@ -158,6 +171,7 @@ namespace Modele
         /// <summary>
         /// Années de construction du batiment
         /// </summary>
+        [DataMember]
         public String Construction
         {
             get { return construction; }
@@ -171,6 +185,7 @@ namespace Modele
         /// <summary>
         /// Année d'ouverture du batiment
         /// </summary>
+        [DataMember]
         public String Ouverture
         {
             get { return ouverture; }
@@ -184,6 +199,7 @@ namespace Modele
         /// <summary>
         /// Description du batiment
         /// </summary>
+        [DataMember]
         public String Description
         {
             get { return description; }
@@ -197,6 +213,7 @@ namespace Modele
         /// <summary>
         /// Image principale du batiment
         /// </summary>
+        [DataMember]
         public String Imageprincipale
         {
             get { return imageprincipale; }
@@ -210,6 +227,7 @@ namespace Modele
         /// <summary>
         /// Image de l'architecte du batiment
         /// </summary>
+        [DataMember]
         public String Imagearchitecte
         {
             get { return imagearchitecte; }
@@ -223,6 +241,7 @@ namespace Modele
         /// <summary>
         /// Image du plan du batiment
         /// </summary>
+        [DataMember]
         public String Imageplan
         {
             get { return imageplan; }
@@ -236,6 +255,7 @@ namespace Modele
         /// <summary>
         /// Image de l'interieur du batiment
         /// </summary>
+        [DataMember]
         public String Imageinterieur
         {
             get { return imageinterieur; }

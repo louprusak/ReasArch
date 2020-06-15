@@ -51,6 +51,9 @@
                         <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Ajout_Ville">
                             <Image Source="img/icone_ajouter_blanc.png" MaxWidth="30"/>
                         </Button>
+                        <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="Sauvegarde">
+                            <TextBlock Text="Sauvegarder" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="4"/>
+                        </Button>
                     </WrapPanel>
                 </Grid>
             </Grid>

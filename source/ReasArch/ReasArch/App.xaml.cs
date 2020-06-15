@@ -15,11 +15,11 @@ namespace ReasArch
     /// </summary>
     public partial class App : Application
     {
-        public Manager LeManager { get; set; } = new Manager();
+        public Manager LeManager { get; set; } = new Manager(new DataContractPersistance.DataContractPers());
 
         public App()
         {
-            LeManager.Monde = Stub.CreerEnsemble();
+            LeManager.ChargeDonnées();
         }
     }
 }

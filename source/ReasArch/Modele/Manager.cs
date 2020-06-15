@@ -58,6 +58,37 @@ namespace Modele
         private Batiment batimentSelectionne;
 
 
+        public IPersistanceManager Persistance { get; set; }
+
+
+        public void ChargeDonnées()
+        {
+            Monde LeMonde = Persistance.ChargeDonnées();
+            monde = new Monde();
+            foreach (var v in LeMonde.Listevilles)
+            {
+                monde.Listevilles.Add(v);
+            }
+        }
+
+
+        public void SauvegardeDonnées()
+        {
+            Persistance.SauvegardeDonnées(monde);
+        }
+
+        public Manager()
+        {
+            Monde monde = new Monde();
+        }
+
+        public Manager(IPersistanceManager persistance)
+        {
+            Persistance = persistance;
+            Monde monde = new Monde();
+        }
+
+
         //------------------------------------------------------------------------------------//
         //METHODES
 

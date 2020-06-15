@@ -1,6 +1,7 @@
 ﻿using Modele;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -9,8 +10,19 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class Stub
+    public class Stub: IPersistanceManager
     {
+
+        public Monde ChargeDonnées()
+        {
+            Monde LeMonde = CreerEnsemble();
+            return LeMonde;
+        }
+
+        public void SauvegardeDonnées(Monde LeMonde)
+        {
+            Debug.WriteLine("Sauvegarde demandée");
+        }
 
         public static Monde CreerEnsemble()
         {
@@ -53,6 +65,7 @@ namespace Data
             return manager;
         }
 
+        /*
         public static Ville CreerVille()
         {
             Ville ville = new Ville("Londres", "Angleterre", "no_image_available.png", "no_image_available.png");
@@ -80,5 +93,6 @@ namespace Data
                 "très longtemps", "bah elle penche quoi ...", "img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png", "img/icone_newyork.png");
             return batiment;
         }
+        */
     }
 }

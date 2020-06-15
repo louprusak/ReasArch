@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Modele
@@ -10,11 +11,13 @@ namespace Modele
     /// <summary>
     /// Classe Monde de l'application : c'est elle qui contient la liste des villes de l'application et qui pourra modifier ces éléments
     /// </summary>
+    [DataContract]
     public class Monde
     {
         /// <summary>
         /// Liste des villes contenues dans l'application
         /// </summary>
+        [DataMember]
         public ObservableCollection<Ville> Listevilles
         {
             get { return listevilles; }
@@ -32,7 +35,7 @@ namespace Modele
         /// </summary>
         public Monde()
         {
-            listevilles = new ObservableCollection<Ville>();
+            Listevilles = new ObservableCollection<Ville>();
         }
 
 

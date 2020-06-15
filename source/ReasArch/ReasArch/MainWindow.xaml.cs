@@ -45,6 +45,15 @@ namespace ReasArch
             nouvelle_ville.ShowDialog();
         }
 
+
+        private void Sauvegarde(object sender, RoutedEventArgs e)
+        {
+            manager.SauvegardeDonnées();
+            MessageBox.Show("Sauvegarde réussie", "Sauvegarde",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
         /// <summary>
         /// Affichage de la page de la ville lors de la selection d'une ville dans la listebox
         /// </summary>
