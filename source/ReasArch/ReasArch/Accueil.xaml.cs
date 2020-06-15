@@ -19,13 +19,22 @@ namespace ReasArch
     /// </summary>
     public partial class Accueil : UserControl
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager = (App.Current as App).LeManager;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Accueil()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Affiche la page d'ajout de ville après click sur le bouton ajouterville de l'accueil
+        /// </summary>
         private void Ajout_Ville(object sender, RoutedEventArgs e)
         {
             Window nouvelle_ville = new AjouterVille();

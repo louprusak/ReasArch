@@ -18,13 +18,26 @@ namespace ReasArch
     /// </summary>
     public partial class ImageFullScreen : Window
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
+        /// <summary>
+        /// Source de l'image à afficher
+        /// </summary>
         public string sourceimage { get; set; } = null;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public ImageFullScreen()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Constructeur de la fenetre avec en parametre la source de l'image à afficher
+        /// </summary>
         public ImageFullScreen(String source)
         {
             InitializeComponent();

@@ -20,16 +20,27 @@ namespace ReasArch
     /// </summary>
     public partial class Ville : UserControl
     {
-
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
 
+        /// <summary>
+        /// Instance actuelle de Modele.Ville
+        /// </summary>
         Modele.Ville ville;
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Ville()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructeur de la fenetre ville en fonction de l'instance de la ville passée en paramètre
+        /// </summary>
         public Ville(Modele.Ville ville)
         {
             InitializeComponent();
@@ -39,12 +50,20 @@ namespace ReasArch
             Afficheur_Batiments.DataContext = ville;
         }
 
+        /// <summary>
+        /// Ouvre une fenetre d'ajout de batiment apres click sur le bouton 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Ajouter_Batiment(object sender, RoutedEventArgs e)
         {
             Window modifierWindow = new AjouterBatiment();
             modifierWindow.ShowDialog();
         }
 
+        /// <summary>
+        /// Supprime la ville en appelant la méthode associée de manager
+        /// </summary>
         private void Supprimer_Ville(object sender, RoutedEventArgs e)
         {
             MainWindow main = Window.GetWindow(this) as MainWindow;
@@ -58,12 +77,18 @@ namespace ReasArch
             }
         }
 
+        /// <summary>
+        /// Ouvre une fenetre de modification de la ville actuelle
+        /// </summary>
         private void Modifier_Ville(object sender, RoutedEventArgs e)
         {
             Window modifierWindow = new ModifierVille();
             modifierWindow.ShowDialog();
         }
 
+        /// <summary>
+        /// Ouvre la fenetre du batiment selectionné lors du click sur le bouton du batiment sur la page de la ville
+        /// </summary>
         private void BoutonListeBatiments_MouseUp(object sender, MouseButtonEventArgs e)
         {
             BoutonListeBatiments bouton = sender as BoutonListeBatiments;
@@ -73,11 +98,9 @@ namespace ReasArch
             main.fenetre.Content = new Batiment(batiment);
         }
 
-        private void Afficheur_Batiments_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            manager.BatimentSelectionne = e.AddedItems[0] as Modele.Batiment;
-        }
-
+        /// <summary>
+        /// Affiche la page d'accueil lors de l'appui sur le bouton retour de la page ville
+        /// </summary>
         private void Retour(object sender, RoutedEventArgs e)
         {
             MainWindow main = Window.GetWindow(this) as MainWindow;

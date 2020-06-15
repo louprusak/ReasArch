@@ -19,14 +19,26 @@ namespace ReasArch
     /// </summary>
     public partial class BoutonListeBatiments : UserControl
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
+        /// <summary>
+        /// Batiment actuelle lors de la création du user control
+        /// </summary>
         public Modele.Batiment CeBatiment { get; set; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public BoutonListeBatiments()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Affiche la fenetre de modification du batiment actuel après click sur la bouton modifier
+        /// </summary>
         private void Modifier_Batiment(object sender, RoutedEventArgs e)
         {
             CeBatiment = DataContext as Modele.Batiment;
@@ -34,6 +46,9 @@ namespace ReasArch
             modif.ShowDialog();
         }
 
+        /// <summary>
+        /// Affichage d'une fenetre de confirmation et suppression du batiment actuel avec appel de la méthode associée de manager
+        /// </summary>
         private void Supprimer_Batiment(object sender, RoutedEventArgs e)
         {
             CeBatiment = DataContext as Modele.Batiment;

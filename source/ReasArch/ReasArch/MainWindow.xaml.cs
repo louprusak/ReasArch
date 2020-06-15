@@ -22,31 +22,37 @@ namespace ReasArch
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
 
-
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             AfficheurVilles.DataContext = manager;
         }
 
+        /// <summary>
+        /// Affichage de la fenetre d'ajout d'une ville suite au click sur le bouton ajouter ville
+        /// </summary>
         private void Ajout_Ville(object sender, RoutedEventArgs e)
         {
             Window nouvelle_ville = new AjouterVille();
             nouvelle_ville.ShowDialog();
         }
 
+        /// <summary>
+        /// Affichage de la page de la ville lors de la selection d'une ville dans la listebox
+        /// </summary>
         private void BoutonListeVilles_MouseUp(object sender, MouseButtonEventArgs e)
         {
             BoutonListeVilles bouton = sender as BoutonListeVilles;
             Modele.Ville ville = bouton.DataContext as Modele.Ville;
             fenetre.Content = new Ville(ville);
         }
-
-        /*private void AfficheurVilles_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            manager.VilleSelectionnee = e.AddedItems[0] as Modele.Ville;
-        }*/
     }
 }

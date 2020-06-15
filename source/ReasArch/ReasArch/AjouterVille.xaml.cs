@@ -21,10 +21,19 @@ namespace ReasArch
     /// </summary>
     public partial class AjouterVille : Window
     {
+        /// <summary>
+        /// Lien vers le manager de l'application
+        /// </summary>
         public Manager manager => (App.Current as App).LeManager;
 
+        /// <summary>
+        /// Ville en cours de création dans la fenetre
+        /// </summary>
         public Modele.Ville LaVille { get; set; }
 
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public AjouterVille()
         {
             InitializeComponent();
@@ -33,6 +42,9 @@ namespace ReasArch
             DataContext = LaVille;
         }
 
+        /// <summary>
+        /// Ajout de la ville crée lors de l'appui sur le bouton sauvegarder avec appel de la méthode dédiée de manager et si erreur affiche une message box
+        /// </summary>
         private void Ajouter_Ville(object sender, RoutedEventArgs e)
         {
             bool res = manager.AjouterVille(LaVille);
@@ -40,11 +52,17 @@ namespace ReasArch
             Close();
         }
 
+        /// <summary>
+        /// Ferme la fenetre d'ajout si click sur le bouton annuler de celle-ci
+        /// </summary>
         private void Annuler(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image vignette lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImageVignette_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -66,6 +84,9 @@ namespace ReasArch
             else MessageBox.Show("Image invalide !", "", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        /// <summary>
+        /// Parcours, enregistrement et modification de l'image panorama lors de l'appui sur le bouton parcourir
+        /// </summary>
         private void ImagePanorama_MouseUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
