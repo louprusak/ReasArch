@@ -7,8 +7,14 @@ using System.Text;
 
 namespace Modele
 {
+    /// <summary>
+    /// Classe Batiment de l'application c'est l'élément de présentation essentiel de l'application
+    /// </summary>
     public class Batiment : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Nom du Batiment
+        /// </summary>
         public String Nom
         {
             get { return nom; }
@@ -17,8 +23,11 @@ namespace Modele
                 { nom = value;OnPropertyChanged();}
             }
         }
-        private String nom; //Nom du batiment
+        private String nom;
 
+        /// <summary>
+        /// Pays dans lequel se trouve le Batiment
+        /// </summary>
         public String Pays
         {
             get { return pays; }
@@ -27,8 +36,11 @@ namespace Modele
                 { pays = value; OnPropertyChanged(); }
             }
         }
-        private string pays = "non spécifié"; //Pays dans lequel se trouve le batiment
+        private string pays = "non spécifié";
 
+        /// <summary>
+        /// Ville dans laquelle se trouve le batiment
+        /// </summary>
         public String Ville
         {
             get { return ville; }
@@ -37,8 +49,11 @@ namespace Modele
                 { ville = value; OnPropertyChanged(); }
             }
         }
-        private string ville = "non spécifié";//Ville dans laquelle se trouve le batiment
+        private string ville = "non spécifié";
 
+        /// <summary>
+        /// Quartier de la ville dans lequel se trouve le batiment
+        /// </summary>
         public String Quartier
         {
             get { return quartier; }
@@ -47,8 +62,11 @@ namespace Modele
                 { quartier= value; OnPropertyChanged(); }
             }
         }
-        private string quartier = "non spécifié";//Quartier dans lequel se trouve la batiment
+        private string quartier = "non spécifié";
 
+        /// <summary>
+        /// Adresse à laquelle se trouve le batiment
+        /// </summary>
         public String Adresse
         {
             get { return adresse; }
@@ -57,8 +75,11 @@ namespace Modele
                 { adresse = value; OnPropertyChanged(); }
             }
         }
-        private string adresse = "non spécifié";//Adresse du batiment
+        private string adresse = "non spécifié";
 
+        /// <summary>
+        /// Architecte du Batiment
+        /// </summary>
         public String Architecte
         {
             get { return architecte; }
@@ -67,8 +88,11 @@ namespace Modele
                 { architecte = value; OnPropertyChanged(); }
             }
         }
-        private string architecte = "non spécifié";//Architecte du batiment
+        private string architecte = "non spécifié";
 
+        /// <summary>
+        /// Ingénieur du batiment
+        /// </summary>
         public String Ingenieur
         {
             get { return ingenieur; }
@@ -77,8 +101,11 @@ namespace Modele
                 { ingenieur = value; OnPropertyChanged(); }
             }
         }
-        private string ingenieur = "non spécifié";//INgénieur du batiment
+        private string ingenieur = "non spécifié";
 
+        /// <summary>
+        /// Style architectural du batiment
+        /// </summary>
         public String Style
         {
             get { return style; }
@@ -87,8 +114,11 @@ namespace Modele
                 { style = value; OnPropertyChanged(); }
             }
         }
-        private string style = "non spécifié";//Style du batiment
+        private string style = "non spécifié";
 
+        /// <summary>
+        /// Matériaux utilisés pour construire le batiment
+        /// </summary>
         public String Materiaux
         {
             get { return materiaux; }
@@ -97,8 +127,11 @@ namespace Modele
                 { materiaux = value; OnPropertyChanged(); }
             }
         }
-        private string materiaux = "non spécifié";//Matériaux utilisés pour construire le batiment
+        private string materiaux = "non spécifié";
 
+        /// <summary>
+        /// Hauteur en mètres du batiment
+        /// </summary>
         public String Hauteur
         {
             get { return hauteur; }
@@ -107,8 +140,11 @@ namespace Modele
                 { hauteur = value; OnPropertyChanged(); }
             }
         }
-        private string hauteur = "non spécifié";//Hauteur en mètres du batiment
+        private string hauteur = "non spécifié";
 
+        /// <summary>
+        /// Nombre d'étages du batiment
+        /// </summary>
         public String Nbetages
         {
             get { return nbetages; }
@@ -117,8 +153,11 @@ namespace Modele
                 { nbetages = value; OnPropertyChanged(); }
             }
         }
-        private string nbetages = "non spécifié";//Nombre d'étages du batiment
+        private string nbetages = "non spécifié";
 
+        /// <summary>
+        /// Années de construction du batiment
+        /// </summary>
         public String Construction
         {
             get { return construction; }
@@ -127,8 +166,11 @@ namespace Modele
                 { construction = value; OnPropertyChanged(); }
             }
         }
-        private string construction = "non spécifié";//Années de Construction du batiment
+        private string construction = "non spécifié";
 
+        /// <summary>
+        /// Année d'ouverture du batiment
+        /// </summary>
         public String Ouverture
         {
             get { return ouverture; }
@@ -137,8 +179,11 @@ namespace Modele
                 { ouverture = value; OnPropertyChanged(); }
             }
         }
-        private string ouverture = "non spécifié";//Année d'Ouverture du batiment
+        private string ouverture = "non spécifié";
 
+        /// <summary>
+        /// Description du batiment
+        /// </summary>
         public String Description
         {
             get { return description; }
@@ -147,8 +192,11 @@ namespace Modele
                 { description = value; OnPropertyChanged(); }
             }
         }
-        private string description = "aucune Description";//Description autre du batiment
+        private string description = "aucune Description";
 
+        /// <summary>
+        /// Image principale du batiment
+        /// </summary>
         public String Imageprincipale
         {
             get { return imageprincipale; }
@@ -157,8 +205,11 @@ namespace Modele
                 { imageprincipale = value; OnPropertyChanged(); }
             }
         }
-        private string imageprincipale = null;//Image Principale du batiment
+        private string imageprincipale = null;
 
+        /// <summary>
+        /// Image de l'architecte du batiment
+        /// </summary>
         public String Imagearchitecte
         {
             get { return imagearchitecte; }
@@ -167,8 +218,11 @@ namespace Modele
                 { imagearchitecte = value; OnPropertyChanged(); }
             }
         }
-        private string imagearchitecte = null;//Image de l'Architecte du batiment
+        private string imagearchitecte = null;
 
+        /// <summary>
+        /// Image du plan du batiment
+        /// </summary>
         public String Imageplan
         {
             get { return imageplan; }
@@ -177,8 +231,11 @@ namespace Modele
                 { imageplan= value; OnPropertyChanged(); }
             }
         }
-        private string imageplan = null;//Image du plan du batiment
+        private string imageplan = null;
 
+        /// <summary>
+        /// Image de l'interieur du batiment
+        /// </summary>
         public String Imageinterieur
         {
             get { return imageinterieur; }
@@ -187,23 +244,23 @@ namespace Modele
                 { imageinterieur = value; OnPropertyChanged(); }
             }
         }
-        private string imageinterieur = null;//Image de l'intérieur du batiment
+        private string imageinterieur = null;
 
 
         //----------------------------------------------------------------------------------------------------------------------//
         //CONSTRUCTEURS
 
+
         /// <summary>
-        /// Constructeur de la class Batiment
+        /// Constructeur de la classe Batiment avec le nom
         /// </summary>
         public Batiment(string nom)
         {
             Nom = nom;
         }
 
-
         /// <summary>
-        /// Constructeur de la class Batiment
+        /// Constructeur simple de la classe Batiment
         /// </summary>
         public Batiment(string nom, string pays, string ville, string description, string imageprincipale, string imageArchitecte, 
             string imageplan, string imageinterieur):this(nom)
@@ -217,9 +274,8 @@ namespace Modele
             Imageinterieur = imageinterieur;
         }
 
-
         /// <summary>
-        /// Constructeur de la class Batiment
+        /// Constructeur complet de la classe Batiment
         /// </summary>
         public Batiment(string nom, string pays, string ville, string quartier, string adresse, string architecte,
             string ingenieur, string style, string materiaux, string hauteur, string nbetages, string construction,
@@ -238,37 +294,10 @@ namespace Modele
             Ouverture = ouverture;
         }
 
-        
-
-
-        //------------------------------------------------------------------------------------//
-        //METHODES
-
-        /// <summary>
-        /// Modifie les paramètres d'un batiment
-        /// </summary>
-        /// <returns>Retourne true si la modification a bien eu lieu sinon retourne false</returns>
-        public bool ModifierBatiment(string nvnom, string pays, string ville, string quartier,
-            string adresse, string architecte, string ingenieur, string style, string materiaux, string hauteur,
-            string nbetages, string construction, string ouverture, string description, string imageprincipale,
-            string imagearchitecte, string imageplan, string imageinterieur)
-        {
-            Nom = nvnom; Pays = pays; Ville = ville;  Quartier = quartier; Adresse = adresse;
-            Architecte = architecte; Ingenieur = ingenieur; Style = style; Materiaux = materiaux;
-            Hauteur = hauteur; Nbetages = nbetages; Construction = construction;
-            Ouverture = ouverture; Description = description; Imageprincipale = imageprincipale;
-            Imagearchitecte = imagearchitecte; Imageplan = imageplan; Imageinterieur = imageinterieur;
-
-            if(Nom == nvnom && Pays == pays && Ville == ville && Quartier == quartier && Adresse == adresse &&
-            Architecte == architecte && Ingenieur == ingenieur && Style == style && Materiaux == materiaux &&
-            Hauteur == hauteur && Nbetages == nbetages && Construction == construction &&
-            Ouverture == ouverture && Description == description) return true;
-            else return false;
-        }
-
 
         //----------------------------------------------------------------------------------------------------------------------//
         //REDEFINITION DE METHODES 
+
 
         /// <summary>
         /// Définit l'affichage de la Description du batiment
@@ -276,13 +305,12 @@ namespace Modele
         /// <returns>Retourne le message à afficher</returns>
         public override string ToString()
         {
-            string message = $"Nom : {Nom}\nPays : {Pays}\nQuartier : {Quartier}\nAdresse : {Adresse}\nArchitecte : {Architecte}\n" +
+            string message = $"Nom : {Nom}\nPays : {Pays}\nVille : {Ville}\nQuartier : {Quartier}\nAdresse : {Adresse}\nArchitecte : {Architecte}\n" +
                 $"Ingénieur : {Ingenieur}\nStyle : {Style}\nMatériaux : {Materiaux}\nHauteur : {Hauteur}\nNombre d'Etages : {Nbetages}\n" +
                 $"Construction : {Construction}\nOuverture : {Ouverture}\n\n" +
                 $"{Description}\n\n";
             return message;
         }
-
 
         /// <summary>
         /// Compare si l'objet envoyé est le même que le batiment  
@@ -297,6 +325,9 @@ namespace Modele
             return Nom.Equals(other.Nom);
         }
 
+        /// <summary>
+        /// Event de changement de propriété
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
