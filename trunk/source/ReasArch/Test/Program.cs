@@ -12,6 +12,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
+            /*
             WriteLine("------------------------------------------------------------------------------------------------------------\n" +
                 "Hello World! Voici les tests console de notre application ReasArch ! Enjoy !\n" +
                 "------------------------------------------------------------------------------------------------------------\n\n");
@@ -101,7 +102,7 @@ namespace Test
             WriteLine("ToString de Monde juste après la suppression d'une ville:\n" + manager.ToString());
             WriteLine("-    -   -   -   -   -");
 
-
+            */
 
 
            /* WriteLine("------------------------------------------------------------------------------------------------------------\n");

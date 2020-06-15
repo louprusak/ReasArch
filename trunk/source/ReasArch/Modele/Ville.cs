@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Modele
@@ -10,11 +11,13 @@ namespace Modele
     /// <summary>
     /// Classe ville de l'application et du master, elle contient une liste de batiments
     /// </summary>
+    [DataContract]
     public class Ville : INotifyPropertyChanged
     {
         /// <summary>
         /// Liste des batiment contenus dans la ville
         /// </summary>
+        [DataMember]
         public ObservableCollection<Batiment> Listebatiments
         {
             get { return listebatiments; }
@@ -25,6 +28,7 @@ namespace Modele
         /// <summary>
         /// Nom de la ville
         /// </summary>
+        [DataMember]
         public string Nom
         {
             get { return nom; }
@@ -38,6 +42,7 @@ namespace Modele
         /// <summary>
         /// Pays dans lequel se trouve la ville
         /// </summary>
+        [DataMember]
         public string Pays
         {
             get { return pays; }
@@ -51,6 +56,7 @@ namespace Modele
         /// <summary>
         /// Image Vignette de la ville
         /// </summary>
+        [DataMember]
         public string Imagevignette
         {
             get { return imagevignette; }
@@ -64,6 +70,7 @@ namespace Modele
         /// <summary>
         /// Image Panorama de la ville
         /// </summary>
+        [DataMember]
         public string Imagepanorama
         {
             get { return imagepanorama; }

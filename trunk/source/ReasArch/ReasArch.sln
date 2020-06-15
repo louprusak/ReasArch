@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{FF9BFCAD-A652-4D63-BDAB-622D9A4FF90F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContractPersistance", "DataContractPersistance\DataContractPersistance.csproj", "{B3046377-BEFA-4DF9-B387-2D281C5BA8D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_datacontract", "Test_datacontract\Test_datacontract.csproj", "{F030FA00-9B15-4DB2-8C65-EF100B3DA337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{FF9BFCAD-A652-4D63-BDAB-622D9A4FF90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF9BFCAD-A652-4D63-BDAB-622D9A4FF90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF9BFCAD-A652-4D63-BDAB-622D9A4FF90F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3046377-BEFA-4DF9-B387-2D281C5BA8D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3046377-BEFA-4DF9-B387-2D281C5BA8D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3046377-BEFA-4DF9-B387-2D281C5BA8D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3046377-BEFA-4DF9-B387-2D281C5BA8D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F030FA00-9B15-4DB2-8C65-EF100B3DA337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F030FA00-9B15-4DB2-8C65-EF100B3DA337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F030FA00-9B15-4DB2-8C65-EF100B3DA337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F030FA00-9B15-4DB2-8C65-EF100B3DA337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

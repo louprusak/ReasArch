@@ -22,7 +22,7 @@ namespace ReasArch
         /// <summary>
         /// Lien vers le manager de l'application
         /// </summary>
-        public Manager manager = (App.Current as App).LeManager;
+        public Manager manager => (App.Current as App).LeManager;
 
         /// <summary>
         /// Constructeur
@@ -39,6 +39,13 @@ namespace ReasArch
         {
             Window nouvelle_ville = new AjouterVille();
             nouvelle_ville.ShowDialog();
+        }
+
+        private void Sauvegarde(object sender, RoutedEventArgs e)
+        {
+            manager.SauvegardeDonnées();
+            MessageBox.Show("Sauvegarde réussie", "Sauvegarde",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
