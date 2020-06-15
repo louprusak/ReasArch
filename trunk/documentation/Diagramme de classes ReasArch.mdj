@@ -1061,7 +1061,7 @@
 											"top": 407,
 											"width": 2137.63037109375,
 											"height": 13,
-											"text": "+AjouterBatimentSimple(nomville: string, nombat: string, pays: string, ville: string, description: string, imageprincipale: string, imagearchitecte: string, imageplan: string, imageinterieur): bool",
+											"text": "+AjouterBatimentSimple(nomville: string, nombat: string, description: string, imageprincipale: string, imagearchitecte: string, imageplan: string, imageinterieur): bool",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1078,7 +1078,7 @@
 											"top": 422,
 											"width": 2137.63037109375,
 											"height": 13,
-											"text": "+AjouterBatimentComplet(nomville: string, nombat: string, pays: string, ville: string, quartier: string, adresse: string, architecte: string, ingenieur: string, style: string, materiaux: string, hauteur: string, nbetages: string, construction: string, ouverture: string, description: string, imageprincipale: string, imagearchitecte: string, imageplan: string, imageinterieur: string): bool",
+											"text": "+AjouterBatimentComplet(nomville: string, nombat: string, quartier: string, adresse: string, architecte: string, ingenieur: string, style: string, materiaux: string, hauteur: string, nbetages: string, construction: string, ouverture: string, description: string, imageprincipale: string, imagearchitecte: string, imageplan: string, imageinterieur: string): bool",
 											"horizontalAlignment": 0
 										},
 										{
@@ -5396,7 +5396,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx/zlnXj0wARg="
 									},
-									"name": "pays",
+									"name": "description",
 									"type": "string"
 								},
 								{
@@ -5405,7 +5405,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx/zlnXj0wARg="
 									},
-									"name": "ville",
+									"name": "imageprincipale",
 									"type": "string"
 								},
 								{
@@ -5414,7 +5414,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx/zlnXj0wARg="
 									},
-									"name": "description",
+									"name": "imagearchitecte",
 									"type": "string"
 								},
 								{
@@ -5423,7 +5423,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx/zlnXj0wARg="
 									},
-									"name": "imageprincipale",
+									"name": "imageplan",
 									"type": "string"
 								},
 								{
@@ -5432,26 +5432,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx/zlnXj0wARg="
 									},
-									"name": "imagearchitecte",
-									"type": "string"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFyegJjo+Rs96E=",
-									"_parent": {
-										"$ref": "AAAAAAFx/zlnXj0wARg="
-									},
-									"name": "imageplan",
-									"type": "string"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFyegJjo+RtwOU=",
-									"_parent": {
-										"$ref": "AAAAAAFx/zlnXj0wARg="
-									},
-									"name": "imageinterieur",
-									"type": ""
+									"name": "imageinterieur"
 								},
 								{
 									"_type": "UMLParameter",
@@ -5496,7 +5477,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "pays",
+									"name": "quartier",
 									"type": "string"
 								},
 								{
@@ -5505,7 +5486,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "ville",
+									"name": "adresse",
 									"type": "string"
 								},
 								{
@@ -5514,7 +5495,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "quartier",
+									"name": "architecte",
 									"type": "string"
 								},
 								{
@@ -5523,7 +5504,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "adresse",
+									"name": "ingenieur",
 									"type": "string"
 								},
 								{
@@ -5532,7 +5513,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "architecte",
+									"name": "style",
 									"type": "string"
 								},
 								{
@@ -5541,7 +5522,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "ingenieur",
+									"name": "materiaux",
 									"type": "string"
 								},
 								{
@@ -5550,7 +5531,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "style",
+									"name": "hauteur",
 									"type": "string"
 								},
 								{
@@ -5559,7 +5540,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "materiaux",
+									"name": "nbetages",
 									"type": "string"
 								},
 								{
@@ -5568,7 +5549,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "hauteur",
+									"name": "construction",
 									"type": "string"
 								},
 								{
@@ -5577,7 +5558,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "nbetages",
+									"name": "ouverture",
 									"type": "string"
 								},
 								{
@@ -5586,7 +5567,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "construction",
+									"name": "description",
 									"type": "string"
 								},
 								{
@@ -5595,7 +5576,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "ouverture",
+									"name": "imageprincipale",
 									"type": "string"
 								},
 								{
@@ -5604,7 +5585,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "description",
+									"name": "imagearchitecte",
 									"type": "string"
 								},
 								{
@@ -5623,30 +5604,12 @@
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
-									"name": "imageprincipale",
-									"type": "string"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFyegJLCePezJ0=",
-									"_parent": {
-										"$ref": "AAAAAAFyF1KCLpuuypo="
-									},
-									"name": "imagearchitecte",
-									"type": "string"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFyegJLCePfmtM=",
-									"_parent": {
-										"$ref": "AAAAAAFyF1KCLpuuypo="
-									},
 									"name": "imageplan",
 									"type": "string"
 								},
 								{
 									"_type": "UMLParameter",
-									"_id": "AAAAAAFyegJLCuPgc68=",
+									"_id": "AAAAAAFyegJLCePezJ0=",
 									"_parent": {
 										"$ref": "AAAAAAFyF1KCLpuuypo="
 									},
