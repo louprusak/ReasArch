@@ -17,6 +17,9 @@ namespace ReasArch
     {
         public Manager LeManager { get; set; } = new Manager(new DataContractPersistance.DataContractPers());
 
+        /// <summary>
+        /// Charge les données dans le ficier XML
+        /// </summary>
         public App()
         {
             LeManager.ChargeDonnées();

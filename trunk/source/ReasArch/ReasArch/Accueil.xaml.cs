@@ -41,6 +41,10 @@ namespace ReasArch
             nouvelle_ville.ShowDialog();
         }
 
+
+        /// <summary>
+        /// Fait la sauvegarde des changements et affiche un message
+        /// </summary>
         private void Sauvegarde(object sender, RoutedEventArgs e)
         {
             manager.SauvegardeDonnées();

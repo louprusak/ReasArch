@@ -6,6 +6,9 @@ namespace Test_datacontract
 {
     class Program
     {
+        /// <summary>
+        /// Test de la persistance
+        /// </summary>
         static void Main(string[] args)
         {
             Manager manager = new Manager(new Data.Stub());
